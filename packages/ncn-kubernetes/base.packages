@@ -11,7 +11,7 @@ rpm-build=4.14.1-20.3
 
 # COS
 cray-cps-utils=0.7.2-20210203161105_c771219
-cray-craytrace-kmp-default=2.3.9_k5.3.18_24.46-1.4.0.0_1.4__g8a12698
+cray-craytrace-kmp-default=2.3.9_k5.3.18_24.46-1.4.0.0_1.4__g8a12698.shasta
 cray-orca=0.7.4-20201209110559_f6a5aeb
 cray-liborca=0.7.4-20201209110559_f6a5aeb
 
