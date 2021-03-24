@@ -1,0 +1,9 @@
+# SUSE Backport
+buildonly-suse-Backports-15-SP2 https://arti.dev.cray.com/artifactory/mirror-SUSE/Backports/SLE-15-SP2_x86_64/standard/
+
+# SUSE PTF repos
+buildonly-suse-SLE-Module-Basesystem-PTF http://car.dev.cray.com/artifactory/mirror-sles15sp2/Updates/SLE-Module-Basesystem-PTF/
+
+# HPE-SPP
+# XXX Intentionally disabled for now, should be packaged by UAN or COS if required.
+# buildonly-hpe-spp-sle-15sp2 https://arti.dev.cray.com/artifactory/mirror-HPE-SPP/SUSE_LINUX/SLES15-SP2/x86_64/current/
