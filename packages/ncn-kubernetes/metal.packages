@@ -1,0 +1,4 @@
+haproxy=2.0.14-bp152.1.1
+keepalived=2.0.19-bp152.1.9
+dracut-metal-dmk8s=1.5.0-20210307171643_ec60e8e
+dracut-metal-luksetcd=1.5.0-20210305145608_976acfa

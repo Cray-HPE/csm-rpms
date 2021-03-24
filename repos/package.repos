@@ -7,3 +7,6 @@ buildonly-suse-SLE-Module-Basesystem-PTF http://car.dev.cray.com/artifactory/mir
 # HPE-SPP
 # XXX Intentionally disabled for now, should be packaged by UAN or COS if required.
 # buildonly-hpe-spp-sle-15sp2 https://arti.dev.cray.com/artifactory/mirror-HPE-SPP/SUSE_LINUX/SLES15-SP2/x86_64/current/
+
+# SDU_RPM_REPO
+buildonly-sdu-shasta-1-4 http://dst.us.cray.com/dstrepo/bloblets/sdu/release/shasta-1.4/rpms/cray-sles15-ncn/

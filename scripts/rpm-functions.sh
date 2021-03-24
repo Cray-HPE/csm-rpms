@@ -26,7 +26,7 @@ function add-suse-repo() {
 function add-cray-repo() {
   local uri="$1"
   local ref="$2"
-  local name="$(echo "$uri" | tr -s -c '[:alnum:][:cntrl:]' -)"
+  local name="$(echo "$uri-$ref" | tr -s -c '[:alnum:][:cntrl:]' -)"
   shift 2
   for arch in "$@"; do
     # Uses CAR CI build repositories instead of bloblets to guarantee latest

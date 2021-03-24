@@ -1,17 +1,23 @@
+# shasta-1.4
 cos/DVS        release/shasta-1.4 x86_64
 cos/LUS        release/shasta-1.4 x86_64
 cos/SHASTA-3RD release/shasta-1.4 x86_64
 cos/SHASTA-OS  release/shasta-1.4 noarch x86_64
 
-csm/CDS   release/shasta-1.4 x86_64
-csm/CLOUD release/shasta-1.4 x86_64
-csm/CSM   release/shasta-1.4 noarch
-csm/MTL   release/shasta-1.4 noarch x86_64
-csm/SCMS  release/shasta-1.4 x86_64
-csm/SPET  release/shasta-1.4 noarch
-csm/UAS   release/shasta-1.4 x86_64
+csm/CDS      release/shasta-1.4 x86_64
+csm/CLOUD    release/shasta-1.4 x86_64
+csm/CSM      release/shasta-1.4 noarch
+csm/MTL      release/shasta-1.4 noarch x86_64
+csm/SCMS     release/shasta-1.4 x86_64
+csm/SPET     release/shasta-1.4 noarch
+csm/UAS      release/shasta-1.4 x86_64
+ct-tests/HMS release/shasta-1.4 x86_64
 
 sat/SAT release/shasta-1.4 x86_64
 
 slingshot/OFI-CRAY release/shasta-1.4 noarch x86_64
 slingshot/SSHOT    release/shasta-1.4 x86_64
+
+# dev/master
+csm/SPET dev/master noarch
+csm/SCMS dev/master x86_64
