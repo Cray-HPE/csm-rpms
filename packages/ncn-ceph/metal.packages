@@ -1,0 +1,6 @@
+# SES
+ses-release=7-64.1
+
+# Base
+haproxy=2.0.14-bp152.1.1
+keepalived=2.0.19-bp152.1.9
