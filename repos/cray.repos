@@ -9,9 +9,10 @@ csm/CLOUD    release/shasta-1.4 x86_64
 csm/CSM      release/shasta-1.4 noarch
 csm/MTL      release/shasta-1.4 noarch x86_64
 csm/SCMS     release/shasta-1.4 x86_64
-csm/SPET     release/shasta-1.4 noarch
+csm/SPET     release/shasta-1.4 noarch x86_64
 csm/UAS      release/shasta-1.4 x86_64
 ct-tests/HMS release/shasta-1.4 x86_64
+csm/CRAY-HPE release/shasta-1.4 noarch
 
 sat/SAT release/shasta-1.4 x86_64
 
