@@ -73,7 +73,6 @@ syslinux=4.04-8.14
 systemd-bash-completion=234-24.79.1
 tar=1.30-3.3.2
 tcpdump=4.9.2-3.12.1
-timezone=2021a-3.44.1
 traceroute=2.0.21-1.29
 usbutils=008-1.30
 vim=data-common-8.0.1568-5.11.1
