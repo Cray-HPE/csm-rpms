@@ -19,5 +19,11 @@ slingshot/OFI-CRAY release/shasta-1.4 noarch x86_64
 slingshot/SSHOT    release/shasta-1.4 x86_64
 
 # dev/master
-csm/SPET dev/master noarch
-csm/SCMS dev/master x86_64
+csm/SPET     dev/master noarch x86_64
+csm/SCMS     dev/master x86_64
+csm/CLOUD    dev/master x86_64
+csm/CSM      dev/master x86_64
+csm/MTL      dev/master x86_64
+csm/CRAY-HPE dev/master x86_64
+
+slingshot/OFI-CRAY dev/master noarch x86_64
