@@ -81,16 +81,3 @@ wget=1.20.3-3.9.2
 which=2.21-2.20
 wireshark=3.2.8-3.44.1
 wol=0.7.1-2.5
-
-# ISO Packages
-branding-SLE=15-20.3.3
-dracut-kiwi-live=9.21.23-3.30.2
-
-# Bootstrap Packages
-ca-certificates=2+git20170807.10b2785-7.3.3
-ca-certificates-mozilla=2.44-9.6.1
-cracklib-dict-full=2.8.12-1.22
-filesystem=15.0-11.3.2
-glibc-locale=base-2.26-13.56.1
-SLE_HPC-release=15.2-44.3
-udev=234-24.79.1
