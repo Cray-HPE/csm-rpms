@@ -26,7 +26,7 @@ mdadm=4.1-15.26.1
 
 # CSM Testing
 csm-testing=1.6.2-20210326133247_9b474e8
-goss-servers=1.4.6-20210304172137_e2c4225
+goss-servers=1.6.2-20210326133247_9b474e8
 hpe-csm-goss-package=0.3.13-20210127124704_aae8d77
 hpe-csm-yq-package=3.4.1-20210221105415_40f15a6
 
