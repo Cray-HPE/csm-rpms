@@ -124,5 +124,4 @@ usbutils=008-1.30
 wget=1.20.3-3.9.2
 wireshark=3.2.8-3.44.1
 xfsdump=3.1.6-1.30
-yum-metadata-parser=1.1.2-1.29
 zip=3.0-2.22
