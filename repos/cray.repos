@@ -20,7 +20,10 @@ slingshot/OFI-CRAY release/shasta-1.4 noarch x86_64
 slingshot/SSHOT    release/shasta-1.4 x86_64
 
 # csm-1.0
-csm/MTL release/csm-1.0 noarch x86_64
+csm/CRAY-HPE release/csm-1.0 noarch x86_64
+csm/CSM      release/csm-1.0 noarch
+csm/MTL      release/csm-1.0 noarch x86_64
+csm/SCMS     release/csm-1.0 x86_64
 
 # dev/master
 csm/SPET     dev/master noarch x86_64
