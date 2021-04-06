@@ -1,5 +1,5 @@
 #CMS
-cfs-state-reporter=1.4.6-20210128142236_6bb340b
+cfs-state-reporter=1.5.3-20210331154622_d0d0346
 
 # COS
 acpid=2.0.31-1.1
@@ -21,14 +21,14 @@ craycli=0.40.9-20210219163514_90a38c0
 cryptsetup=2.0.6-4.3.1
 dosfstools=4.1-1.39
 dracut-kiwi-live=9.21.23-3.30.2
-dracut-metal-mdsquash=1.5.0-20210303192957_e38984f
-hpe-csm-scripts=0.0.6-20210218130520_73db7a5
+dracut-metal-mdsquash=1.5.2-20210328044042_e23ba0b
+hpe-csm-scripts=0.0.9-20210325201219_b15e8e1
 lvm2=2.03.05-8.24.1
 mdadm=4.1-15.26.1
 
 # CSM Testing
-csm-testing=1.6.2-20210331162053_c511ccd
-goss-servers=1.6.2-20210402133118_84d1ce3
+csm-testing=1.6.2-20210329144529_9b474e8
+goss-servers=1.6.2-20210329144529_9b474e8
 hpe-csm-goss-package=0.3.13-20210127124704_aae8d77
 hpe-csm-yq-package=3.4.1-20210221105415_40f15a6
 
