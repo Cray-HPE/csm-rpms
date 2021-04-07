@@ -38,6 +38,74 @@ function install-packages() {
   zypper -n install --auto-agree-with-licenses --no-recommends $(sed '/^[a-zA-Z].*$/!d' $packages_path)
 }
 
+function update-package-versions() {
+  local packages_path="$1"
+  local output_diffs_only="$2"
+  local filter="$3"
+
+  if [[ ! -z "$filter" ]]; then
+    echo "Filtering packages with regex $filter"
+  fi
+
+  local package_names=""
+
+  # Filter out just the package names we want
+  while read -r package; do
+    local parts=(${package//=/ })
+    local package=${parts[0]}
+    local version=${parts[1]}
+
+    if [[ ! -z "$filter" && ! $package =~ $filter ]]; then
+      continue
+    fi
+
+    package_names="${package_names} $package"
+  done < <(sed '/^[a-zA-Z].*$/!d' $packages_path)
+
+
+  echo "Looking up latest versions"
+
+  local package_info=$(zypper --no-refresh info $package_names)
+
+  for package in $package_names; do
+    local current_version=$(cat $packages_path | grep -oP "^${package}=\K.*$")
+    local latest_version=$(echo "${package_info}" | grep -oPz "Name + : ${package}\nVersion + : \K.*" | tr '\0' '\n')
+
+    if [[ "$latest_version" == "" ]]; then
+      echo
+      echo "Couldn't find latest version of '$package'. Skipping"
+      continue
+    fi
+
+
+    if [[ "$current_version" != "$latest_version" || $output_diffs_only != "true" ]]; then
+      echo
+      echo "Package:         $package"
+      echo "Current version: $current_version"
+      echo "Latest version:  $latest_version"
+    fi
+
+    if [[ "$current_version" != "$latest_version" && $output_diffs_only != "true" ]]; then
+      read -p "Update package lock version (y/N)?" answer
+      if [[ "$answer" == "y" ]]; then
+        update-package-version $packages_path $package $latest_version
+        echo "Packages file updated"
+      fi
+    elif [[ $output_diffs_only != "true" ]]; then
+      echo "Version already up to date"
+    fi
+
+  done
+}
+
+function update-package-version() {
+  local packages_path="$1"
+  local package="$2"
+  local new_version="$3"
+
+  sed -i "s/$package=.*/$package=$new_version/g" $packages_path
+}
+
 function get-current-package-list() {
   local inventory_file=$(mktemp)
   local output_path="$1"
