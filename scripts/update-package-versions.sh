@@ -3,11 +3,43 @@
 function usage(){
     cat <<EOF
 Usage:
-    update-package-versions.sh PACKAGES_FILE
 
-    Will check latest package versions and prompt to update that version the csm-rpms
-    packages file
+    update-package-versions.sh
 
+    Loops through the packages in the given packages-file path and compares the packages locked version to the latest found version the defined repos.
+    One by one, if an update is found the script prompts if the version should be updated in the packages file.
+    If you choose to update the version then the given packages-file is updated directly.
+    You can then git commit to the appropriate branch and create a PR.
+
+    -p|--packages-file <path>  Required: The packages file path to update versions in (eg packages/node-image-non-compute-common/base.packages)
+
+    [-f|--filter <pattern>]    Package regex pattern to filter against. Only packages matching the filter will be queried and prompted to update. (eg cray-)
+    [-r|--repos <pattern>]     Repo regex pattern to filter against. Latest version will only be looked up in repos names matching the filter. (eg SUSE)
+    [-o|--output-diffs-only]   The package information, including the latest found version, will be outputted instead of prompting to update the package file directly
+    [--no-cache]               Destroy the docker image used as a cache so we do not have to re-add repos on every usage
+    [--refresh]                Do a zypper refresh before querying for latest versions
+    [--help]                   Prints this usage and exists
+
+    Examples
+
+    ./scripts/update-package-versions.sh -p packages/node-image-non-compute-common/base.packages
+    --------------
+    Query all packages in base.packages and prompt the user to update the version if a newer version is found in the repos one by one.
+
+
+    ./scripts/update-package-versions.sh -p packages/node-image-non-compute-common/base.packages -f '^cray' -o
+    --------------
+    Query packages in base.packages that start with 'cray'. Only print out packages that have a different version found
+
+
+    ./scripts/update-package-versions.sh -p packages/node-image-non-compute-common/base.packages -f cray-network-config -r shasta-1.4
+    --------------
+    Only update the package cray-network-config in a repo that contains the shasta-1.4 name
+
+
+    ./scripts/update-package-versions.sh -p packages/node-image-non-compute-common/base.packages -r buildonly-SUSE
+    --------------
+    Only update packages found in the upstream SUSE repos
 EOF
 }
 
@@ -15,6 +47,7 @@ SOURCE_DIR="$(dirname $0)/.."
 SOURCE_DIR="$(pushd "$SOURCE_DIR" > /dev/null && pwd && popd > /dev/null)"
 
 OUTPUT_DIFFS_ONLY="false"
+REPOS_FILTER="all"
 
 while [[ "$#" -gt 0 ]]
 do
@@ -29,13 +62,16 @@ do
     -f|--filter)
       FILTER="$2"
       ;;
+    -r|--repos)
+      REPOS_FILTER="$2"
+      ;;
     -o|--output-diffs-only)
       OUTPUT_DIFFS_ONLY="true"
       ;;
-    -n|--no-cache)
+    --no-cache)
       NO_CACHE="true"
       ;;
-    -r|--refresh)
+    --refresh)
       REFRESH="true"
       ;;
 
@@ -46,6 +82,7 @@ done
 
 if [[ -z "$PACKAGES_FILE" ]]; then
     echo >&2 "error: missing -p packaages-file option"
+    usage
     exit 3
 fi
 
@@ -56,7 +93,7 @@ DOCKER_BASE_IMAGE="opensuse/leap:15.2"
 
 if [[ "$NO_CACHE" == "true" && "$(docker images -q $DOCKER_CACHE_IMAGE 2> /dev/null)" != "" ]]; then
   echo "Removing docker image cache $DOCKER_CACHE_IMAGE"
-  docker rmi --force $DOCKER_CACHE_IMAGE
+  docker rmi $DOCKER_CACHE_IMAGE || docker rmi --force $DOCKER_CACHE_IMAGE
 fi
 
 if [[ "$(docker images -q $DOCKER_CACHE_IMAGE 2> /dev/null)" == "" ]]; then
@@ -84,5 +121,5 @@ docker run -it --rm -v $SOURCE_DIR:/csm-rpms --init $DOCKER_CACHE_IMAGE bash -c 
     zypper --no-refresh info man
   fi
 
-  update-package-versions /csm-rpms/${PACKAGES_FILE} ${OUTPUT_DIFFS_ONLY} ${FILTER}
+  update-package-versions /csm-rpms/${PACKAGES_FILE} ${REPOS_FILTER} ${OUTPUT_DIFFS_ONLY} ${FILTER}
 "

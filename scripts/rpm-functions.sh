@@ -40,8 +40,9 @@ function install-packages() {
 
 function update-package-versions() {
   local packages_path="$1"
-  local output_diffs_only="$2"
-  local filter="$3"
+  local repos_filter="$2"
+  local output_diffs_only="$3"
+  local filter="$4"
 
   if [[ ! -z "$filter" ]]; then
     echo "Filtering packages with regex $filter"
@@ -65,22 +66,32 @@ function update-package-versions() {
 
   echo "Looking up latest versions"
 
-  local package_info=$(zypper --no-refresh info $package_names)
+  if [[ "$repos_filter" != "all" ]]; then
+    local repos=$(zypper lr | grep "${repos_filter}" | awk '{printf " -r %s", $1}')
+    echo "Filtering repos matching grep pattern ${repos_filter}"
+    if [[ -z "$repos" ]]; then
+      echo "Error: No repos matched filter"
+      exit 1
+    fi
+  else
+    local repos=""
+  fi
+
+  local package_info=$(zypper --no-refresh info $repos $package_names)
 
   for package in $package_names; do
     local current_version=$(cat $packages_path | grep -oP "^${package}=\K.*$")
     local latest_version=$(echo "${package_info}" | grep -oPz "Name + : ${package}\nVersion + : \K.*" | tr '\0' '\n')
-
-    if [[ "$latest_version" == "" ]]; then
-      echo
-      echo "Couldn't find latest version of '$package'. Skipping"
-      continue
-    fi
-
+    local repo=$(echo "${package_info}" | grep -oPz "Repository + : .*\nName + : ${package}\n" | grep -oPz "Repository + : \K.*" | tr '\0' '\n')
 
     if [[ "$current_version" != "$latest_version" || $output_diffs_only != "true" ]]; then
       echo
       echo "Package:         $package"
+      if [[ "$latest_version" == "" ]]; then
+        echo "                 Couldn't find '$package' in current repo list. Skipping"
+        continue
+      fi
+      echo "Repository:      $repo"
       echo "Current version: $current_version"
       echo "Latest version:  $latest_version"
     fi
