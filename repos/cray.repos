@@ -1,36 +1,25 @@
-# shasta-1.4
-cos/DVS        release/shasta-1.4 x86_64
-cos/LUS        release/shasta-1.4 x86_64
-cos/SHASTA-3RD release/shasta-1.4 x86_64
-cos/SHASTA-OS  release/shasta-1.4 noarch x86_64
+http://car.dev.cray.com/artifactory/cos/DVS/sle15_sp2_ncn/x86_64/release/shasta-1.4/             cray-cos-sle-15sp2-x86_64-DVS-shasta-1.4             cray/cos/sle-15sp2/x86_64
+http://car.dev.cray.com/artifactory/cos/LUS/sle15_sp2_ncn/x86_64/release/shasta-1.4/             cray-cos-sle-15sp2-x86_64-LUS-shasta-1.4             cray/cos/sle-15sp2/x86_64
+http://car.dev.cray.com/artifactory/cos/SHASTA-3RD/sle15_sp2_ncn/x86_64/release/shasta-1.4/      cray-cos-sle-15sp2-x86_64-SHASTA-3RD-shasta-1.4      cray/cos/sle-15sp2/x86_64
+http://car.dev.cray.com/artifactory/cos/SHASTA-OS/sle15_sp2_ncn/noarch/release/shasta-1.4/       cray-cos-sle-15sp2-noarch-SHASTA-OS-shasta-1.4       cray/cos/sle-15sp2/noarch
+http://car.dev.cray.com/artifactory/cos/SHASTA-OS/sle15_sp2_ncn/x86_64/release/shasta-1.4/       cray-cos-sle-15sp2-x86_64-SHASTA-OS-shasta-1.4       cray/cos/sle-15sp2/x86_64
 
-csm/CDS      release/shasta-1.4 x86_64
-csm/CLOUD    release/shasta-1.4 x86_64
-csm/CSM      release/shasta-1.4 noarch
-csm/MTL      release/shasta-1.4 noarch x86_64
-csm/SCMS     release/shasta-1.4 x86_64
-csm/SPET     release/shasta-1.4 noarch x86_64
-csm/UAS      release/shasta-1.4 x86_64
-ct-tests/HMS release/shasta-1.4 x86_64
-csm/CRAY-HPE release/shasta-1.4 noarch
+http://car.dev.cray.com/artifactory/csm/CSM/sle15_sp2_ncn/noarch/dev/master/                     cray-csm-sle-15sp2-noarch-CSM-master                 cray/csm/sle-15sp2/noarch
+http://car.dev.cray.com/artifactory/csm/CRAY-HPE/sle15_sp2_ncn/noarch/release/csm-1.0/           cray-csm-sle-15sp2-noarch-CRAY-HPE-1.0               cray/csm/sle-15sp2/noarch
+http://car.dev.cray.com/artifactory/csm/CRAY-HPE/sle15_sp2_ncn/x86_64/release/csm-1.0/           cray-csm-sle-15sp2-x86_64-CRAY-HPE-1.0               cray/csm/sle-15sp2/x86_64
+http://car.dev.cray.com/artifactory/csm/CSM/sle15_sp2_ncn/noarch/release/csm-1.0/                cray-csm-sle-15sp2-noarch-CSM-1.0                    cray/csm/sle-15sp2/noarch
+http://car.dev.cray.com/artifactory/csm/MTL/sle15_sp2_ncn/noarch/release/csm-1.0/                cray-csm-sle-15sp2-noarch-MTL-1.0                    cray/csm/sle-15sp2/noarch
+http://car.dev.cray.com/artifactory/csm/MTL/sle15_sp2_ncn/x86_64/release/csm-1.0/                cray-csm-sle-15sp2-x86_64-MTL-1.0                    cray/csm/sle-15sp2/x86_64
+http://car.dev.cray.com/artifactory/csm/SCMS/sle15_sp2_ncn/x86_64/release/csm-1.0/               cray-csm-sle-15sp2-x86_64-SCMS-1.0                   cray/csm/sle-15sp2/x86_64
+http://car.dev.cray.com/artifactory/csm/SPET/sle15_sp2_ncn/x86_64/release/shasta-1.4/            cray-csm-sle-15sp2-x86_64-SPET-shasta-1.4            cray/csm/sle-15sp2/x86_64
+https://arti.dev.cray.com/artifactory/csm-rpm-stable-local/sle-15sp2/                            cray-csm-sle-15sp2-stable                            cray/csm/sle-15sp2
 
-sat/SAT release/shasta-1.4 x86_64
+http://car.dev.cray.com/artifactory/sat/SAT/sle15_sp2_ncn/x86_64/release/shasta-1.4/             cray-sat-sle-15sp2-x86_64-SAT-shasta-1.4             cray/sat/sle-15sp2/x86_64
 
-slingshot/OFI-CRAY release/shasta-1.4 noarch x86_64
-slingshot/SSHOT    release/shasta-1.4 x86_64
+http://car.dev.cray.com/artifactory/slingshot/OFI-CRAY/sle15_sp2_ncn/noarch/release/shasta-1.5/  cray-slingshot-sle-15sp2-noarch-OFI_CRAY-shasta-1.5  cray/slingshot/sle-15sp2/noarch
+http://car.dev.cray.com/artifactory/slingshot/OFI-CRAY/sle15_sp2_ncn/x86_64/release/shasta-1.5/  cray-slingshot-sle-15sp2-x86_64-OFI_CRAY-shasta-1.5  cray/slingshot/sle-15sp2/x86_64
+http://car.dev.cray.com/artifactory/slingshot/OFI-CRAY/sle15_sp2_ncn/noarch/release/shasta-1.4/  cray-slingshot-sle-15sp2-noarch-OFI_CRAY-shasta-1.4  cray/slingshot/sle-15sp2/noarch
+http://car.dev.cray.com/artifactory/slingshot/OFI-CRAY/sle15_sp2_ncn/x86_64/release/shasta-1.4/  cray-slingshot-sle-15sp2-x86_64-OFI_CRAY-shasta-1.4  cray/slingshot/sle-15sp2/x86_64
+http://car.dev.cray.com/artifactory/slingshot/SSHOT/sle15_sp2_ncn/x86_64/release/shasta-1.4/     cray-slingshot-sle-15sp2-x86_64-SSHOT-shasta-1.4     cray/slingshot/sle-15sp2/x86_64
 
-# csm-1.0
-csm/CRAY-HPE release/csm-1.0 noarch x86_64
-csm/CSM      release/csm-1.0 noarch
-csm/MTL      release/csm-1.0 noarch x86_64
-csm/SCMS     release/csm-1.0 x86_64
-
-# dev/master
-csm/SPET     dev/master noarch x86_64
-csm/SCMS     dev/master x86_64
-csm/CLOUD    dev/master x86_64
-csm/CSM      dev/master noarch
-csm/MTL      dev/master noarch x86_64
-csm/CRAY-HPE dev/master noarch
-
-slingshot/OFI-CRAY dev/master noarch x86_64
+http://dst.us.cray.com/dstrepo/bloblets/sdu/release/shasta-1.4/rpms/cray-sles15-ncn/             cray-sdu-sle-15-x86_64-shasta-1.4                    cray/sdu/sle-15/x86_64
