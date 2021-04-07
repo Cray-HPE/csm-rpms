@@ -1,62 +1,32 @@
 #!/bin/bash
 CSM_RPMS_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}")/.." &> /dev/null && pwd )"
 
-function add-package-repo() {
-  local name="$1"
-  local uri="$2"
-  local priority="${3:-99}" # Set to 99 (default) and pass verbosely.
-  echo "Adding rpm repo ${name} at repo url ${uri}"
-  zypper -n addrepo --no-gpgcheck -p ${priority:-99} ${uri} ${name}
-  zypper -n --gpg-auto-import-keys refresh ${name}
-}
-
-# Adds SUSE Products and Updates repositories; optional URI suffix supports
-# Storage repositories
-function add-suse-repo() {
-  local uri="$1"
-  if [[ "$uri" == "${uri%%/*}" ]]; then
-    local uri="${uri}/15-SP2"
-  fi
-  local repo="$(echo "$uri" | tr -s -c '[:alnum:][:cntrl:]' -)"
-  add-package-repo "buildonly-suse-${repo}-Pool"    "https://arti.dev.cray.com/artifactory/mirror-SUSE/Products/${uri}/x86_64/product/"
-  add-package-repo "buildonly-suse-${repo}-Updates" "https://arti.dev.cray.com/artifactory/mirror-SUSE/Updates/${uri}/x86_64/update/"
-}
-
-# Adds Cray repositories for specified architectures
-function add-cray-repo() {
-  local uri="$1"
-  local ref="$2"
-  local name="$(echo "$uri-$ref" | tr -s -c '[:alnum:][:cntrl:]' -)"
-  shift 2
-  for arch in "$@"; do
-    # Uses CAR CI build repositories instead of bloblets to guarantee latest
-    # RPMs are available.
-    add-package-repo "buildonly-cray-${name}-sle-15sp2-${arch}" "http://car.dev.cray.com/artifactory/${uri}/sle15_sp2_ncn/${arch}/${ref}/" "${priority:-89}"
+function add-repos() {
+  local priority="${2:-99}"
+  sed -e 's/#.*$//' -e '/[[:space:]]/!d' "$1" | awk '{print $1, $2}' | while read url name; do
+    local alias="buildonly-${name}"
+    echo "Adding repo ${alias} at ${url}"
+    zypper -n addrepo --no-gpgcheck -p "${priority}" "${url}" "${alias}"
+    zypper -n --gpg-auto-import-keys refresh "${alias}"
   done
 }
 
 # Read repos from manifest files and add to repos accordingly
-function add-package-repos() {
-  sed '/^[a-zA-Z].*$/!d' ${CSM_RPMS_DIR}/repos/package.repos | while read -r line; do
-    add-package-repo $line
-  done
+function add-hpe-spp-repos() {
+  add-repos "${CSM_RPMS_DIR}/repos/hpe-spp.repos" 94
 }
 
 function add-suse-repos() {
-  sed '/^[a-zA-Z].*$/!d' ${CSM_RPMS_DIR}/repos/suse.repos | while read -r line; do
-    add-suse-repo $line
-  done
+  add-repos "${CSM_RPMS_DIR}/repos/suse.repos" 99
 }
 
 function add-cray-repos() {
-  sed '/^[a-zA-Z].*$/!d' ${CSM_RPMS_DIR}/repos/cray.repos | while read -r line; do
-    add-cray-repo $line
-  done
+  add-repos "${CSM_RPMS_DIR}/repos/cray.repos" 89
 }
 
 function setup-package-repos() {
   add-suse-repos
-  add-package-repos
+  add-hpe-spp-repos
   add-cray-repos
 
   zypper lr -e /tmp/repos.repos
