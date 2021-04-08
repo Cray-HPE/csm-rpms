@@ -72,7 +72,7 @@ function get-package-list-from-inventory() {
 
 function cleanup-package-repos() {
   echo "Cleaning up buildonly-* package repos"
-  for repo in $(zypper lr | awk -F' | ' '{print $3}' | grep ^buildonly); do
+  for repo in $(zypper lr | awk -F'|' '{gsub(/ /,""); print $3}' | grep '^buildonly'); do
     echo "Removing package repo ${repo}"
     zypper -n removerepo ${repo} || true
   done
