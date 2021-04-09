@@ -5,6 +5,7 @@ http://car.dev.cray.com/artifactory/cos/SHASTA-OS/sle15_sp2_ncn/noarch/release/s
 http://car.dev.cray.com/artifactory/cos/SHASTA-OS/sle15_sp2_ncn/x86_64/release/shasta-1.4/       cray-cos-sle-15sp2-x86_64-SHASTA-OS-shasta-1.4       cray/cos/sle-15sp2/x86_64
 
 http://car.dev.cray.com/artifactory/csm/CSM/sle15_sp2_ncn/noarch/dev/master/                     cray-csm-sle-15sp2-noarch-CSM-master                 cray/csm/sle-15sp2/noarch
+http://car.dev.cray.com/artifactory/csm/CLOUD/sle15_sp2_ncn/x86_64/release/csm-1.0/              cray-csm-sle-15sp2-x86_64-CLOUD-1.0                  cray/csm/sle-15sp2/x86_64
 http://car.dev.cray.com/artifactory/csm/CRAY-HPE/sle15_sp2_ncn/noarch/release/csm-1.0/           cray-csm-sle-15sp2-noarch-CRAY-HPE-1.0               cray/csm/sle-15sp2/noarch
 http://car.dev.cray.com/artifactory/csm/CRAY-HPE/sle15_sp2_ncn/x86_64/release/csm-1.0/           cray-csm-sle-15sp2-x86_64-CRAY-HPE-1.0               cray/csm/sle-15sp2/x86_64
 http://car.dev.cray.com/artifactory/csm/CSM/sle15_sp2_ncn/noarch/release/csm-1.0/                cray-csm-sle-15sp2-noarch-CSM-1.0                    cray/csm/sle-15sp2/noarch
