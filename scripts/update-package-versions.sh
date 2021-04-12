@@ -16,6 +16,7 @@ Usage:
     [-f|--filter <pattern>]    Package regex pattern to filter against. Only packages matching the filter will be queried and prompted to update. (eg cray-)
     [-r|--repos <pattern>]     Repo regex pattern to filter against. Latest version will only be looked up in repos names matching the filter. (eg SUSE)
     [-o|--output-diffs-only]   The package information, including the latest found version, will be outputted instead of prompting to update the package file directly
+    [-y|--yes]                 No prompts, instead auto updates the package file with any new version that matches other option filters
     [--no-cache]               Destroy the docker image used as a cache so we do not have to re-add repos on every usage
     [--refresh]                Do a zypper refresh before querying for latest versions
     [--help]                   Prints this usage and exists
@@ -40,6 +41,11 @@ Usage:
     ./scripts/update-package-versions.sh -p packages/node-image-non-compute-common/base.packages -r buildonly-SUSE
     --------------
     Only update packages found in the upstream SUSE repos
+
+    ./scripts/update-package-versions.sh -p packages/node-image-non-compute-common/base.packages -r buildonly-SUSE -y
+    --------------
+    Same as the last example, but automatically update all SUSE packages rather than prompt one by one
+
 EOF
 }
 
@@ -48,6 +54,7 @@ SOURCE_DIR="$(pushd "$SOURCE_DIR" > /dev/null && pwd && popd > /dev/null)"
 
 OUTPUT_DIFFS_ONLY="false"
 REPOS_FILTER="all"
+AUTO_YES="false"
 
 while [[ "$#" -gt 0 ]]
 do
@@ -67,6 +74,9 @@ do
       ;;
     -o|--output-diffs-only)
       OUTPUT_DIFFS_ONLY="true"
+      ;;
+    -y|--yes)
+      AUTO_YES="true"
       ;;
     --no-cache)
       NO_CACHE="true"
@@ -123,5 +133,5 @@ docker run -it --rm -v $SOURCE_DIR:/csm-rpms --init $DOCKER_CACHE_IMAGE bash -c 
     zypper --no-refresh info man
   fi
 
-  update-package-versions /csm-rpms/${PACKAGES_FILE} ${REPOS_FILTER} ${OUTPUT_DIFFS_ONLY} ${FILTER}
+  update-package-versions /csm-rpms/${PACKAGES_FILE} ${REPOS_FILTER} ${OUTPUT_DIFFS_ONLY} ${AUTO_YES} ${FILTER}
 "

@@ -42,7 +42,8 @@ function update-package-versions() {
   local packages_path="$1"
   local repos_filter="$2"
   local output_diffs_only="$3"
-  local filter="$4"
+  local auto_yes="$4"
+  local filter="$5"
 
   if [[ ! -z "$filter" ]]; then
     echo "Filtering packages with regex $filter"
@@ -97,8 +98,10 @@ function update-package-versions() {
     fi
 
     if [[ "$current_version" != "$latest_version" && $output_diffs_only != "true" ]]; then
-      read -p "Update package lock version (y/N)?" answer
-      if [[ "$answer" == "y" ]]; then
+      if [[ "$auto_yes" != "true" ]]; then
+        read -p "Update package lock version (y/N)?" answer
+      fi
+      if [[ "$auto_yes" == "true" || "$answer" == "y" ]]; then
         update-package-version $packages_path $package $latest_version
         echo "Packages file updated"
       fi
