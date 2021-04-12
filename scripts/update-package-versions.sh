@@ -89,7 +89,7 @@ fi
 echo "Updating packages file $PACKAGES_FILE"
 
 DOCKER_CACHE_IMAGE="csm-rpms-cache"
-DOCKER_BASE_IMAGE="opensuse/leap:15.2"
+DOCKER_BASE_IMAGE="arti.dev.cray.com/baseos-docker-master-local/sles15sp2:latest"
 
 if [[ "$NO_CACHE" == "true" && "$(docker images -q $DOCKER_CACHE_IMAGE 2> /dev/null)" != "" ]]; then
   echo "Removing docker image cache $DOCKER_CACHE_IMAGE"
@@ -102,6 +102,8 @@ if [[ "$(docker images -q $DOCKER_CACHE_IMAGE 2> /dev/null)" == "" ]]; then
 
   docker run -it --name $DOCKER_CACHE_IMAGE -v $SOURCE_DIR:/csm-rpms $DOCKER_BASE_IMAGE bash -c "
     source /csm-rpms/scripts/rpm-functions.sh
+    zypper --non-interactive install gawk
+    cleanup-all-repos
     setup-package-repos
     zypper refresh
     # Force a cache update
