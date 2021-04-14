@@ -17,6 +17,7 @@ Usage:
     [-r|--repos <pattern>]     Repo regex pattern to filter against. Latest version will only be looked up in repos names matching the filter. (eg SUSE)
     [-o|--output-diffs-only]   The package information, including the latest found version, will be outputted instead of prompting to update the package file directly
     [-y|--yes]                 No prompts, instead auto updates the package file with any new version that matches other option filters
+    [--validate]               Validate that packages exist instead looking for newer versions
     [--no-cache]               Destroy the docker image used as a cache so we do not have to re-add repos on every usage
     [--refresh]                Do a zypper refresh before querying for latest versions
     [--help]                   Prints this usage and exists
@@ -78,6 +79,9 @@ do
     -y|--yes)
       AUTO_YES="true"
       ;;
+    --validate)
+      VALIDATE="true"
+      ;;
     --no-cache)
       NO_CACHE="true"
       ;;
@@ -88,15 +92,6 @@ do
   esac
   shift
 done
-
-
-if [[ -z "$PACKAGES_FILE" ]]; then
-    echo >&2 "error: missing -p packaages-file option"
-    usage
-    exit 3
-fi
-
-echo "Updating packages file $PACKAGES_FILE"
 
 DOCKER_CACHE_IMAGE="csm-rpms-cache"
 DOCKER_BASE_IMAGE="arti.dev.cray.com/baseos-docker-master-local/sles15sp2:latest"
@@ -110,14 +105,15 @@ if [[ "$(docker images -q $DOCKER_CACHE_IMAGE 2> /dev/null)" == "" ]]; then
   echo "Creating docker cache image"
   docker rm $DOCKER_CACHE_IMAGE 2> /dev/null || true
 
-  docker run -it --name $DOCKER_CACHE_IMAGE -v $SOURCE_DIR:/csm-rpms $DOCKER_BASE_IMAGE bash -c "
+  docker run --name $DOCKER_CACHE_IMAGE -v $SOURCE_DIR:/csm-rpms $DOCKER_BASE_IMAGE bash -c "
+    set -e
     source /csm-rpms/scripts/rpm-functions.sh
     zypper --non-interactive install gawk
     cleanup-all-repos
     setup-package-repos
     zypper refresh
     # Force a cache update
-    zypper --no-refresh info man
+    zypper --no-refresh info man > /dev/null 2>&1
   "
 
   echo "Creating cache docker image $DOCKER_CACHE_IMAGE"
@@ -125,13 +121,45 @@ if [[ "$(docker images -q $DOCKER_CACHE_IMAGE 2> /dev/null)" == "" ]]; then
   docker rm $DOCKER_CACHE_IMAGE
 fi
 
-docker run -it --rm -v $SOURCE_DIR:/csm-rpms --init $DOCKER_CACHE_IMAGE bash -c "
-  source /csm-rpms/scripts/rpm-functions.sh
-  if [[ \"$REFRESH\" == \"true\" ]]; then
+if [[ "$REFRESH" == "true" ]]; then
+  docker rm $DOCKER_CACHE_IMAGE 2> /dev/null || true
+  docker run --name $DOCKER_CACHE_IMAGE -v $SOURCE_DIR:/csm-rpms --init $DOCKER_CACHE_IMAGE bash -c "
+    set -e
+    source /csm-rpms/scripts/rpm-functions.sh
     zypper refresh
     # Force a cache update
-    zypper --no-refresh info man
-  fi
+    zypper --no-refresh info man > /dev/null 2>&1
+  "
+  echo "Updating cache docker image $DOCKER_CACHE_IMAGE"
+  docker commit $DOCKER_CACHE_IMAGE $DOCKER_CACHE_IMAGE
+  docker rm $DOCKER_CACHE_IMAGE
 
-  update-package-versions /csm-rpms/${PACKAGES_FILE} ${REPOS_FILTER} ${OUTPUT_DIFFS_ONLY} ${AUTO_YES} ${FILTER}
+  if [[ -z "$PACKAGES_FILE" ]]; then
+    exit 0
+  fi
+fi
+
+if [[ -z "$PACKAGES_FILE" ]]; then
+    echo >&2 "error: missing -p packaages-file option"
+    usage
+    exit 3
+fi
+
+echo "Working with packages file $PACKAGES_FILE"
+
+# Only use tty when we'll prompt. This will allow jenkins or other automation to work
+if [[ "$VALIDATE" == "true" || "$AUTO_YES" == "true" || OUTPUT_DIFFS_ONLY == "true" ]]; then
+  DOCKER_TTY_ARG=""
+else
+  DOCKER_TTY_ARG="-it"
+fi
+
+docker run $DOCKER_TTY_ARG --rm -v $SOURCE_DIR:/csm-rpms --init $DOCKER_CACHE_IMAGE bash -c "
+  set -e
+  source /csm-rpms/scripts/rpm-functions.sh
+  if [[ \"$VALIDATE\" == \"true\" ]]; then
+    validate-package-versions /csm-rpms/${PACKAGES_FILE}
+  else
+    update-package-versions /csm-rpms/${PACKAGES_FILE} ${REPOS_FILTER} ${OUTPUT_DIFFS_ONLY} ${AUTO_YES} ${FILTER}
+  fi
 "
