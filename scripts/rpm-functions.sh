@@ -22,6 +22,7 @@ function add-suse-repos() {
 
 function add-cray-repos() {
   add-repos "${CSM_RPMS_DIR}/repos/cray.repos" 89
+  add-repos "${CSM_RPMS_DIR}/repos/cray-metal.repos" 89
 }
 
 function setup-package-repos() {
