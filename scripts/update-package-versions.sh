@@ -105,7 +105,7 @@ if [[ "$(docker images -q $DOCKER_CACHE_IMAGE 2> /dev/null)" == "" ]]; then
   echo "Creating docker cache image"
   docker rm $DOCKER_CACHE_IMAGE 2> /dev/null || true
 
-  docker run -it --name $DOCKER_CACHE_IMAGE -v $SOURCE_DIR:/csm-rpms $DOCKER_BASE_IMAGE bash -c "
+  docker run --name $DOCKER_CACHE_IMAGE -v $SOURCE_DIR:/csm-rpms $DOCKER_BASE_IMAGE bash -c "
     source /csm-rpms/scripts/rpm-functions.sh
     zypper --non-interactive install gawk
     cleanup-all-repos
@@ -122,7 +122,7 @@ fi
 
 if [[ "$REFRESH" == "true" ]]; then
   docker rm $DOCKER_CACHE_IMAGE 2> /dev/null || true
-  docker run -it --name $DOCKER_CACHE_IMAGE -v $SOURCE_DIR:/csm-rpms --init $DOCKER_CACHE_IMAGE bash -c "
+  docker run --name $DOCKER_CACHE_IMAGE -v $SOURCE_DIR:/csm-rpms --init $DOCKER_CACHE_IMAGE bash -c "
     source /csm-rpms/scripts/rpm-functions.sh
     zypper refresh
     # Force a cache update
@@ -145,7 +145,14 @@ fi
 
 echo "Working with packages file $PACKAGES_FILE"
 
-docker run -it --rm -v $SOURCE_DIR:/csm-rpms --init $DOCKER_CACHE_IMAGE bash -c "
+# Only use tty when we'll prompt. This will allow jenkins or other automation to work
+if [[ "$VALIDATE" == "true" || "$AUTO_YES" == "true" || OUTPUT_DIFFS_ONLY == "true" ]]; then
+  DOCKER_TTY_ARG=""
+else
+  DOCKER_TTY_ARG="-it"
+fi
+
+docker run $DOCKER_TTY_ARG --rm -v $SOURCE_DIR:/csm-rpms --init $DOCKER_CACHE_IMAGE bash -c "
   source /csm-rpms/scripts/rpm-functions.sh
   if [[ \"$VALIDATE\" == \"true\" ]]; then
     validate-package-versions /csm-rpms/${PACKAGES_FILE}
