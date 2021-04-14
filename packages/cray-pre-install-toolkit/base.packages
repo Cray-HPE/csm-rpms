@@ -1,7 +1,7 @@
 # CSM Packages
 apache2=2.4.43-3.17.1
 cray-nexus=0.9.1-2.20210324074110_59d2799
-cray-site-init=1.5.28-20210414103441_cb6210d
+cray-site-init=1.5.28-20210414110517_7b763eb
 craycli=0.40.9-20210408072059_4dfdfcf
 csm-install-workarounds-0.1.9-20210413100714_054497f
 csm-testing=1.6.4-20210409150938_69b1515
