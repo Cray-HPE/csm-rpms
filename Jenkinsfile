@@ -24,6 +24,7 @@ pipeline {
       steps {
         sh """
           ./scripts/update-package-versions.sh -p packages/cray-pre-install-toolkit/base.packages --validate
+          ./scripts/update-package-versions.sh -p packages/cray-pre-install-toolkit/metal.packages --validate
         """
       }
     }
