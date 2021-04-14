@@ -106,6 +106,7 @@ if [[ "$(docker images -q $DOCKER_CACHE_IMAGE 2> /dev/null)" == "" ]]; then
   docker rm $DOCKER_CACHE_IMAGE 2> /dev/null || true
 
   docker run --name $DOCKER_CACHE_IMAGE -v $SOURCE_DIR:/csm-rpms $DOCKER_BASE_IMAGE bash -c "
+    set -e
     source /csm-rpms/scripts/rpm-functions.sh
     zypper --non-interactive install gawk
     cleanup-all-repos
@@ -123,6 +124,7 @@ fi
 if [[ "$REFRESH" == "true" ]]; then
   docker rm $DOCKER_CACHE_IMAGE 2> /dev/null || true
   docker run --name $DOCKER_CACHE_IMAGE -v $SOURCE_DIR:/csm-rpms --init $DOCKER_CACHE_IMAGE bash -c "
+    set -e
     source /csm-rpms/scripts/rpm-functions.sh
     zypper refresh
     # Force a cache update
@@ -153,6 +155,7 @@ else
 fi
 
 docker run $DOCKER_TTY_ARG --rm -v $SOURCE_DIR:/csm-rpms --init $DOCKER_CACHE_IMAGE bash -c "
+  set -e
   source /csm-rpms/scripts/rpm-functions.sh
   if [[ \"$VALIDATE\" == \"true\" ]]; then
     validate-package-versions /csm-rpms/${PACKAGES_FILE}
