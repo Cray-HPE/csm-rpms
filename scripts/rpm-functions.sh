@@ -125,7 +125,7 @@ function validate-package-versions() {
   local packages_path="$1"
 
   echo "Running zypper install --dry-run to validate packages"
-  zypper --no-refresh --non-interactive install --dry-run --auto-agree-with-licenses --no-recommends  $(sed '/^[a-zA-Z].*$/!d' $packages_path)
+  zypper --no-refresh --non-interactive install --dry-run --auto-agree-with-licenses --no-recommends --force-resolution $(sed '/^[a-zA-Z].*$/!d' $packages_path)
 }
 
 function get-current-package-list() {
