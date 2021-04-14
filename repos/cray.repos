@@ -4,14 +4,6 @@ http://car.dev.cray.com/artifactory/cos/SHASTA-3RD/sle15_sp2_ncn/x86_64/release/
 http://car.dev.cray.com/artifactory/cos/SHASTA-OS/sle15_sp2_ncn/noarch/release/shasta-1.4/       cray-cos-sle-15sp2-noarch-SHASTA-OS-shasta-1.4       cray/cos/sle-15sp2/noarch
 http://car.dev.cray.com/artifactory/cos/SHASTA-OS/sle15_sp2_ncn/x86_64/release/shasta-1.4/       cray-cos-sle-15sp2-x86_64-SHASTA-OS-shasta-1.4       cray/cos/sle-15sp2/x86_64
 
-# Metal repositories; NCN and LiveCD; dracut, iPXE, cloud-init.
-http://car.dev.cray.com/artifactory/csm/CRAY-HPE/sle15_sp2_ncn/noarch/dev/master/                cray-csm-sle-15sp2-noarch-MTL-CRAY-HPE-master        cray/csm/sle-15sp2/noarch
-http://car.dev.cray.com/artifactory/csm/CRAY-HPE/sle15_sp2_ncn/noarch/release/csm-1.0/           cray-csm-sle-15sp2-noarch-MTL-CRAY-HPE-1.0           cray/csm/sle-15sp2/noarch
-http://car.dev.cray.com/artifactory/csm/MTL/sle15_sp2_ncn/noarch/dev/master/                     cray-csm-sle-15sp2-noarch-MTL-master                 cray/csm/sle-15sp2/noarch
-http://car.dev.cray.com/artifactory/csm/MTL/sle15_sp2_ncn/noarch/release/csm-1.0/                cray-csm-sle-15sp2-noarch-MTL-1.0                    cray/csm/sle-15sp2/noarch
-http://car.dev.cray.com/artifactory/csm/MTL/sle15_sp2_ncn/x86_64/dev/master/                     cray-csm-sle-15sp2-x86_64-MTL-master                 cray/csm/sle-15sp2/x86_64
-http://car.dev.cray.com/artifactory/csm/MTL/sle15_sp2_ncn/x86_64/release/csm-1.0/                cray-csm-sle-15sp2-x86_64-MTL-1.0                    cray/csm/sle-15sp2/x86_64
-
 http://car.dev.cray.com/artifactory/csm/CLOUD/sle15_sp2_ncn/x86_64/release/csm-1.0/              cray-csm-sle-15sp2-x86_64-CLOUD-1.0                  cray/csm/sle-15sp2/x86_64
 http://car.dev.cray.com/artifactory/csm/CSM/sle15_sp2_ncn/noarch/dev/master/                     cray-csm-sle-15sp2-noarch-CSM-master                 cray/csm/sle-15sp2/noarch
 http://car.dev.cray.com/artifactory/csm/CSM/sle15_sp2_ncn/noarch/release/csm-1.0/                cray-csm-sle-15sp2-noarch-CSM-1.0                    cray/csm/sle-15sp2/noarch
