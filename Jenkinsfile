@@ -28,11 +28,11 @@ pipeline {
       }
     }
 
-    stage('Validate node-image-non-common packages') {
+    stage('Validate node-image-non-compute-common packages') {
       steps {
         sh """
-          ./scripts/update-package-versions.sh -p packages/node-image-non-common/base.packages --validate
-          ./scripts/update-package-versions.sh -p packages/node-image-non-common/metal.packages --validate
+          ./scripts/update-package-versions.sh -p packages/node-image-non-compute-common/base.packages --validate
+          ./scripts/update-package-versions.sh -p packages/node-image-non-compute-common/metal.packages --validate
         """
       }
     }
