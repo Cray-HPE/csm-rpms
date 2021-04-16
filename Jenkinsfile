@@ -11,11 +11,15 @@ pipeline {
     timestamps()
   }
 
+  environment {
+    SUFFIX = "${env.JOB_BASE_NAME.replaceAll("%2F","-")}-${env.BUILD_NUMBER}"
+  }
+
   stages {
     stage('Setup Docker Cache') {
       steps {
         sh """
-          ./scripts/update-package-versions.sh --refresh --no-cache --suffix ${JOB_BASE_NAME}-${BUILD_NUMBER}
+          ./scripts/update-package-versions.sh --refresh --no-cache --suffix ${env.SUFFIX}
         """
       }
     }
@@ -23,8 +27,8 @@ pipeline {
     stage('Validate cray-pre-install-toolkit packages') {
       steps {
         sh """
-          ./scripts/update-package-versions.sh -p packages/cray-pre-install-toolkit/base.packages --validate --suffix ${JOB_BASE_NAME}-${BUILD_NUMBER}
-          ./scripts/update-package-versions.sh -p packages/cray-pre-install-toolkit/metal.packages --validate --suffix ${JOB_BASE_NAME}-${BUILD_NUMBER}
+          ./scripts/update-package-versions.sh -p packages/cray-pre-install-toolkit/base.packages --validate --suffix ${env.SUFFIX}
+          ./scripts/update-package-versions.sh -p packages/cray-pre-install-toolkit/metal.packages --validate --suffix ${env.SUFFIX}
         """
       }
     }
@@ -32,8 +36,8 @@ pipeline {
     stage('Validate node-image-non-compute-common packages') {
       steps {
         sh """
-          ./scripts/update-package-versions.sh -p packages/node-image-non-compute-common/base.packages --validate --suffix ${JOB_BASE_NAME}-${BUILD_NUMBER}
-          ./scripts/update-package-versions.sh -p packages/node-image-non-compute-common/metal.packages --validate --suffix ${JOB_BASE_NAME}-${BUILD_NUMBER}
+          ./scripts/update-package-versions.sh -p packages/node-image-non-compute-common/base.packages --validate --suffix ${env.SUFFIX}
+          ./scripts/update-package-versions.sh -p packages/node-image-non-compute-common/metal.packages --validate --suffix ${env.SUFFIX}
         """
       }
     }
@@ -41,9 +45,9 @@ pipeline {
     stage('Validate node-image-kubernetes packages') {
       steps {
         sh """
-          ./scripts/update-package-versions.sh -p packages/node-image-kubernetes/base.packages --validate --suffix ${JOB_BASE_NAME}-${BUILD_NUMBER}
-          ./scripts/update-package-versions.sh -p packages/node-image-kubernetes/metal.packages --validate --suffix ${JOB_BASE_NAME}-${BUILD_NUMBER}
-          ./scripts/update-package-versions.sh -p packages/node-image-kubernetes/google.packages --validate --suffix ${JOB_BASE_NAME}-${BUILD_NUMBER}
+          ./scripts/update-package-versions.sh -p packages/node-image-kubernetes/base.packages --validate --suffix ${env.SUFFIX}
+          ./scripts/update-package-versions.sh -p packages/node-image-kubernetes/metal.packages --validate --suffix ${env.SUFFIX}
+          ./scripts/update-package-versions.sh -p packages/node-image-kubernetes/google.packages --validate --suffix ${env.SUFFIX}
         """
       }
     }
@@ -51,8 +55,8 @@ pipeline {
     stage('Validate node-image-storage-ceph packages') {
       steps {
         sh """
-          ./scripts/update-package-versions.sh -p packages/node-image-storage-ceph/base.packages --validate --suffix ${JOB_BASE_NAME}-${BUILD_NUMBER}
-          ./scripts/update-package-versions.sh -p packages/node-image-storage-ceph/metal.packages --validate --suffix ${JOB_BASE_NAME}-${BUILD_NUMBER}
+          ./scripts/update-package-versions.sh -p packages/node-image-storage-ceph/base.packages --validate --suffix ${env.SUFFIX}
+          ./scripts/update-package-versions.sh -p packages/node-image-storage-ceph/metal.packages --validate --suffix ${env.SUFFIX}
         """
       }
     }
