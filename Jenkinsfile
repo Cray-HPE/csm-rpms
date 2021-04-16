@@ -12,7 +12,7 @@ pipeline {
   }
 
   environment {
-    SUFFIX = "${env.JOB_BASE_NAME.replaceAll("%2F","-")}-${env.BUILD_NUMBER}"
+    SUFFIX = "${env.JOB_BASE_NAME.replaceAll("%2F","-").toLowerCase()}-${env.BUILD_NUMBER}"
   }
 
   stages {
