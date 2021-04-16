@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+set -ex
 
 function usage(){
     cat <<EOF
@@ -19,6 +20,7 @@ Usage:
     [-y|--yes]                 No prompts, instead auto updates the package file with any new version that matches other option filters
     [--validate]               Validate that packages exist instead looking for newer versions
     [--no-cache]               Destroy the docker image used as a cache so we do not have to re-add repos on every usage
+    [--suffix <string>]        Suffix to add to the end of the docker image and container so this can be run in parallel in CI
     [--refresh]                Do a zypper refresh before querying for latest versions
     [--help]                   Prints this usage and exists
 
@@ -57,6 +59,9 @@ OUTPUT_DIFFS_ONLY="false"
 REPOS_FILTER="all"
 AUTO_YES="false"
 
+DOCKER_CACHE_IMAGE="csm-rpms-cache"
+DOCKER_BASE_IMAGE="arti.dev.cray.com/baseos-docker-master-local/sles15sp2:latest"
+
 while [[ "$#" -gt 0 ]]
 do
   case $1 in
@@ -85,6 +90,9 @@ do
     --no-cache)
       NO_CACHE="true"
       ;;
+    --suffix)
+      DOCKER_CACHE_IMAGE="${DOCKER_CACHE_IMAGE}-$2"
+      ;;
     --refresh)
       REFRESH="true"
       ;;
@@ -93,8 +101,6 @@ do
   shift
 done
 
-DOCKER_CACHE_IMAGE="csm-rpms-cache"
-DOCKER_BASE_IMAGE="arti.dev.cray.com/baseos-docker-master-local/sles15sp2:latest"
 
 if [[ "$NO_CACHE" == "true" && "$(docker images -q $DOCKER_CACHE_IMAGE 2> /dev/null)" != "" ]]; then
   echo "Removing docker image cache $DOCKER_CACHE_IMAGE"
