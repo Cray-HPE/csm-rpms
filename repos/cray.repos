@@ -19,4 +19,5 @@ http://car.dev.cray.com/artifactory/slingshot/OFI-CRAY/sle15_sp2_ncn/noarch/rele
 http://car.dev.cray.com/artifactory/slingshot/OFI-CRAY/sle15_sp2_ncn/x86_64/release/shasta-1.4/  cray-slingshot-sle-15sp2-x86_64-OFI_CRAY-shasta-1.4  cray/slingshot/sle-15sp2/x86_64
 http://car.dev.cray.com/artifactory/slingshot/SSHOT/sle15_sp2_ncn/x86_64/release/shasta-1.4/     cray-slingshot-sle-15sp2-x86_64-SSHOT-shasta-1.4     cray/slingshot/sle-15sp2/x86_64
 
-http://dst.us.cray.com/dstrepo/bloblets/sdu/release/shasta-1.4/rpms/cray-sles15-ncn/             cray-sdu-sle-15-x86_64-shasta-1.4                    cray/sdu/sle-15/x86_64
+http://car.dev.cray.com/artifactory/sdu/SSA/sle15_sp2_ncn/noarch/release/shasta-1.4/             cray-sdu-sle-15sp2-noarch-shasta-1.4                 cray/sdu/sle-15sp2/noarch
+http://car.dev.cray.com/artifactory/sdu/SSA/sle15_sp2_ncn/x86_64/release/shasta-1.4/             cray-sdu-sle-15sp2-x86_64-shasta-1.4                 cray/sdu/sle-15sp2/x86_64
