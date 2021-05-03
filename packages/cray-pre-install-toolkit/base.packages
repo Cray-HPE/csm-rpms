@@ -1,7 +1,6 @@
 # CSM Packages
 apache2=2.4.43-3.17.1
 cray-nexus=0.9.1-2.20210324074110_59d2799
-cray-site-init=1.5.31-20210427152722_e9f331a
 craycli=0.40.9-20210408072059_4dfdfcf
 csm-testing=1.6.6-20210423144707_096f25f
 hpe-csm-scripts=0.0.9-20210325201219_b15e8e1
