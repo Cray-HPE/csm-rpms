@@ -9,6 +9,7 @@ http://car.dev.cray.com/artifactory/csm/CSM/sle15_sp2_ncn/noarch/dev/master/    
 http://car.dev.cray.com/artifactory/csm/CSM/sle15_sp2_ncn/noarch/release/csm-1.0/                cray-csm-sle-15sp2-noarch-CSM-1.0                    cray/csm/sle-15sp2/noarch
 http://car.dev.cray.com/artifactory/csm/SCMS/sle15_sp2_ncn/x86_64/release/csm-1.0/               cray-csm-sle-15sp2-x86_64-SCMS-1.0                   cray/csm/sle-15sp2/x86_64
 http://car.dev.cray.com/artifactory/csm/SPET/sle15_sp2_ncn/x86_64/release/shasta-1.4/            cray-csm-sle-15sp2-x86_64-SPET-shasta-1.4            cray/csm/sle-15sp2/x86_64
+http://car.dev.cray.com/artifactory/csm/SPET/sle15_sp2_ncn/noarch/dev/master                     cray-csm-sle-15sp2-x86_64-SPET-master                cray/csm/sle-15sp2/noarch
 https://arti.dev.cray.com/artifactory/csm-rpm-stable-local/sle-15sp2/                            cray-csm-sle-15sp2-stable                            cray/csm/sle-15sp2
 
 http://car.dev.cray.com/artifactory/ct-tests/HMS/sle15_sp2_ncn/x86_64/release/csm-1.0/           cray-ct-tests-sle-15sp2-x86_64-HMS-1.0               cray/csm/sle-15sp2/x86_64
