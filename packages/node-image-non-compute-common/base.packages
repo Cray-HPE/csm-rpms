@@ -21,7 +21,7 @@ craycli=0.40.15-20210430145614_ace95bd
 cryptsetup=2.0.6-4.3.1
 dosfstools=4.1-1.39
 dracut-kiwi-live=9.23.20-3.37.1
-hpe-csm-scripts=0.0.9-20210426150421_291073d
+hpe-csm-scripts-0.0.10-20210507121314_7dc812e
 lvm2=2.03.05-8.24.1
 mdadm=4.1-15.29.1
 
