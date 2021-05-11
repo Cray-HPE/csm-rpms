@@ -1,9 +1,47 @@
 #!/bin/bash
+
 CSM_RPMS_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}")/.." &> /dev/null && pwd )"
 
-function add-repos() {
-  local priority="${2:-99}"
-  sed -e 's/#.*$//' -e '/[[:space:]]/!d' "$1" | awk '{print $1, $2}' | while read url name; do
+function list-suse-repos-files() {
+  cat <<EOF
+${CSM_RPMS_DIR}/repos/suse.repos
+EOF
+}
+
+function list-hpe-spp-repos-files() {
+  cat <<EOF
+${CSM_RPMS_DIR}/repos/hpe-spp.repos
+EOF
+}
+
+function list-cray-repos-files() {
+  cat <<EOF
+${CSM_RPMS_DIR}/repos/cray.repos
+${CSM_RPMS_DIR}/repos/cray-metal.repos
+EOF
+}
+
+function list-cray-compute-repos-files() {
+  cat <<EOF
+${CSM_RPMS_DIR}/repos/cray-compute.repos
+EOF
+}
+
+function remove-comments-and-empty-lines() {
+  sed -e 's/#.*$//' -e '/^[[:space:]]*$/d' "$@"
+}
+
+function zypper-add-repos() {
+  remove-comments-and-empty-lines \
+  | awk '
+        function priority(path) {
+            if (path~/^cray\//) { return "89" }
+            else if (path~/^hpe-spp\//) { return "94" }
+            else { return "99" }
+        }
+        { print $1, $2, priority($3) }
+    ' \
+  | while read url name priority; do
     local alias="buildonly-${name}"
     echo "Adding repo ${alias} at ${url}"
     zypper -n addrepo --no-gpgcheck -p "${priority}" "${url}" "${alias}"
@@ -11,18 +49,16 @@ function add-repos() {
   done
 }
 
-# Read repos from manifest files and add to repos accordingly
 function add-hpe-spp-repos() {
-  add-repos "${CSM_RPMS_DIR}/repos/hpe-spp.repos" 94
+  list-hpe-spp-repos-files | xargs -r cat | zypper-add-repos
 }
 
 function add-suse-repos() {
-  add-repos "${CSM_RPMS_DIR}/repos/suse.repos" 99
+  list-suse-repos-files | xargs -r cat | zypper-add-repos
 }
 
 function add-cray-repos() {
-  add-repos "${CSM_RPMS_DIR}/repos/cray.repos" 89
-  add-repos "${CSM_RPMS_DIR}/repos/cray-metal.repos" 89
+  list-cray-repos-files | xargs -r cat | zypper-add-repos
 }
 
 function setup-package-repos() {
@@ -34,9 +70,25 @@ function setup-package-repos() {
   cat /tmp/repos.repos
 }
 
+function list-packages-files() {
+  find "${CSM_RPMS_DIR}/packages" \( -name '*.packages' ! -name 'compute-*.packages' \)
+}
+
+function list-packages() {
+  list-package-files | xargs -r cat | remove-comments-and-empty-lines
+}
+
+function list-compute-packages-files() {
+  find "${CSM_RPMS_DIR}/packages" -name 'compute-*.packages'
+}
+
+function list-compute-packages() {
+  list-compute-package-files | xargs -r cat | removoe-comments-and-empty-lines
+}
+
 function install-packages() {
-  local packages_path="$1"
-  zypper -n install --auto-agree-with-licenses --no-recommends $(sed '/^[a-zA-Z].*$/!d' $packages_path)
+  remove-comments-and-empty-lines "$1" \
+  | xargs -r zypper -n install --auto-agree-with-licenses --no-recommends
 }
 
 function update-package-versions() {

@@ -1,11 +1,11 @@
 # CSM Packages
 apache2=2.4.43-3.17.1
-cray-nexus=0.9.1-2.20210228170751_089e8b8
+cray-nexus=0.9.1-2.20210615200736_91df64a
 craycli=0.40.19-20210517151806_c1fa76f
 csm-testing=1.6.26-20210630144801_431eacd
 hpe-csm-scripts-0.0.18-20210629211338_898ef4f
-loftsman=1.1.0-20210511145611_2a1e195
-manifestgen=1.3.2-20210219124117_7c59985
+loftsman=1.1.0-20210511145236_2da0507
+manifestgen=1.3.2-20210628125752_1f628f7
 canu=0.0.5~alpha~2~master.60d9e08-1
 
 # SUSE Packages
@@ -28,7 +28,6 @@ grub2=2.04-9.45.2
 grub2-branding-SLE=15-20.6.1
 grub2-i386-pc=2.04-9.45.2
 grub2-x86_64-efi=2.04-9.45.2
-hpe-csm-goss-package=0.3.13-20210127124704_aae8d77
 ipmitool=1.8.18+git20200204.7ccea28-1.22
 iproute2=5.3-5.2.1
 iproute2-bash-completion=5.3-5.2.1

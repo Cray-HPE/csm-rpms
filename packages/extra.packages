@@ -1,0 +1,7 @@
+docs-csm-install=1.10.22-20210629143329_a129d3d
+csm-install-workarounds=0.1.11-20210622150140_49a352b
+
+cf-ca-cert-config-framework=2.1.4-20210421175117_5d25a0d
+csm-ssh-keys=1.1.5-20210401003643_84bf548
+csm-ssh-keys-roles=1.1.5-20210401003643_84bf548
+shasta-authorization-module=1.4.4-20210422170705_cdabbd1
