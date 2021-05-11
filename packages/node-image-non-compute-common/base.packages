@@ -3,6 +3,7 @@ cfs-state-reporter=1.5.6-20210512192639_4dfe6af
 
 #CSM
 acpid=2.0.31-1.1
+amsd=2.3.0
 biosdevname=0.7.3-5.3.1
 bsdtar=3.4.2-2.24
 cloud-init=20.2-8.45.1

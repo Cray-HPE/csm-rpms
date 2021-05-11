@@ -1,7 +1,9 @@
 # Airgap/Firmware Packages
+amsd=2.3.0
+cray-shasta-mlnx-firmware=1.0.8-20210105144446_9873a54
 firmware-ilo5=2.30-1.1
 firmware-system-a41=2.42_2020_07_17-1.1
 firmware-system-a42=1.30_2020_07_18-1.1
 firmware-system-a43=1.30_2020_07_18-1.1
-cray-shasta-mlnx-firmware=1.0.8-20210105144446_9873a54
 kernel-firmware=20200107-3.20.1
+mft=4.15.1-9
