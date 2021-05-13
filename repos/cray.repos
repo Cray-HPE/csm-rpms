@@ -1,5 +1,3 @@
-http://car.dev.cray.com/artifactory/cos/DVS/sle15_sp2_ncn/x86_64/release/shasta-1.4/             cray-cos-sle-15sp2-x86_64-DVS-shasta-1.4             cray/cos/sle-15sp2/x86_64
-http://car.dev.cray.com/artifactory/cos/LUS/sle15_sp2_ncn/x86_64/release/shasta-1.4/             cray-cos-sle-15sp2-x86_64-LUS-shasta-1.4             cray/cos/sle-15sp2/x86_64
 http://car.dev.cray.com/artifactory/cos/SHASTA-3RD/sle15_sp2_ncn/x86_64/release/shasta-1.4/      cray-cos-sle-15sp2-x86_64-SHASTA-3RD-shasta-1.4      cray/cos/sle-15sp2/x86_64
 http://car.dev.cray.com/artifactory/cos/SHASTA-OS/sle15_sp2_ncn/noarch/release/shasta-1.4/       cray-cos-sle-15sp2-noarch-SHASTA-OS-shasta-1.4       cray/cos/sle-15sp2/noarch
 http://car.dev.cray.com/artifactory/cos/SHASTA-OS/sle15_sp2_ncn/x86_64/release/shasta-1.4/       cray-cos-sle-15sp2-x86_64-SHASTA-OS-shasta-1.4       cray/cos/sle-15sp2/x86_64
