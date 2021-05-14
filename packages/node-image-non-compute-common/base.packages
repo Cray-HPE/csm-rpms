@@ -4,12 +4,7 @@ cfs-state-reporter=1.5.6-20210512192639_4dfe6af
 # COS
 acpid=2.0.31-1.1
 cray-cos-release=1.0.1-20210502211115_3b69a58
-cray-dvs-kmp-default=2.12_4.0.109_k5.3.18_24.52-1.4.0.0_12.1__g29c84f13
-cray-dvs-service=2.12_4.0.109-1.4.0.0_12.1__g29c84f13
 cray-heartbeat=1.0.46-1.4.0.0_4.1__g14563d6.shasta
-cray-lustre-client-devel=2.12.4.2_cray_18_g0120bae-7.0.1.0_2.2__g0120bae110.shasta
-cray-lustre-client-kmp-default=2.12.4.2_cray_18_g0120bae_k5.3.18_24.52-1.4.0.0_2.18__g0120bae110.shasta
-cray-lustre-client=2.12.4.2_cray_18_g0120bae-7.0.1.0_2.2__g0120bae110.shasta
 cray-node-identity=0.4.4-20210407142127_177bdcd
 cray-power-button=1.2.1-20210407142215_b1c1c7e
 
