@@ -22,3 +22,5 @@ http://car.dev.cray.com/artifactory/slingshot/SSHOT/sle15_sp2_ncn/x86_64/release
 
 http://car.dev.cray.com/artifactory/sdu/SSA/sle15_sp2_ncn/noarch/release/shasta-1.4/             cray-sdu-sle-15sp2-noarch-shasta-1.4                 cray/sdu/sle-15sp2/noarch
 http://car.dev.cray.com/artifactory/sdu/SSA/sle15_sp2_ncn/x86_64/release/shasta-1.4/             cray-sdu-sle-15sp2-x86_64-shasta-1.4                 cray/sdu/sle-15sp2/x86_64
+
+https://arti.dev.cray.com/artifactory/csm-rpm-stable-local/hpe/                                  x86_64/canu                                          cray/csm/sle-15sp2/x86_64

@@ -19,6 +19,7 @@ dracut-kiwi-live=9.23.20-3.37.1
 hpe-csm-scripts-0.0.10-20210507121314_7dc812e
 lvm2=2.03.05-8.30.1
 mdadm=4.1-15.29.1
+canu=0.0.5~alpha~feature_rpm.0610967-1
 
 # CSM Testing
 csm-testing=1.6.9-20210512163750_91d0523
