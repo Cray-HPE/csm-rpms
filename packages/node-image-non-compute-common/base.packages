@@ -21,8 +21,8 @@ lvm2=2.03.05-8.30.1
 mdadm=4.1-15.29.1
 
 # CSM Testing
-csm-testing=1.6.9-20210512163750_91d0523
-goss-servers=1.6.9-20210512163750_91d0523
+csm-testing=1.6.12-20210514150558_a2761cc
+goss-servers=1.6.12-20210514150558_a2761cc
 hpe-csm-goss-package=0.3.13-20210127124706_aae8d77
 hpe-csm-yq-package=3.4.1-20210221105415_40f15a6
 
