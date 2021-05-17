@@ -6,7 +6,7 @@ ipvsadm=1.29-2.25
 python3-boto3=1.14.40-7.11.1
 platform-utils=0.1.10-20210505190713_0a18461
 hms-ct-test-crayctldeploy=1.6.0-20210509171532_3a8e016
-cray-cmstools-crayctldeploy=0.9.24-20210406104524_cd36ddb
+cray-cmstools-crayctldeploy-1.0.3-20210517140201_6731fdf
 rpm-build=4.14.1-20.3
 
 # COS
