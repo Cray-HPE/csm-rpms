@@ -9,11 +9,5 @@ hms-ct-test-crayctldeploy=1.6.0-20210509171532_3a8e016
 cray-cmstools-crayctldeploy=0.9.24-20210406104524_cd36ddb
 rpm-build=4.14.1-20.3
 
-# COS
-cray-cps-utils=0.7.2-20210203161105_c771219
-cray-craytrace-kmp-default=2.3.9_k5.3.18_24.46-1.4.0.0_1.4__g8a12698.shasta
-cray-orca=0.7.4-20201209110559_f6a5aeb
-cray-liborca=0.7.4-20201209110559_f6a5aeb
-
 # SDU
 cray-sdu-rda=1.0.10-20210305090211_25386fe
