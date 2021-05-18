@@ -13,7 +13,7 @@ cray-power-button=1.2.1-20210407142215_b1c1c7e
 cryptsetup=2.0.6-4.3.1
 dosfstools=4.1-1.39
 dracut-kiwi-live=9.23.20-3.37.1
-hpe-csm-scripts-0.0.10-20210507121314_7dc812e
+hpe-csm-scripts-0.0.11-20210518153720_a2ec07c
 lvm2=2.03.05-8.30.1
 mdadm=4.1-15.29.1
 canu=0.0.5~alpha~feature_rpm.0610967-1
