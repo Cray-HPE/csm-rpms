@@ -8,12 +8,6 @@ loftsman=1.1.0-20210511145611_2a1e195
 manifestgen=1.3.2-20210219124117_7c59985
 canu=0.0.5~alpha~2~master.60d9e08-1
 
-# Airgap/Firmware Packages
-firmware-ilo5=2.30-1.1
-firmware-system-a41=2.42_2020_07_17-1.1
-firmware-system-a42=1.30_2020_07_18-1.1
-firmware-system-a43=1.30_2020_07_18-1.1
-
 # SUSE Packages
 bash-completion=2.7-4.3.1
 bc=1.07.1-3.3.1
@@ -23,7 +17,6 @@ bsdtar=3.4.2-2.24
 checkmedia=5.4-1.13
 chrony=3.2-9.21.1
 conman=0.3.0-1.42
-cray-shasta-mlnx-firmware=1.0.8-20210105144446_9873a54
 createrepo_c=0.15.4-1.54
 curl=7.66.0-4.17.1
 dhcp-client=4.3.5-6.6.1
@@ -42,7 +35,6 @@ iproute2-bash-completion=5.3-5.2.1
 iputils=s20161105-8.3.1
 jq=1.6-3.3.1
 kernel-default=5.3.18-24.64.1
-kernel-firmware=20200107-3.20.1
 kernel-mft-mlnx-kmp-default=4.15.1_k5.3.18_22-1.sles15sp2
 less=530-1.6
 lshw=B.02.19.2-3.6.1
