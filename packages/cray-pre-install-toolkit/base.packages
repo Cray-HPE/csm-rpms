@@ -9,7 +9,7 @@ manifestgen=1.3.2-20210219124117_7c59985
 canu=0.0.5~alpha~2~master.60d9e08-1
 
 # Airgap/Firmware Packages
-firmware-ilo5=2.30-1.1
+firmware-ilo5=2.42-1.1
 firmware-system-a41=2.42_2020_07_17-1.1
 firmware-system-a42=1.30_2020_07_18-1.1
 firmware-system-a43=1.30_2020_07_18-1.1
@@ -31,10 +31,10 @@ ethtool=5.3-1.32
 fontconfig=2.12.6-4.3.1
 fonts-config=20200609+git0.42e2b1b-4.7.1
 git=2.26.2-3.34.1
-grub2=2.04-9.42.1
+grub2=2.04-9.45.2
 grub2-branding-SLE=15-20.6.1
-grub2-i386-pc=2.04-9.42.1
-grub2-x86_64-efi=2.04-9.42.1
+grub2-i386-pc=2.04-9.45.2
+grub2-x86_64-efi=2.04-9.45.2
 hpe-csm-goss-package=0.3.13-20210127124704_aae8d77
 ipmitool=1.8.18+git20200204.7ccea28-1.22
 iproute2=5.3-5.2.1

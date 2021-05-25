@@ -12,21 +12,21 @@ cray-node-identity=0.4.4-20210407142127_177bdcd
 cray-power-button=1.2.1-20210407142215_b1c1c7e
 cryptsetup=2.0.6-4.3.1
 dosfstools=4.1-1.39
-dracut-kiwi-live=9.23.20-3.37.1
+dracut-kiwi-live=9.23.20-3.40.1
 hpe-csm-scripts-0.0.11-20210518153720_a2ec07c
 lvm2=2.03.05-8.30.1
-mdadm=4.1-15.29.1
+mdadm=4.1-15.32.1
 canu=0.0.5~alpha~2~master.60d9e08-1
 
 # CSM Testing
-csm-testing=1.6.14-20210521070821_6341120
-goss-servers=1.6.14-20210521070821_6341120
+csm-testing=1.6.15-20210521145045_a42c5d9
+goss-servers=1.6.15-20210521145045_a42c5d9
 hpe-csm-goss-package=0.3.13-20210127124706_aae8d77
 hpe-csm-yq-package=3.4.1-20210221105415_40f15a6
 
 # Slingshot
-cray-network-config=1.1.7-20210318094807_b409053
-slingshot-network-config=1.1.7-20210322150135_b7a9e10
+cray-network-config=1.1.7-20210519122219_58f7765
+slingshot-network-config=1.1.7-20210514123354_53c4375
 slingshot-utils=1.0.2-20210322150143_4679f59
 
 # Base
@@ -108,7 +108,7 @@ spire-agent=0.12.0-1_20210407135708_2d06876
 squid=4.13-5.23.1
 strace=5.3-1.44
 sysstat=12.0.2-3.27.1
-systemtap=4.2-1.47
+systemtap=4.2-3.3.1
 tcpdump=4.9.2-3.15.1
 unixODBC=2.3.6-3.2.1
 usbutils=008-1.30
