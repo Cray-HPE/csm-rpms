@@ -9,7 +9,7 @@ manifestgen=1.3.2-20210219124117_7c59985
 canu=0.0.5~alpha~2~master.60d9e08-1
 
 # Airgap/Firmware Packages
-firmware-ilo5=2.30-1.1
+firmware-ilo5=2.42-1.1
 firmware-system-a41=2.42_2020_07_17-1.1
 firmware-system-a42=1.30_2020_07_18-1.1
 firmware-system-a43=1.30_2020_07_18-1.1

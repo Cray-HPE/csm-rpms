@@ -10,4 +10,4 @@ cray-cmstools-crayctldeploy-1.0.3-20210517140201_6731fdf
 rpm-build=4.14.1-20.3
 
 # SDU
-cray-sdu-rda=1.0.10-20210305090211_25386fe
+cray-sdu-rda=1.0.11-20210428090209_e1b0e4a
