@@ -12,10 +12,10 @@ cray-node-identity=0.4.4-20210407142127_177bdcd
 cray-power-button=1.2.1-20210407142215_b1c1c7e
 cryptsetup=2.0.6-4.3.1
 dosfstools=4.1-1.39
-dracut-kiwi-live=9.23.20-3.37.1
+dracut-kiwi-live=9.23.20-3.40.1
 hpe-csm-scripts-0.0.11-20210518153720_a2ec07c
 lvm2=2.03.05-8.30.1
-mdadm=4.1-15.29.1
+mdadm=4.1-15.32.1
 canu=0.0.5~alpha~2~master.60d9e08-1
 
 # CSM Testing
@@ -108,7 +108,7 @@ spire-agent=0.12.0-1_20210407135708_2d06876
 squid=4.13-5.23.1
 strace=5.3-1.44
 sysstat=12.0.2-3.27.1
-systemtap=4.2-1.47
+systemtap=4.2-3.3.1
 tcpdump=4.9.2-3.15.1
 unixODBC=2.3.6-3.2.1
 usbutils=008-1.30
