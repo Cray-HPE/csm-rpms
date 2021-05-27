@@ -9,6 +9,7 @@ cloud-init=20.2-8.45.1
 craycli=0.40.19-20210517151806_c1fa76f
 cray-heartbeat=1.0.46-1.4.0.0_4.1__g14563d6.shasta
 cray-node-identity=0.4.4-20210407142127_177bdcd
+csm-node-identity=1.0.0-20210524153417_3e85dd5
 cray-power-button=1.2.1-20210407142215_b1c1c7e
 cryptsetup=2.0.6-4.3.1
 dosfstools=4.1-1.39
