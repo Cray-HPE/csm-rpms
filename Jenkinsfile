@@ -29,6 +29,7 @@ pipeline {
         sh """
           ./scripts/update-package-versions.sh -p packages/cray-pre-install-toolkit/base.packages --validate --suffix ${env.SUFFIX}
           ./scripts/update-package-versions.sh -p packages/cray-pre-install-toolkit/metal.packages --validate --suffix ${env.SUFFIX}
+          ./scripts/update-package-versions.sh -p packages/cray-pre-install-toolkit/firmware.packages --validate --suffix ${env.SUFFIX}
         """
       }
     }
