@@ -3,12 +3,12 @@ cfs-state-reporter=1.5.6-20210512192639_4dfe6af
 
 #CSM
 acpid=2.0.31-1.1
-amsd=2.3.0
+amsd=2.4.1-1571.4.sles15
 biosdevname=0.7.3-5.3.1
 bsdtar=3.4.2-2.24
 cloud-init=20.2-8.45.1
 craycli=0.40.19-20210517151806_c1fa76f
-cray-heartbeat=1.2.2-2.1_5.7__gf6fd0bd.shasta
+cray-heartbeat=1.2.2-2.1_5.10__gf6fd0bd.shasta
 cray-node-identity=0.4.5-2.1_20210415152224__gee8d79b
 csm-node-identity=1.0.0-20210524153417_3e85dd5
 cray-power-button=1.2.2-2.1_20210415152229__g3d80145
@@ -21,8 +21,8 @@ mdadm=4.1-15.32.1
 canu=0.0.5~alpha~2~master.60d9e08-1
 
 # CSM Testing
-csm-testing=1.6.15-20210527162846_b4290de
-goss-servers=1.6.15-20210527162846_b4290de
+csm-testing=1.6.17-20210602144710_6bfc26c
+goss-servers=1.6.17-20210602144710_6bfc26c
 hpe-csm-goss-package=0.3.13-20210127124706_aae8d77
 hpe-csm-yq-package=3.4.1-20210221105415_40f15a6
 
@@ -64,9 +64,9 @@ kernel-syms=5.3.18-24.64.1
 kmod-bash-completion=25-6.7.1
 less=530-1.6
 libcanberra-gtk0=0.30-3.2.3
-libecpg6=13.2-5.6.1
+libecpg6=13.3-5.10.1
 liblldp_clif1=1.0.1+65.f3b70663b55e-3.9.1
-libpq5=13.2-5.6.1
+libpq5=13.3-5.10.1
 libunwind-devel=1.5.0-4.5.1
 libpwquality1=1.4.4-3.3.2
 ltrace=0.7.91-4.3
