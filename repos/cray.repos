@@ -14,11 +14,9 @@ https://arti.dev.cray.com/artifactory/csm-rpm-stable-local/sle-15sp2/           
 
 http://car.dev.cray.com/artifactory/ct-tests/HMS/sle15_sp2_ncn/x86_64/release/csm-1.0/           cray-ct-tests-sle-15sp2-x86_64-HMS-1.0               cray/csm/sle-15sp2/x86_64
 
-http://car.dev.cray.com/artifactory/slingshot/OFI-CRAY/sle15_sp2_ncn/noarch/release/shasta-1.5/  cray-slingshot-sle-15sp2-noarch-OFI_CRAY-shasta-1.5  cray/slingshot/sle-15sp2/noarch
-http://car.dev.cray.com/artifactory/slingshot/OFI-CRAY/sle15_sp2_ncn/x86_64/release/shasta-1.5/  cray-slingshot-sle-15sp2-x86_64-OFI_CRAY-shasta-1.5  cray/slingshot/sle-15sp2/x86_64
+http://car.dev.cray.com/artifactory/slingshot-host-software/OFI-CRAY/sle15_sp2_ncn/noarch/dev/master/  cray-slingshot-sle-15sp2-noarch-OFI_CRAY-master      cray/slingshot/sle-15sp2/noarch
+http://car.dev.cray.com/artifactory/slingshot-host-software/OFI-CRAY/sle15_sp2_ncn/x86_64/dev/master/  cray-slingshot-sle-15sp2-x86_64-OFI_CRAY-master      cray/slingshot/sle-15sp2/x86_64
 
-http://car.dev.cray.com/artifactory/slingshot/OFI-CRAY/sle15_sp2_ncn/noarch/release/shasta-1.4/  cray-slingshot-sle-15sp2-noarch-OFI_CRAY-shasta-1.4  cray/slingshot/sle-15sp2/noarch
-http://car.dev.cray.com/artifactory/slingshot/OFI-CRAY/sle15_sp2_ncn/x86_64/release/shasta-1.4/  cray-slingshot-sle-15sp2-x86_64-OFI_CRAY-shasta-1.4  cray/slingshot/sle-15sp2/x86_64
 http://car.dev.cray.com/artifactory/slingshot/SSHOT/sle15_sp2_ncn/x86_64/release/shasta-1.4/     cray-slingshot-sle-15sp2-x86_64-SSHOT-shasta-1.4     cray/slingshot/sle-15sp2/x86_64
 
 http://car.dev.cray.com/artifactory/sdu/SSA/sle15_sp2_ncn/noarch/release/sdu-1.1/                cray-sdu-sle-15sp2-noarch-sdu-1.1                    cray/sdu/sle-15sp2/noarch
