@@ -27,9 +27,9 @@ hpe-csm-goss-package=0.3.13-20210127124706_aae8d77
 hpe-csm-yq-package=3.4.1-20210221105415_40f15a6
 
 # Slingshot
-cray-network-config=1.1.7-20210318094807_b409053
-slingshot-network-config=1.1.7-20210322150135_b7a9e10
-slingshot-utils=1.0.2-20210322150143_4679f59
+cray-network-config=1.1.9-SSHOT1.2.0_20210525173205_10c569d.x86_64.rpm
+slingshot-network-config=1.1.14-SSHOT1.2.0_20210525173338_9681235.x86_64.rpm
+slingshot-utils=1.0.6-SSHOT1.2.0_20210527162827_ba53f9f.x86_64.rpm
 
 # Base
 apparmor-profiles=2.13.4-3.3.1
