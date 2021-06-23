@@ -21,8 +21,8 @@ mdadm=4.1-15.32.1
 canu=0.0.5~alpha~2~master.60d9e08-1
 
 # CSM Testing
-csm-testing=1.6.22-20210617152016_4b643cf
-goss-servers=1.6.22-20210617152016_4b643cf
+csm-testing=1.6.24-20210622195637_2791e85
+goss-servers=1.6.24-20210622195637_2791e85
 hpe-csm-goss-package=0.3.13-20210127124706_aae8d77
 hpe-csm-yq-package=3.4.1-20210221105415_40f15a6
 
