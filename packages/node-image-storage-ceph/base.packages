@@ -1,7 +1,7 @@
 # Base
 python3-boto3=1.14.40-7.11.1
-python3-six=1.14.0-7.3.1
+python3-six=1.14.0-10.1
 python3-netaddr=0.7.19-1.17
 netcat-openbsd=1.178-1.24
 jq=1.6-3.3.1
-cephadm=15.2.12.83+g528da226523-3.25.1
+cephadm=15.2.13.79+g51835b62d61-3.28.1

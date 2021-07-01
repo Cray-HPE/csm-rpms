@@ -170,7 +170,7 @@ function update-package-version() {
   local package="$2"
   local new_version="$3"
 
-  sed -i "s/$package=.*/$package=$new_version/g" $packages_path
+  sed -e "s/$package=.*/$package=$new_version/g" -i "$packages_path"
 }
 
 function validate-package-versions() {
