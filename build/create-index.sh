@@ -28,7 +28,7 @@ sed -e '/^Not downloading package /!d' \
     -e 's/[[:space:]]\+.*$//' \
 | sort -u \
 | docker run --rm -i arti.dev.cray.com/internal-docker-stable-local/packaging-tools:0.7.0 rpm-index -v \
-    $(cat "$@" | remove-comments-and-empty-lines | awk '{print "-d", $1, $3}') \
+    $(cat "$@" | remove-comments-and-empty-lines | awk '{print "-d", $1, $NF}') \
 | tee "${workdir}/index.yaml"
 
 mv "${workdir}/index.yaml" "$index"

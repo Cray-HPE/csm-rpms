@@ -5,7 +5,7 @@ ipvsadm=1.29-4.3.1
 python3-boto3=1.14.40-7.11.1
 platform-utils=0.2.0-20210526171110_7264626
 hms-ct-test-crayctldeploy=1.8.0-20210618143700_7c5b43d
-cray-cmstools-crayctldeploy=1.2.1-20210604191957_e87f409
+cray-cmstools-crayctldeploy=1.2.4-20210701120841_0b385e0
 rpm-build=4.14.1-20.3
 
 # SDU
