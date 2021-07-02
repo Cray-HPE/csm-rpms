@@ -1,0 +1,11 @@
+cf-ca-cert-config-framework=2.3.1-20210611155123_f0691f3
+cfs-trust=1.3.3-20210629162025_1ba4726
+csm-ssh-keys=1.3.3-20210628094510_a3b5ce3
+csm-ssh-keys-roles=1.3.3-20210628094510_a3b5ce3
+shasta-authorization-module=1.6.1-20210611164050_ffb67f3
+
+cray-switchboard=1.2.2-20210615160128_b7454e2
+cray-uai-util=1.0.11-20210518075246_fb9d9c8
+
+docs-csm-install=1.10.27-20210701163842_7f1dcf0
+csm-install-workarounds=0.1.11-20210622150140_49a352b
