@@ -1,10 +1,5 @@
 # Metal repositories; NCN and LiveCD; dracut, iPXE, cloud-init.
 # email casm_mtl@groups.int.hpe.com for assistance with these repositories.
-
-#http://car.dev.cray.com/artifactory/csm/CRAY-HPE/sle15_sp2_ncn/noarch/release/csm-1.1/           cray-csm-sle-15sp2-noarch-MTL-CRAY-HPE-1.1           cray/csm/sle-15sp2/noarch
-#http://car.dev.cray.com/artifactory/csm/MTL/sle15_sp2_ncn/noarch/release/csm-1.1/                cray-csm-sle-15sp2-noarch-MTL-1.1                    cray/csm/sle-15sp2/noarch
-#http://car.dev.cray.com/artifactory/csm/MTL/sle15_sp2_ncn/x86_64/release/csm-1.1/                cray-csm-sle-15sp2-x86_64-MTL-1.1                    cray/csm/sle-15sp2/x86_64
-
 http://car.dev.cray.com/artifactory/csm/CRAY-HPE/sle15_sp2_ncn/noarch/release/csm-1.0/           cray-csm-sle-15sp2-noarch-MTL-CRAY-HPE-1.0           cray/csm/sle-15sp2/noarch
 http://car.dev.cray.com/artifactory/csm/MTL/sle15_sp2_ncn/noarch/release/csm-1.0/                cray-csm-sle-15sp2-noarch-MTL-1.0                    cray/csm/sle-15sp2/noarch
 http://car.dev.cray.com/artifactory/csm/MTL/sle15_sp2_ncn/x86_64/release/csm-1.0/                cray-csm-sle-15sp2-x86_64-MTL-1.0                    cray/csm/sle-15sp2/x86_64
