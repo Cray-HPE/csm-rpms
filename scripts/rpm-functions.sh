@@ -64,7 +64,10 @@ function add-cray-repos() {
 function setup-package-repos() {
   add-suse-repos
   add-hpe-spp-repos
-  add-cray-repos
+  case "$1" in
+  -c|--compute) list-cray-compute-repos-files | xargs -r cat | zypper-add-repos ;;
+  *) add-cray-repos ;;
+  esac
 
   zypper lr -e /tmp/repos.repos
   cat /tmp/repos.repos
