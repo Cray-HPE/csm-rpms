@@ -78,6 +78,10 @@ do
     -r|--repos)
       REPOS_FILTER="$2"
       ;;
+    -c|--compute)
+      DOCKER_CACHE_IMAGE="${DOCKER_CACHE_IMAGE}-compute"
+      SETUP_PACKAGE_REPOS_FLAGS="--compute"
+      ;;
     -o|--output-diffs-only)
       OUTPUT_DIFFS_ONLY="true"
       ;;
@@ -101,7 +105,6 @@ do
   shift
 done
 
-
 if [[ "$NO_CACHE" == "true" && "$(docker images -q $DOCKER_CACHE_IMAGE 2> /dev/null)" != "" ]]; then
   echo "Removing docker image cache $DOCKER_CACHE_IMAGE"
   docker rmi $DOCKER_CACHE_IMAGE || docker rmi --force $DOCKER_CACHE_IMAGE
@@ -111,12 +114,12 @@ if [[ "$(docker images -q $DOCKER_CACHE_IMAGE 2> /dev/null)" == "" ]]; then
   echo "Creating docker cache image"
   docker rm $DOCKER_CACHE_IMAGE 2> /dev/null || true
 
-  docker run --name $DOCKER_CACHE_IMAGE -v $SOURCE_DIR:/csm-rpms $DOCKER_BASE_IMAGE bash -c "
+  docker run --name $DOCKER_CACHE_IMAGE -v "$(realpath "$SOURCE_DIR"):/app" $DOCKER_BASE_IMAGE bash -c "
     set -e
-    source /csm-rpms/scripts/rpm-functions.sh
+    source /app/scripts/rpm-functions.sh
     zypper --non-interactive install gawk
     cleanup-all-repos
-    setup-package-repos
+    setup-package-repos $SETUP_PACKAGE_REPOS_FLAGS
     zypper refresh
     # Force a cache update
     zypper --no-refresh info man > /dev/null 2>&1
@@ -129,9 +132,9 @@ fi
 
 if [[ "$REFRESH" == "true" ]]; then
   docker rm $DOCKER_CACHE_IMAGE 2> /dev/null || true
-  docker run --name $DOCKER_CACHE_IMAGE -v $SOURCE_DIR:/csm-rpms --init $DOCKER_CACHE_IMAGE bash -c "
+  docker run --name $DOCKER_CACHE_IMAGE -v "$(realpath "$SOURCE_DIR"):/app" --init $DOCKER_CACHE_IMAGE bash -c "
     set -e
-    source /csm-rpms/scripts/rpm-functions.sh
+    source /app/scripts/rpm-functions.sh
     zypper refresh
     # Force a cache update
     zypper --no-refresh info man > /dev/null 2>&1
@@ -160,12 +163,14 @@ else
   DOCKER_TTY_ARG="-it"
 fi
 
-docker run $DOCKER_TTY_ARG --rm -v $SOURCE_DIR:/csm-rpms --init $DOCKER_CACHE_IMAGE bash -c "
+docker run $DOCKER_TTY_ARG --rm -v "$(realpath "$SOURCE_DIR"):/app" -v "$(realpath "$PACKAGES_FILE"):/packages" --init $DOCKER_CACHE_IMAGE bash -c "
   set -e
-  source /csm-rpms/scripts/rpm-functions.sh
+  source /app/scripts/rpm-functions.sh
   if [[ \"$VALIDATE\" == \"true\" ]]; then
-    validate-package-versions /csm-rpms/${PACKAGES_FILE}
+    validate-package-versions /packages
   else
-    update-package-versions /csm-rpms/${PACKAGES_FILE} ${REPOS_FILTER} ${OUTPUT_DIFFS_ONLY} ${AUTO_YES} ${FILTER}
+    cp /packages /tmp/packages
+    update-package-versions /tmp/packages ${REPOS_FILTER} ${OUTPUT_DIFFS_ONLY} ${AUTO_YES} ${FILTER}
+    cp /tmp/packages /packages
   fi
 "

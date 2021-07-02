@@ -1,7 +1,7 @@
-SLE_HPC-release=15.2-44.3
+SLE_HPC-release=15.2-44.6.1
 conman=0.3.0-1.42
 cpupower=5.5-6.3.1
 kernel-mft-mlnx-kmp-default=4.15.1_k5.3.18_22-1.sles15sp2
-mft=4.15.1-9
+mft=4.15.1-100
 dracut-metal-mdsquash=1.5.6-20210601150241_f974a5f
 
