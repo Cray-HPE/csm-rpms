@@ -7,5 +7,5 @@ shasta-authorization-module=1.6.1-20210611164050_ffb67f3
 cray-switchboard=1.2.2-20210615160128_b7454e2
 cray-uai-util=1.0.11-20210518075246_fb9d9c8
 
-docs-csm-install=1.10.27-20210701163842_e096dbf
-csm-install-workarounds=0.1.11-20210524155302_10173aa
+docs-csm-install=1.10.27-20210701163842_0e4a4fc
+csm-install-workarounds=0.1.11-20210524155322_10173aa

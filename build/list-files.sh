@@ -21,8 +21,6 @@ while [[ $# -gt 0 ]]; do
         list-cray-repos-files
         ;;
     compute-repos|compute-repositories)
-        list-suse-repos-files
-        list-hpe-spp-repos-files
         list-cray-compute-repos-files
         ;;
     pkgs|packages)

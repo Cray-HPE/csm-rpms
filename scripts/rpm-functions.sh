@@ -33,18 +33,11 @@ function remove-comments-and-empty-lines() {
 
 function zypper-add-repos() {
   remove-comments-and-empty-lines \
-  | awk '
-        function priority(path) {
-            if (path~/^cray\//) { return "89" }
-            else if (path~/^hpe-spp\//) { return "94" }
-            else { return "99" }
-        }
-        { print $1, $2, priority($3) }
-    ' \
-  | while read url name priority; do
+  | awk '{ NF-=1; print }' \
+  | while read url name flags; do
     local alias="buildonly-${name}"
     echo "Adding repo ${alias} at ${url}"
-    zypper -n addrepo --no-gpgcheck -p "${priority}" "${url}" "${alias}"
+    zypper -n addrepo $flags "${url}" "${alias}"
     zypper -n --gpg-auto-import-keys refresh "${alias}"
   done
 }
@@ -61,12 +54,20 @@ function add-cray-repos() {
   list-cray-repos-files | xargs -r cat | zypper-add-repos
 }
 
+function add-cray-compute-repos() {
+  list-cray-compute-repos-files | xargs -r cat | zypper-add-repos
+}
+
 function setup-package-repos() {
-  add-suse-repos
-  add-hpe-spp-repos
   case "$1" in
-  -c|--compute) list-cray-compute-repos-files | xargs -r cat | zypper-add-repos ;;
-  *) add-cray-repos ;;
+  -c|--compute)
+    add-cray-compute-repos
+    ;;
+  *)
+    add-suse-repos
+    add-hpe-spp-repos
+    add-cray-repos
+    ;;
   esac
 
   zypper lr -e /tmp/repos.repos
