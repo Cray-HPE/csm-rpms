@@ -19,9 +19,7 @@ lvm2=2.03.05-8.33.1
 mdadm=4.1-15.32.1
 canu=0.0.5~alpha~2~master.852bef9-1
 
-# CSM Testing
-csm-testing=1.6.27-20210707143452_3350673
-goss-servers=1.6.27-20210707143452_3350673
+# CSM Testing Utils
 hpe-csm-goss-package=0.3.13-20210615152800_aae8d77
 hpe-csm-yq-package=3.4.1-20210615153837_40f15a6
 
