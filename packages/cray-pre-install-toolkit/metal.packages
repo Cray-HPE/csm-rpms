@@ -1,4 +1,4 @@
-cray-site-init=1.6.10-20210712100443_da560c5
-metal-basecamp=1.1.9-20210629102418_a1ef717
-metal-ipxe=2.0.4-20210714101304_436ee53b
-metal-net-scripts=0.0.2-20210507123625_0ddc02e
+cray-site-init=1.6.10-20210714071938_5f9fb7c
+metal-basecamp=1.1.9-20210629101521_fbaf7bb
+metal-ipxe=2.0.3-20210701195202_ede58dc1
+metal-net-scripts=0.0.2-20210507123625_880ba18
