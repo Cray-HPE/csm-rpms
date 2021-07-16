@@ -11,8 +11,14 @@ pipeline {
     timestamps()
   }
 
+
+  parameters {
+    booleanParam(name: 'dev', defaultValue: "${env.BRANCH_NAME}" ==~ /release\/.*/ ? false : true, description: 'Allow unsigned packages and pull from mainline (defaults to false for release branches)')
+  }
+
   environment {
     SUFFIX = "${env.JOB_BASE_NAME.replaceAll("%2F","-").toLowerCase()}-${env.BUILD_NUMBER}"
+    DEV    = "${params.dev}"
   }
 
   stages {
