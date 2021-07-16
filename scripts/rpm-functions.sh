@@ -92,7 +92,7 @@ function list-compute-packages() {
 
 function install-packages() {
   remove-comments-and-empty-lines "$1" \
-  | xargs -r zypper -n install --auto-agree-with-licenses --no-recommends
+  | xargs -r zypper -n install --auto-agree-with-licenses --no-recommends --allow-unsigned-rpm
 }
 
 function update-package-versions() {
