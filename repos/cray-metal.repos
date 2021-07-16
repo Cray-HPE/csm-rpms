@@ -1,7 +1,4 @@
 # Metal repositories; NCN and LiveCD; dracut, iPXE, cloud-init.
 # email casm_mtl@groups.int.hpe.com for assistance with these repositories.
-http://car.dev.cray.com/artifactory/csm/MTL/sle15_sp2_ncn/noarch/release/csm-1.0/       cray-csm-sle-15sp2-noarch-MTL-1.0           --gpgcheck-allow-unsigned-repo -p 89  cray/csm/sle-15sp2/noarch
-http://car.dev.cray.com/artifactory/csm/MTL/sle15_sp2_ncn/x86_64/release/csm-1.0/       cray-csm-sle-15sp2-x86_64-MTL-1.0           --gpgcheck-allow-unsigned-repo -p 89  cray/csm/sle-15sp2/x86_64
-# Grab tags over anything:
-# NOTE: this pulls from unstable, but the /^csm/ prefixed tags are stable.
-http://arti.dev.cray.com/artifactory/csm-rpm-unstable-local/predev/csm-v1.1.0/sle15_sp2_ncn       cray-csm-sle-15sp2-x86_64-tag-1.1.0            --gpgcheck-allow-unsigned-repo -p 79  cray/csm/sle-15sp2/x86_64
+http://car.dev.cray.com/artifactory/csm/MTL/sle15_sp2_ncn/noarch/dev/master/       cray-csm-sle-15sp2-noarch-MTL-master           --gpgcheck-allow-unsigned-repo -p 89  cray/csm/sle-15sp2/noarch
+http://car.dev.cray.com/artifactory/csm/MTL/sle15_sp2_ncn/x86_64/dev/master/       cray-csm-sle-15sp2-x86_64-MTL-master           --gpgcheck-allow-unsigned-repo -p 89  cray/csm/sle-15sp2/x86_64
