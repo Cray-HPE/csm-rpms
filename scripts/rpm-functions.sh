@@ -91,8 +91,11 @@ function list-compute-packages() {
 }
 
 function install-packages() {
-  remove-comments-and-empty-lines "$1" \
-  | xargs -r zypper -n install --auto-agree-with-licenses --no-recommends --allow-unsigned-rpm
+  if [[ "$DEV" = 'true' ]]; then
+    remove-comments-and-empty-lines "$1" | xargs -r zypper -n install --auto-agree-with-licenses --no-recommends --allow-unsigned-rpm
+  else
+    remove-comments-and-empty-lines "$1" | xargs -r zypper -n install --auto-agree-with-licenses --no-recommends
+  fi
 }
 
 function update-package-versions() {
