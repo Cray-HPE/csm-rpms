@@ -87,7 +87,7 @@ function list-compute-packages-files() {
 }
 
 function list-compute-packages() {
-  list-compute-package-files | xargs -r cat | removoe-comments-and-empty-lines
+  list-compute-package-files | xargs -r cat | remove-comments-and-empty-lines
 }
 
 function install-packages() {
