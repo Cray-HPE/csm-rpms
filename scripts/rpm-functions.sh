@@ -92,6 +92,7 @@ function list-compute-packages() {
 
 function install-packages() {
   if [[ "$DEV" = 'true' ]]; then
+    echo >&2 "DEV: $DEV"
     remove-comments-and-empty-lines "$1" | xargs -r zypper -n install --auto-agree-with-licenses --no-recommends --allow-unsigned-rpm
   else
     remove-comments-and-empty-lines "$1" | xargs -r zypper -n install --auto-agree-with-licenses --no-recommends
