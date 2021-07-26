@@ -17,7 +17,6 @@ EOF
 function list-cray-repos-files() {
   cat <<EOF
 ${CSM_RPMS_DIR}/repos/cray.repos
-${CSM_RPMS_DIR}/repos/cray-metal.repos
 EOF
 }
 
