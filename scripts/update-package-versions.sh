@@ -1,6 +1,10 @@
 #!/usr/bin/env bash
 set -ex
 
+realpath() {
+  [[ $1 = /* ]] && echo "$1" || echo "$PWD/${1#./}"
+}
+
 function usage(){
     cat <<EOF
 Usage:
