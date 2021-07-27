@@ -3,5 +3,5 @@ conman=0.3.0-1.42
 cpupower=5.5-6.3.1
 kernel-mft-mlnx-kmp-default=4.16.0_k5.3.18_22-1.sles15sp2
 mft=4.16.0-105.sles15sp2
-dracut-metal-mdsquash=1.5.7-20210715203938_2a577bd
+dracut-metal-mdsquash=1.5.7-1
 
