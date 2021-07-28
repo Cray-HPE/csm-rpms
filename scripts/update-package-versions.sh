@@ -64,7 +64,7 @@ REPOS_FILTER="all"
 AUTO_YES="false"
 
 DOCKER_CACHE_IMAGE="csm-rpms-cache"
-DOCKER_BASE_IMAGE="arti.dev.cray.com/baseos-docker-master-local/sles15sp2:latest"
+DOCKER_BASE_IMAGE="arti.dev.cray.com/baseos-docker-master-local/sles15sp3:latest"
 
 while [[ "$#" -gt 0 ]]
 do
