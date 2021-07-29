@@ -7,4 +7,4 @@ firmware-system-a41=2.42_2020_07_17-1.1
 firmware-system-a42=1.30_2020_07_18-1.1
 firmware-system-a43=1.30_2020_07_18-1.1
 kernel-firmware=20200107-3.20.1
-mft=4.16.0-105.sles15sp2
+mft=4.15.1-100
