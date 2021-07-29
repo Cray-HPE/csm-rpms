@@ -30,7 +30,7 @@ cat "$@" \
 | docker run -i \
     --cidfile "${workdir}/container-id" \
     -v "$(realpath "$ROOTDIR"):/data" \
-    arti.dev.cray.com/baseos-docker-master-local/sles15sp2:latest \
+    arti.dev.cray.com/baseos-docker-master-local/sles15sp3:latest \
     bash -c "set -exo pipefail
     {
         zypper --non-interactive install  --auto-agree-with-licenses gawk
@@ -40,7 +40,7 @@ cat "$@" \
     zypper-add-repos"
 
 cid="$(cat "${workdir}/container-id")"
-image="base-sles15sp2:${cid}"
+image="base-sles15sp3:${cid}"
 
 docker commit "$cid" "$image"
 docker rm -f "$cid"
