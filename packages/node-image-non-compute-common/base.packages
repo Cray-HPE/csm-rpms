@@ -65,7 +65,7 @@ kmod-bash-completion=28-2.1
 less=530-1.6
 libcanberra-gtk0=0.30-3.2.3
 libecpg6=13.3-5.13.1
-liblldp_clif1
+liblldp_clif1=1.1+36.e926f7172b96-1.12
 libunwind-devel=1.5.0-4.5.1
 libpwquality1=1.4.4-3.3.2
 ltrace=0.7.91-4.3
@@ -75,7 +75,7 @@ mariadb=10.5.8-1.5
 minicom=2.7.1-1.19
 mlocate=0.26-5.22
 nmap=7.70-3.12.1
-open-lldp
+open-lldp=1.1+36.e926f7172b96-1.12
 pdsh=2.34-8.2
 perf=5.3.18-36.35
 perl-doc=5.26.1-15.87
