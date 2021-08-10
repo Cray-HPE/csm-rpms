@@ -2,7 +2,7 @@ cf-ca-cert-config-framework=2.2.5-1
 cfs-trust=1.2.27-1
 csm-ssh-keys=1.2.5-1
 csm-ssh-keys-roles=1.2.5-1
-shasta-authorization-module=1.5.1-20210611164050_b1e96b7
+shasta-authorization-module=1.5.2-1
 
 cray-switchboard=1.2.2-20210615160128_b7454e2
 cray-uai-util=1.0.11-20210518075246_fb9d9c8
