@@ -8,6 +8,10 @@ hms-ct-test-crayctldeploy=1.7.2-1
 cray-cmstools-crayctldeploy=1.1.39-1
 rpm-build=4.14.1-20.3
 
+#CMS
+cfs-state-reporter=1.6.25-1
+cfs-trust=1.2.3-20210701114017_1838cd9
+
 # COS
 cray-cps-utils=0.7.5-2.1_20210601130549__g7c8ea37
 cray-orca=0.7.5-2.1_20210601130646__gac3cd47
