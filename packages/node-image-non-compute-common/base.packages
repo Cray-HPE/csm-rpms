@@ -1,5 +1,6 @@
 #CMS
 cfs-state-reporter=1.6.25-1
+cfs-trust=1.2.3-20210701114017_1838cd9
 
 #CSM
 acpid=2.0.31-1.1
