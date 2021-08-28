@@ -10,7 +10,7 @@ rpm-build=4.14.1-20.3
 
 #CMS
 cfs-state-reporter=1.6.25-1
-cfs-trust=1.2.3-20210701114017_1838cd9
+cfs-trust=1.2.44-1
 
 # COS
 cray-cps-utils=0.7.5-2.1_20210601130549__g7c8ea37
