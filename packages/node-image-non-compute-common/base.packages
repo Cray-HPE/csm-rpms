@@ -1,6 +1,3 @@
-#CMS
-cfs-state-reporter=1.6.25-1
-
 #CSM
 acpid=2.0.31-1.1
 amsd=2.4.1-1571.4.sles15
