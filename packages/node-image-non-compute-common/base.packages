@@ -78,6 +78,7 @@ mariadb-tools=10.4.17-3.6.1
 mariadb=10.4.17-3.6.1
 minicom=2.7.1-1.19
 mlocate=0.26-5.22
+netcat-openbsd=1.178-1.24
 nmap=7.70-3.12.1
 open-lldp=1.0.1+65.f3b70663b55e-3.9.1
 openssl-1_1=1.1.1d-11.27.1
