@@ -9,6 +9,7 @@ manifestgen=1.3.2-20210628125752_1f628f7
 canu=0.0.5~alpha~2~master.852bef9-1
 
 # SUSE Packages
+acl=2.2.52-4.3.1
 bash-completion=2.7-4.3.1
 bc=1.07.1-11.37
 biosdevname=0.7.3-5.3.1
@@ -42,7 +43,7 @@ lshw=B.02.19.2-3.6.1
 lsof=4.91-1.11
 lsscsi=0.28-1.24
 lvm2=2.03.05-8.33.1
-mdadm=4.1-15.32.1
+mdadm=4.1-24.3.1
 minicom=2.7.1-1.19
 nmap=7.70-3.12.1
 open-lldp=1.1+36.e926f7172b96-1.12
