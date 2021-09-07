@@ -13,7 +13,7 @@ cray-cps-utils=0.7.5-2.1_20210601130549__g7c8ea37
 cray-orca=0.7.5-2.1_20210601130646__gac3cd47
 
 # SDU
-cray-sdu-rda=1.1.3-20210701133249_47fd8c1
+cray-sdu-rda-1.1.4-20210902175938_a7796c6
 
 # DVS
 insserv-compat=0.1-4.3.1
