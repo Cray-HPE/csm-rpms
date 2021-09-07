@@ -1,6 +1,9 @@
+@Library('csm-shared-library') _
+
+def credentialsId = 'artifactory-algol60'
 pipeline {
   agent {
-    node { label 'metal-gcp-builder' }
+    label "metal-gcp-builder"
   }
 
   // Configuration options applicable to the entire job
@@ -11,22 +14,18 @@ pipeline {
     timestamps()
   }
 
-
-  parameters {
-    booleanParam(name: 'dev', defaultValue: "${env.BRANCH_NAME}" ==~ /release\/.*/ ? false : true, description: 'Allow unsigned packages and pull from mainline (defaults to false for release branches)')
-  }
-
   environment {
     SUFFIX = "${env.JOB_BASE_NAME.replaceAll("%2F","-").toLowerCase()}-${env.BUILD_NUMBER}"
-    DEV    = "${params.dev}"
   }
 
   stages {
     stage('Setup Docker Cache') {
       steps {
-        sh """
+      withCredentials([usernamePassword(credentialsId: credentialsId, usernameVariable: 'ARTIFACTORY_USER', passwordVariable: 'ARTIFACTORY_TOKEN')]) {
+          sh """
           ./scripts/update-package-versions.sh --refresh --no-cache --suffix ${env.SUFFIX}
-        """
+          """
+        }
       }
     }
 
