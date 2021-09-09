@@ -21,14 +21,14 @@ mdadm=4.1-24.3.1
 canu=0.0.5~alpha~2~master.852bef9-1
 
 # CSM Testing Utils
-goss-servers=1.8.1-1
+goss-servers=1.7.0-1
 hpe-csm-goss-package=0.3.13-20210615152800_aae8d77
 hpe-csm-yq-package=3.4.1-20210615153837_40f15a6
 
 # Slingshot
 cray-network-config=1.1.12-SSHOT1.5.0_20210826135308_c9ac220
 slingshot-network-config=1.1.19-SSHOT1.5.0_20210826132542_917908e
-slingshot-utils=1.0.12-SSHOT1.5.1_20210908172455_7674435
+slingshot-utils=1.0.11-SSHOT1.5.0_20210831162612_3dbc9c7
 cray-shasta-ncn-mofed=1.0.24-20210719210027_2921198
 
 # Base
@@ -118,7 +118,7 @@ sysstat=12.0.2-3.30.1
 systemtap=4.2-3.3.1
 tcpdump=4.9.2-3.15.1
 unixODBC=2.3.9-8.3.2
-usbutils=014-3.3.1
+usbutils=013-1.22
 wget=1.20.3-3.12.1
 wireshark=3.4.6-3.56.1
 xfsdump=3.1.6-1.30
