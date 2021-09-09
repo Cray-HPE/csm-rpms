@@ -114,10 +114,10 @@ if [[ "$(docker images -q $DOCKER_CACHE_IMAGE 2> /dev/null)" == "" ]]; then
   echo "Creating docker cache image"
   docker rm $DOCKER_CACHE_IMAGE 2> /dev/null || true
 
-  docker run --name $DOCKER_CACHE_IMAGE -v "$(realpath "$SOURCE_DIR"):/app" $DOCKER_BASE_IMAGE bash -c "
+  docker run --name $DOCKER_CACHE_IMAGE -v "$(realpath "$SOURCE_DIR"):/app" -e ARTIFACTORY_USER=$ARTIFACTORY_USER -e ARTIFACTORY_TOKEN=$ARTIFACTORY_TOKEN $DOCKER_BASE_IMAGE bash -c "
     set -e
     source /app/scripts/rpm-functions.sh
-    zypper --non-interactive install gawk
+    zypper --non-interactive install gettext gawk
     cleanup-all-repos
     setup-package-repos $SETUP_PACKAGE_REPOS_FLAGS
     zypper refresh
@@ -149,7 +149,7 @@ if [[ "$REFRESH" == "true" ]]; then
 fi
 
 if [[ -z "$PACKAGES_FILE" ]]; then
-    echo >&2 "error: missing -p packaages-file option"
+    echo >&2 "error: missing -p packages-file option"
     usage
     exit 3
 fi
