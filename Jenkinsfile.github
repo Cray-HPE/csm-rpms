@@ -1,0 +1,71 @@
+@Library('csm-shared-library') _
+
+def credentialsId = 'artifactory-algol60'
+pipeline {
+  agent {
+    label "metal-gcp-builder"
+  }
+
+  // Configuration options applicable to the entire job
+  options {
+    // Don't fill up the build server with unnecessary cruft
+    buildDiscarder(logRotator(numToKeepStr: '5'))
+
+    timestamps()
+  }
+
+  environment {
+    SUFFIX = "${env.JOB_BASE_NAME.replaceAll("%2F","-").toLowerCase()}-${env.BUILD_NUMBER}"
+  }
+
+  stages {
+    stage('Setup Docker Cache') {
+      steps {
+      withCredentials([usernamePassword(credentialsId: credentialsId, usernameVariable: 'ARTIFACTORY_USER', passwordVariable: 'ARTIFACTORY_TOKEN')]) {
+          sh """
+          ./scripts/update-package-versions.sh --refresh --no-cache --suffix ${env.SUFFIX}
+          """
+        }
+      }
+    }
+
+    stage('Validate cray-pre-install-toolkit packages') {
+      steps {
+        sh """
+          ./scripts/update-package-versions.sh -p packages/cray-pre-install-toolkit/base.packages --validate --suffix ${env.SUFFIX}
+          ./scripts/update-package-versions.sh -p packages/cray-pre-install-toolkit/metal.packages --validate --suffix ${env.SUFFIX}
+          ./scripts/update-package-versions.sh -p packages/cray-pre-install-toolkit/firmware.packages --validate --suffix ${env.SUFFIX}
+        """
+      }
+    }
+
+    stage('Validate node-image-non-compute-common packages') {
+      steps {
+        sh """
+          ./scripts/update-package-versions.sh -p packages/node-image-non-compute-common/base.packages --validate --suffix ${env.SUFFIX}
+          ./scripts/update-package-versions.sh -p packages/node-image-non-compute-common/metal.packages --validate --suffix ${env.SUFFIX}
+        """
+      }
+    }
+
+    stage('Validate node-image-kubernetes packages') {
+      steps {
+        sh """
+          ./scripts/update-package-versions.sh -p packages/node-image-kubernetes/base.packages --validate --suffix ${env.SUFFIX}
+          ./scripts/update-package-versions.sh -p packages/node-image-kubernetes/metal.packages --validate --suffix ${env.SUFFIX}
+          ./scripts/update-package-versions.sh -p packages/node-image-kubernetes/google.packages --validate --suffix ${env.SUFFIX}
+        """
+      }
+    }
+
+    stage('Validate node-image-storage-ceph packages') {
+      steps {
+        sh """
+          ./scripts/update-package-versions.sh -p packages/node-image-storage-ceph/base.packages --validate --suffix ${env.SUFFIX}
+          ./scripts/update-package-versions.sh -p packages/node-image-storage-ceph/metal.packages --validate --suffix ${env.SUFFIX}
+        """
+      }
+    }
+
+  }
+}
