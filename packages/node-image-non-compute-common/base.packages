@@ -7,9 +7,9 @@ acpid=2.0.31-1.1
 amsd=2.4.1-1571.4.sles15
 biosdevname=0.7.3-5.3.1
 bsdtar=3.4.2-2.24
-cloud-init=21.2+67.g562f14b4-1
-craycli=0.41.3-1
-cray-heartbeat=1.2.2-2.1_6.9__gf6fd0bd.shasta
+cloud-init=21.3+12.gb0db6191-1
+craycli=0.41.6-1
+cray-heartbeat=1.2.2-2.1_6.10__gf6fd0bd.shasta
 csm-node-identity=1.0.1-1
 cray-power-button=1.2.2-2.1_20210601130345__g3d80145
 cryptsetup=2.3.4-1.34
@@ -21,14 +21,14 @@ mdadm=4.1-24.3.1
 canu=0.0.5~alpha~2~master.852bef9-1
 
 # CSM Testing Utils
-goss-servers=1.7.0-1
+goss-servers=1.8.2-1
 hpe-csm-goss-package=0.3.13-20210615152800_aae8d77
 hpe-csm-yq-package=3.4.1-20210615153837_40f15a6
 
 # Slingshot
 cray-network-config=1.1.12-SSHOT1.5.0_20210826135308_c9ac220
 slingshot-network-config=1.1.19-SSHOT1.5.0_20210826132542_917908e
-slingshot-utils=1.0.11-SSHOT1.5.0_20210831162612_3dbc9c7
+slingshot-utils=1.0.13-SSHOT1.5.1_20210910142227_d72e44a
 cray-shasta-ncn-mofed=1.0.24-20210719210027_2921198
 
 # Base
@@ -37,7 +37,7 @@ arptables=0.0.4-8.39
 at=3.1.20-11.3
 bc=1.07.1-11.37
 bind-utils=9.16.6-22.10.1
-ceph-common=15.2.13.79+g51835b62d61-3.28.1
+ceph-common=15.2.14.84+gb6e5642e260-3.31.1
 crash=7.2.9-23.5.3
 createrepo_c=0.15.4-1.54
 dnsmasq=2.78-7.6.1
@@ -118,7 +118,7 @@ sysstat=12.0.2-3.30.1
 systemtap=4.2-3.3.1
 tcpdump=4.9.2-3.15.1
 unixODBC=2.3.9-8.3.2
-usbutils=013-1.22
+usbutils=014-3.3.1
 wget=1.20.3-3.12.1
 wireshark=3.4.6-3.56.1
 xfsdump=3.1.6-1.30
