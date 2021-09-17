@@ -5,5 +5,5 @@ dracut-metal-mdsquash=1.6.2-1
 hdparm=9.52-1.22
 kernel-mft-mlnx-kmp-default=4.17.0_k5.3.18_57-1.sles15sp3
 ledmon=0.94-1.59
-lshw=B.02.19.2-3.6.1
+lshw=B.02.19.2+git.20210619-3.9.1
 mft=4.17.0-106

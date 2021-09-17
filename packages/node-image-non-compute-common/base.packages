@@ -18,17 +18,17 @@ dracut-kiwi-live=9.23.20-3.40.1
 hpe-csm-scripts=0.0.20-20210728163955_8e17129
 lvm2=2.03.05-8.33.1
 mdadm=4.1-24.3.1
-canu=0.0.5~alpha~2~master.852bef9-1
+canu=0.0.6-1
 
 # CSM Testing Utils
-goss-servers=1.8.2-1
+goss-servers=1.8.3-1
 hpe-csm-goss-package=0.3.13-20210615152800_aae8d77
 hpe-csm-yq-package=3.4.1-20210615153837_40f15a6
 
 # Slingshot
 cray-network-config=1.1.12-SSHOT1.5.0_20210826135308_c9ac220
 slingshot-network-config=1.1.19-SSHOT1.5.0_20210826132542_917908e
-slingshot-utils=1.0.13-SSHOT1.5.1_20210910142227_d72e44a
+slingshot-utils=1.0.13-SSHOT1.5.1_20210915155746_ca97645
 cray-shasta-ncn-mofed=1.0.24-20210719210027_2921198
 
 # Base
@@ -120,6 +120,6 @@ tcpdump=4.9.2-3.15.1
 unixODBC=2.3.9-8.3.2
 usbutils=014-3.3.1
 wget=1.20.3-3.12.1
-wireshark=3.4.6-3.56.1
+wireshark=3.4.7-3.59.1
 xfsdump=3.1.6-1.30
 zip=3.0-2.22
