@@ -26,10 +26,10 @@ hpe-csm-goss-package=0.3.13-20210615152800_aae8d77
 hpe-csm-yq-package=3.4.1-20210615153837_40f15a6
 
 # Slingshot
-cray-network-config=1.1.9-SSHOT1.2.1_20210608151833_10c569d
-slingshot-network-config=1.1.15-SSHOT1.2.1_20210607093902_c789be6
-slingshot-utils=1.0.6-SSHOT1.2.1_20210608151833_f112e28
-cray-shasta-ncn-mofed=1.0.22-20210615194139_9f2987e
+cray-network-config=1.1.12-SSHOT1.5.0_20210826135308_c9ac220
+slingshot-network-config=1.1.19-SSHOT1.5.0_20210826132542_917908e
+slingshot-utils=1.0.13-SSHOT1.5.1_20210915155746_ca97645
+cray-shasta-ncn-mofed=1.0.24-20210719210027_2921198
 
 # Base
 apparmor-profiles=2.13.4-3.3.1
@@ -81,7 +81,7 @@ mlocate=0.26-5.22
 netcat-openbsd=1.178-1.24
 nmap=7.70-3.12.1
 open-lldp=1.0.1+65.f3b70663b55e-3.9.1
-openssl-1_1=1.1.1d-11.27.1
+openssl-1_1=1.1.1d-11.30.1
 pdsh=2.34-4.3.9
 perf=5.3.18-25.9.1
 perl-doc=5.26.1-7.12.1
