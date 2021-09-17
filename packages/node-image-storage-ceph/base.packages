@@ -4,4 +4,4 @@ python3-six=1.14.0-10.1
 python3-netaddr=0.7.19-1.17
 netcat-openbsd=1.178-1.24
 jq=1.6-3.3.1
-cephadm=15.2.13.79+g51835b62d61-3.28.1
+cephadm=15.2.14.84+gb6e5642e260-3.31.1
