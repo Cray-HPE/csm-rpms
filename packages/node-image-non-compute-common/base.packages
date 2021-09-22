@@ -54,6 +54,7 @@ git-core=2.26.2-3.34.1
 gnuplot=5.2.2-3.6.1
 gperftools=2.5-4.12
 gptfdisk=1.0.1-2.11
+grub2-x86_64-efi=2.04-9.45.2
 hplip=3.19.12-3.3.1
 ipmitool=1.8.18+git20200204.7ccea28-3.3.1
 iproute2-bash-completion=5.3-5.2.1
