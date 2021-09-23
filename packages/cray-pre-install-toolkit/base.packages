@@ -45,6 +45,7 @@ lsscsi=0.28-1.24
 lvm2=2.03.05-8.33.1
 mdadm=4.1-15.32.1
 minicom=2.7.1-1.19
+netcat-openbsd=1.178-1.24
 nmap=7.70-3.12.1
 open-lldp=1.0.1+65.f3b70663b55e-3.9.1
 openssh=8.1p1-5.18.1
