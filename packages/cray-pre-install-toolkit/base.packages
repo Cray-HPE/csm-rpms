@@ -1,6 +1,6 @@
 # CSM Packages
 apache2=2.4.43-3.22.1
-cray-nexus=0.9.1-2.20210628130311_91df64a
+cray-nexus=0.9.1-3.1
 craycli=0.40.20-20210812135921_5922b54
 hpe-csm-goss-package=0.3.13-20210615152800_aae8d77
 hpe-csm-scripts=0.0.18-20210629211407_898ef4f
