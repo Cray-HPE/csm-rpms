@@ -235,6 +235,4 @@ function cleanup-all-repos() {
   zypper -n removerepo -a
   echo "Running a zypper clean"
   zypper -n clean --all
-  echo "Disabling remote zypper service repos"
-  zypper ms --remote --disable
 }
