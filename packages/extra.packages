@@ -8,4 +8,4 @@ cray-switchboard=1.2.2-20210615160128_b7454e2
 cray-uai-util=1.0.11-20210518075246_fb9d9c8
 
 docs-csm=1.12.0-1
-csm-install-workarounds=1.12.0-20210910134452_a829d71
+csm-install-workarounds=1.12.1-1
