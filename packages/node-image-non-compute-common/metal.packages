@@ -7,3 +7,4 @@ dracut-metal-mdsquash=1.5.9-1
 hdparm=9.52-1.22
 ledmon=0.93-1.32
 lshw=B.02.19.2-3.6.1
+libstoragemgmt=1.8.1-3.3.8
