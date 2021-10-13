@@ -2,8 +2,20 @@
 
 CSM_RPMS_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}")/.." &> /dev/null && pwd )"
 
+function arti_envsubst() {
+    local infile=$1
+    local outfile=$2
+
+    # shellcheck disable=SC2086
+    cp $infile $outfile
+    # shellcheck disable=SC2016,SC2086
+    sed -i 's|${ARTIFACTORY_TOKEN}|'${ARTIFACTORY_TOKEN}'|g' $outfile
+    # shellcheck disable=SC2016,SC2086
+    sed -i 's|${ARTIFACTORY_USER}|'${ARTIFACTORY_USER}'|g' $outfile
+}
+
 function list-suse-repos-files() {
-  envsubst < ${CSM_RPMS_DIR}/repos/suse.template.repos > ${CSM_RPMS_DIR}/repos/suse.repos
+  arti_envsubst ${CSM_RPMS_DIR}/repos/suse.template.repos ${CSM_RPMS_DIR}/repos/suse.repos
   cat <<EOF
 ${CSM_RPMS_DIR}/repos/suse.repos
 EOF
