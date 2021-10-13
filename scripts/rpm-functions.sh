@@ -3,7 +3,7 @@
 CSM_RPMS_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}")/.." &> /dev/null && pwd )"
 
 function list-suse-repos-files() {
-  envsubst < ${CSM_RPMS_DIR}/repos/suse.template.repos > ${CSM_RPMS_DIR}/repos/suse.repos
+  /usr/bin/envsubst < ${CSM_RPMS_DIR}/repos/suse.template.repos > ${CSM_RPMS_DIR}/repos/suse.repos
   cat <<EOF
 ${CSM_RPMS_DIR}/repos/suse.repos
 EOF
