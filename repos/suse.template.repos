@@ -1,4 +1,6 @@
 http://${ARTIFACTORY_USER}:${ARTIFACTORY_TOKEN}@artifactory.algol60.net/artifactory/sles-mirror/Products/SLE-Module-Basesystem/15-SP2/x86_64/product/?auth=basic                  SUSE-SLE-Module-Basesystem-15-SP2-x86_64-Pool                         -g -p 99  suse/SLE-Module-Basesystem/15-SP2/x86_64/product
+https://${ARTIFACTORY_USER}:${ARTIFACTORY_TOKEN}@artifactory.algol60.net/artifactory/sles-mirror/Products/SLE-Module-Basesystem/15-SP2/x86_64/product_debug?auth=basic            SUSE-SLE-Module-Basesystem-15-SP2-x86_64-Debug                        -g -p 99  suse/SLE-Module-Basesystem/15-SP2/x86_64/product_debug
+
 http://${ARTIFACTORY_USER}:${ARTIFACTORY_TOKEN}@artifactory.algol60.net/artifactory/sles-mirror/Updates/SLE-Module-Basesystem/15-SP2/x86_64/update/?auth=basic                    SUSE-SLE-Module-Basesystem-15-SP2-x86_64-Updates                      -g -p 99  suse/SLE-Module-Basesystem/15-SP2/x86_64/update
 http://car.dev.cray.com/artifactory/mirror-sles15sp2/Updates/SLE-Module-Basesystem-PTF/                  SUSE-SLE-Module-Basesystem-15-SP2-x86_64-PTF                          --no-gpgcheck -p 99  suse/SLE-Module-Basesystem/15-SP2/x86_64/ptf
 
