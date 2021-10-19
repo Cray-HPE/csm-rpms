@@ -1,11 +1,11 @@
 cf-ca-cert-config-framework=2.3.5-1
-cfs-trust=1.3.71-1
-csm-ssh-keys=1.3.5-1
-csm-ssh-keys-roles=1.3.5-1
+cfs-trust=1.3.87-1
+csm-ssh-keys=1.3.79-1
+csm-ssh-keys-roles=1.3.79-1
 shasta-authorization-module=1.6.2-1
 
-cray-switchboard=1.2.2-20210615160128_b7454e2
-cray-uai-util=1.0.11-20210518075246_fb9d9c8
+cray-switchboard=1.2.3-1
+cray-uai-util=1.0.13-1
 
-docs-csm=1.12.0-1
+docs-csm=1.12.7-1
 csm-install-workarounds=1.12.1-1
