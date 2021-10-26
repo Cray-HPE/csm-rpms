@@ -23,5 +23,6 @@ http://car.dev.cray.com/artifactory/sdu/SSA/sle15_sp2_ncn/noarch/release/sdu-1.1
 http://car.dev.cray.com/artifactory/sdu/SSA/sle15_sp2_ncn/x86_64/release/sdu-1.1/                      cray-sdu-sle-15sp2-x86_64-sdu-1.1                 --no-gpgcheck -p 89                   cray/sdu/sle-15sp2/x86_64
 
 https://arti.dev.cray.com/artifactory/csm-rpm-stable-local/hpe/                                        x86_64/canu                                       --no-gpgcheck -p 89                   cray/csm/sle-15sp3/x86_64
+https://arti.dev.cray.com/artifactory/csm-rpm-stable-local/release/csm-1.2/                            sle15_sp2_ncn/noarch                              --no-gpgcheck -p 89                   cray/csm/sle-15sp2/noarch
 
 https://artifactory.algol60.net/artifactory/csm-rpms/hpe/stable/sle-15sp2/	                                   cray-algol60-csm-rpms-stable	                     --no-gpgcheck -p 69	               cray/csm/sle-15sp3
