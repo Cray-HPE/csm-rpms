@@ -5,7 +5,7 @@ cray-heartbeat=1.2.2-2.1_6.11__gf6fd0bd.shasta
 cray-power-button=1.2.2-2.1_20210930095544__g3d80145
 craycli=0.41.8-1
 csm-node-identity=1.0.18-1
-hpe-csm-scripts=0.0.20-20210728163955_8e17129
+hpe-csm-scripts=0.0.28-20211005110449_38c41f8
 
 # CSM Testing Utils
 goss-servers=1.8.19-1
