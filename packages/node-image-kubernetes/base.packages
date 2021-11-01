@@ -9,7 +9,7 @@ rpm-build=4.14.3-37.2
 
 # COS
 cray-cps-utils=0.7.8-2.1_20210930080432__g51f7939
-cray-orca=0.7.5-2.1_20210601130646__gac3cd47
+cray-orca=0.7.5-2.1_20210930095500__gac3cd47
 
 # HMS
 hms-bss-ct-test=1.10.0-1
