@@ -4,13 +4,27 @@ manifestgen=1.3.4-1~development~bbba190
 ipvsadm=1.29-4.3.1
 python3-boto3=1.17.9-19.1
 platform-utils=1.2.2-1
-hms-ct-test-crayctldeploy=1.8.5-1
 cray-cmstools-crayctldeploy=1.2.105-1
 rpm-build=4.14.3-37.2
 
 # COS
 cray-cps-utils=0.7.8-2.1_20210930080432__g51f7939
 cray-orca=0.7.5-2.1_20210601130646__gac3cd47
+
+# HMS
+hms-bss-ct-test=1.10.0-1
+hms-capmc-ct-test=1.29.0-1
+hms-ct-test-base=1.9.0-1
+hms-fas-ct-test=1.11.0-1
+hms-hmcollector-ct-test=2.14.0-1
+hms-hbtd-ct-test=1.13.0-1
+hms-hmnfd-ct-test=1.10.0-1
+hms-meds-ct-test=1.17.0-1
+hms-reds-ct-test=1.21.0-1
+hms-rts-ct-test=1.14.0-1
+hms-scsd-ct-test=1.8.0-1
+hms-sls-ct-test=1.11.0-1
+hms-smd-ct-test=1.32.0-1
 
 # SDU
 cray-sdu-rda=1.1.5-20210930134023_baa45ce
