@@ -1,1 +1,2 @@
-*       @Cray-HPE/reviewer-csm-rpms
+*                           @Cray-HPE/reviewer-csm-rpms
+packages/*/metal.packages   @Cray-HPE/metal
