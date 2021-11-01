@@ -1,5 +1,9 @@
 cray-site-init=1.9.8-1
 ilorest=3.2.3-1
+kernel-default=5.3.18-59.19.1
+kernel-mft-mlnx-kmp-default=4.17.0_k5.3.18_57-1.sles15sp3
+kernel-source=5.3.18-59.19.1
+kernel-syms=5.3.18-59.19.1
 metal-basecamp=1.1.9-1
 metal-ipxe=2.0.9-1
 metal-net-scripts=0.0.2-1
