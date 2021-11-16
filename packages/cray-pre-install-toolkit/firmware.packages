@@ -1,7 +1,5 @@
 # Airgap/Firmware Packages
 amsd=2.4.1-1571.4.sles15
-slingshot-firmware-management=2.0.4-SSHOT1.3.1_20210714131156_f970eab
-slingshot-firmware-mellanox=2.0.4-SSHOT1.3.1_20210714131156_f970eab
 firmware-ilo5=2.42-1.1
 firmware-system-a41=2.42_2020_07_17-1.1
 firmware-system-a42=1.30_2020_07_18-1.1

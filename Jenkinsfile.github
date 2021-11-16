@@ -45,7 +45,6 @@ pipeline {
           ./scripts/update-package-versions.sh -p packages/node-image-non-compute-common/base.packages --validate --suffix ${env.SUFFIX}
           ./scripts/update-package-versions.sh -p packages/node-image-non-compute-common/metal.packages --validate --suffix ${env.SUFFIX}
           ./scripts/update-package-versions.sh -p packages/node-image-non-compute-common/cms.packages --validate --suffix ${env.SUFFIX}
-          ./scripts/update-package-versions.sh -p packages/node-image-non-compute-common/sshot.packages --validate --suffix ${env.SUFFIX}
         """
       }
     }
