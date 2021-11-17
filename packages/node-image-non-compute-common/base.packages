@@ -3,7 +3,7 @@ acpid=2.0.31-1.1
 canu=0.0.6-1
 cray-heartbeat=1.2.2-2.1_6.16__gf6fd0bd.shasta
 cray-power-button=1.2.2-2.1_20210930095544__g3d80145
-craycli=0.41.8-1
+craycli=0.41.11
 csm-node-identity=1.0.18-1
 hpe-csm-scripts=0.0.29-1
 
