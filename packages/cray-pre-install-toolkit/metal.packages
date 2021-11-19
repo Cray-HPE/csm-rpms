@@ -1,4 +1,4 @@
-cray-site-init=1.10.3-1
+cray-site-init=1.11.1-1
 ilorest=3.2.3-1
 kernel-default=5.3.18-59.19.1
 kernel-mft-mlnx-kmp-default=4.17.0_k5.3.18_57-1.sles15sp3
