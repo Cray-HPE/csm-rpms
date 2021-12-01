@@ -1,4 +1,4 @@
 haproxy=2.0.14-bp152.1.1
 keepalived=2.0.19-bp152.1.9
-dracut-metal-dmk8s=1.5.2-1
-dracut-metal-luksetcd=1.5.4-1
+dracut-metal-dmk8s=1.5.4-1
+dracut-metal-luksetcd=1.5.6-1
