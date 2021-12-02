@@ -2,6 +2,7 @@
 apache2=2.4.43-3.25.1
 canu=0.0.6-1
 craycli=0.41.11
+dnsmasq=2.78-7.6.1
 hpe-csm-goss-package=0.3.13-20210615152800_aae8d77
 hpe-csm-scripts=0.0.29-1
 loftsman=1.1.0-20210511145236_2da0507
