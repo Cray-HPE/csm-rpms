@@ -52,7 +52,6 @@ libpq5=13.4-5.16.2
 libpwquality1=1.4.4-3.3.2
 libunwind-devel=1.5.0-4.5.1
 ltrace=0.7.91-4.3
-lvm2=2.03.05-8.33.1
 man=2.7.6-6.22
 mariadb-tools=10.5.12-3.6.1
 mariadb=10.5.12-3.6.1
