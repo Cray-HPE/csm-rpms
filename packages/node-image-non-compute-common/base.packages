@@ -19,7 +19,6 @@ arptables=0.0.4-8.39
 at=3.1.20-11.3
 bc=1.07.1-11.37
 bind-utils=9.16.6-22.10.1
-biosdevname=0.7.3-5.3.1
 bsdtar=3.4.2-2.24
 ceph-common=15.2.14.84+gb6e5642e260-3.31.1
 cloud-init-config-suse=21.4+41.ga94f0035-1
