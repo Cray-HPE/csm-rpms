@@ -104,7 +104,6 @@ rsyslog=8.39.0-4.10.1
 rzsz=0.12.21~rc-1.8
 s3fs=1.83-3.3.1
 screen=4.6.2-5.3.1
-SLE_HPC-release=15.3-47.3.3
 smartmontools=7.0-6.1
 socat=1.7.3.2-4.10
 spire-agent=0.12.2-2_20210804172958_81fcb94
