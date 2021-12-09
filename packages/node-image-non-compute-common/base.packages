@@ -76,6 +76,10 @@ mlocate=0.26-5.22
 nmap=7.70-3.12.1
 open-lldp=1.1+36.e926f7172b96-1.12
 openssl-1_1=1.1.1d-11.30.1
+openssh-8.4p1-3.3.1.x86_64
+openssh-clients-8.4p1-3.3.1.x86_64
+openssh-server-8.4p1-3.3.1.x86_64
+openssh-common-8.4p1-3.3.1.x86_64
 pdsh=2.34-32.1
 perf=5.3.18-36.35
 perl-doc=5.26.1-15.87
