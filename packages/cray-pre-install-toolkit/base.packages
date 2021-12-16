@@ -8,7 +8,7 @@ loftsman=1.1.0-20210511145236_2da0507
 manifestgen=1.3.4-1~development~bbba190
 
 # CSM METAL-team Packages
-cray-site-init=1.13.6-1
+cray-site-init=1.13.7-1
 ilorest=3.2.3-1
 metal-basecamp=1.1.9-1
 metal-ipxe=2.0.11-1
