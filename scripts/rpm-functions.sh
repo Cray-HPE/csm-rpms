@@ -9,9 +9,10 @@ ${CSM_RPMS_DIR}/repos/suse.repos
 EOF
 }
 
-function list-hpe-spp-repos-files() {
+function list-hpe-repos-files() {
+  /usr/bin/envsubst < ${CSM_RPMS_DIR}/repos/hpe.template.repos > ${CSM_RPMS_DIR}/repos/hpe.repos
   cat <<EOF
-${CSM_RPMS_DIR}/repos/hpe-spp.repos
+${CSM_RPMS_DIR}/repos/hpe.repos
 EOF
 }
 
@@ -42,8 +43,8 @@ function zypper-add-repos() {
   done
 }
 
-function add-hpe-spp-repos() {
-  list-hpe-spp-repos-files | xargs -r cat | zypper-add-repos
+function add-hpe-repos() {
+  list-hpe-repos-files | xargs -r cat | zypper-add-repos
 }
 
 function add-suse-repos() {
@@ -64,9 +65,9 @@ function setup-package-repos() {
     add-cray-compute-repos
     ;;
   *)
-    add-suse-repos
-    add-hpe-spp-repos
+    add-hpe-repos
     add-cray-repos
+    add-suse-repos
     ;;
   esac
 
