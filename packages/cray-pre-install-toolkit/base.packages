@@ -1,7 +1,7 @@
 # CSM Packages
 apache2=2.4.43-3.25.1
 canu=1.0.0-1
-craycli=0.41.11
+craycli=0.45.0
 hpe-csm-goss-package=0.3.13-20210615152800_aae8d77
 hpe-csm-scripts=0.0.30
 loftsman=1.1.0-20210511145236_2da0507
@@ -28,7 +28,6 @@ conman=0.3.0-1.42
 createrepo_c=0.16.0-3.3.1
 curl=7.66.0-4.27.1
 dhcp-client=4.3.6.P1-6.11.1
-ethtool=5.9-1.31
 fontconfig=2.12.6-4.3.1
 fonts-config=20200609+git0.42e2b1b-4.7.1
 git=2.31.1-10.3.1
