@@ -30,7 +30,7 @@ hms-smd-ct-test=1.38.0-1
 cray-sdu-rda=1.1.5-20210930134023_baa45ce
 
 # SAT
-cray-prodmgr-1.1.1-20211207144328_ba9d8c8
+cray-prodmgr-1.1.2-20220104153307_2374f1f
 
 # DVS
 insserv-compat=0.1-4.6.1
