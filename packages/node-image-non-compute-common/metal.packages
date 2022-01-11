@@ -10,7 +10,6 @@ kernel-source=5.3.18-59.27.1
 kernel-syms=5.3.18-59.19.1
 ledmon=0.94-1.59
 SLE_HPC-release=15.3-47.3.3
-hexane=1.0.7-1
 hpe-mlnx-ofed-default=5.4_1.0.3.0_5.3.18_57_default-1.sles15sp3
 mft=4.17.0-106
 mlnx-ethtool=5.10-1.54103
