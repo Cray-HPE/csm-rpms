@@ -30,7 +30,7 @@ curl=7.66.0-4.27.1
 dhcp-client=4.3.6.P1-6.11.1
 fontconfig=2.12.6-4.3.1
 fonts-config=20200609+git0.42e2b1b-4.7.1
-git=2.31.1-10.3.1
+git-core=2.31.1-10.3.1
 ipmitool=1.8.18+git20200204.7ccea28-3.3.1
 iproute2=5.3-5.2.1
 iproute2-bash-completion=5.3-5.2.1
@@ -46,7 +46,10 @@ minicom=2.7.1-1.19
 netcat-openbsd=1.178-1.24
 nmap=7.70-3.12.1
 open-lldp=1.1+36.e926f7172b96-1.12
-openssh=8.4p1-3.3.1
+openssh-8.4p1-3.3.1
+openssh-clients-8.4p1-3.3.1
+openssh-server-8.4p1-3.3.1
+openssh-common-8.4p1-3.3.1
 parted=3.2-19.1
 patterns-base-base=20200124-10.5.1
 pciutils=3.5.6-11.45
