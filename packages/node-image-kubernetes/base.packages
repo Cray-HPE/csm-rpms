@@ -14,7 +14,7 @@ cray-orca=0.7.5-2.1_20210930095500__gac3cd47
 # HMS
 hms-bss-ct-test=1.11.0-1
 hms-capmc-ct-test=1.29.0-1
-hms-ct-test-base=1.10.0-1
+hms-ct-test-base=1.11.0-1
 hms-fas-ct-test=1.13.0-1
 hms-hmcollector-ct-test=2.14.0-1
 hms-hbtd-ct-test=1.13.0-1
