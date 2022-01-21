@@ -23,5 +23,6 @@ https://arti.dev.cray.com/artifactory/sat-rpm-master-local/dev/master/sle15_sp2_
 https://arti.dev.cray.com/artifactory/csm-rpm-stable-local/hpe/                                        x86_64/canu                                       --no-gpgcheck -p 89                   cray/csm/sle-15sp3/x86_64
 https://arti.dev.cray.com/artifactory/csm-rpm-stable-local/release/                                    cray-csm-rpm-stable-local-release                 --no-gpgcheck -p 89                   cray/csm/rpm/stable/local/release
 
+https://artifactory.algol60.net/artifactory/csm-rpms/hpe/stable/noos/                                  cray-algol60-csm-rpms-stable-noos                 --no-gpgcheck -p 49                   cray/csm/noos
 https://artifactory.algol60.net/artifactory/csm-rpms/hpe/stable/sle-15sp3/                             cray-algol60-csm-rpms-stable-sle-15sp3            --no-gpgcheck -p 59                   cray/csm/sle-15sp3
 https://artifactory.algol60.net/artifactory/csm-rpms/hpe/stable/sle-15sp2/                             cray-algol60-csm-rpms-stable-sle-15sp2            --no-gpgcheck -p 69                   cray/csm/sle-15sp2
