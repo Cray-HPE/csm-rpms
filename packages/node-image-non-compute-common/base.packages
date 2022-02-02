@@ -98,6 +98,7 @@ python3-lxml=4.4.2-1.24
 python3-MarkupSafe=1.0-1.29
 python3-netaddr=0.7.19-1.17
 python3-pexpect=4.8.0-5.3.5
+python3-pyroute2=0.5.10-3.3.1
 python3-rpm=4.14.3-37.2
 python3-sip=4.19.19-1.52
 rarpd=s20161105-8.3.1
