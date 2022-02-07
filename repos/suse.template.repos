@@ -35,3 +35,5 @@ http://${ARTIFACTORY_USER}:${ARTIFACTORY_TOKEN}@artifactory.algol60.net/artifact
 http://${ARTIFACTORY_USER}:${ARTIFACTORY_TOKEN}@artifactory.algol60.net/artifactory/sles-mirror/Updates/Storage/6/x86_64/update/?auth=basic                                       SUSE-Storage-6-x86_64-Updates                                         -g -p 99  suse/Storage/6/x86_64/update
 
 http://${ARTIFACTORY_USER}:${ARTIFACTORY_TOKEN}@artifactory.algol60.net/artifactory/sles-mirror/Backports/SLE-15-SP2_x86_64/standard/?auth=basic                                  SUSE-Backports-SLE-15-SP2-x86_64                                      -g -p 99  suse/Backports-SLE/15-SP2/x86_64/standard
+
+http://${ARTIFACTORY_USER}:${ARTIFACTORY_TOKEN}@artifactory.algol60.net/artifactory/sles-mirror/Updates/SLE-Product-SLES/15-SP2-LTSS/x86_64/update/?auth=basic                    SUSE-SLE-Product-SLES-15-SP2-LTSS-x86_64-Updates                      -g -p 99  suse/SLE-Product-SLES/15-SP2-LTSS/x86_64/update
