@@ -24,7 +24,7 @@ hms-reds-ct-test=1.21.0-1
 hms-rts-ct-test=1.15.0-1
 hms-scsd-ct-test=1.8.0-1
 hms-sls-ct-test=1.11.0-1
-hms-smd-ct-test=1.38.0-1
+hms-smd-ct-test=1.45.0-1
 
 # SDU
 cray-sdu-rda=1.1.5-20210930134023_baa45ce
