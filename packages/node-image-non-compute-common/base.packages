@@ -3,12 +3,12 @@ acpid=2.0.31-1.1
 canu=1.1.4-1
 cray-heartbeat=1.2.2-2.1_6.16__gf6fd0bd.shasta
 cray-power-button=1.2.2-2.1_20210930095544__g3d80145
-craycli=0.45.0
+craycli=0.46.0
 csm-node-identity=1.0.18-1
 hpe-csm-scripts=0.0.31
 
 # CSM Testing Utils
-goss-servers=1.9.0-1
+goss-servers=1.10.4-1
 hpe-csm-goss-package=0.3.13-20210615152800_aae8d77
 hpe-csm-yq-package=3.4.1-20210615153837_40f15a6
 
@@ -78,6 +78,7 @@ openssh-8.4p1-3.3.1.x86_64
 openssh-clients-8.4p1-3.3.1.x86_64
 openssh-server-8.4p1-3.3.1.x86_64
 openssh-common-8.4p1-3.3.1.x86_64
+parted=3.2-19.1
 pdsh=2.34-32.1
 perf=5.3.18-36.35
 perl-doc=5.26.1-15.87
@@ -97,6 +98,7 @@ python3-lxml=4.4.2-1.24
 python3-MarkupSafe=1.0-1.29
 python3-netaddr=0.7.19-1.17
 python3-pexpect=4.8.0-5.3.5
+python3-pyroute2=0.5.10-3.3.1
 python3-rpm=4.14.3-37.2
 python3-sip=4.19.19-1.52
 rarpd=s20161105-8.3.1
