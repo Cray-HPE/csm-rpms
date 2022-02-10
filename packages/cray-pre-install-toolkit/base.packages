@@ -71,3 +71,7 @@ wget=1.20.3-3.12.1
 which=2.21-2.20
 wireshark=3.4.5-3.53.1
 wol=0.7.1-2.5
+
+# Polkit packages with fix for CVE-2021-4034 are available from LTSS repo
+polkit=0.116-3.6.1
+libpolkit0=0.116-3.6.1
