@@ -92,12 +92,15 @@ function list-compute-packages() {
 }
 
 function install-packages() {
+  # rpm scripts often exit with errors, which should not break any scripts calling us
+  set +e
   if [[ "$DEV" = 'true' ]]; then
     echo >&2 "DEV: $DEV"
     remove-comments-and-empty-lines "$1" | xargs -t -r zypper -n install --oldpackage --auto-agree-with-licenses --no-recommends --allow-unsigned-rpm
   else
     remove-comments-and-empty-lines "$1" | xargs -t -r zypper -n install --oldpackage --auto-agree-with-licenses --no-recommends
   fi
+  set -e
 }
 
 function update-package-versions() {
