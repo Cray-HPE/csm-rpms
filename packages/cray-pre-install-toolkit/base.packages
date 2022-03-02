@@ -1,6 +1,6 @@
 # CSM Packages
 apache2=2.4.43-3.25.1
-canu=1.1.11-1
+canu=1.2.1-1
 craycli=0.46.0
 hpe-csm-goss-package=0.3.13-20210615152800_aae8d77
 hpe-csm-scripts=0.0.31
