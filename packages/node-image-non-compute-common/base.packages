@@ -8,7 +8,7 @@ csm-node-identity=1.0.18-1
 hpe-csm-scripts=0.0.32
 
 # CSM Testing Utils
-goss-servers=1.12.9-1
+goss-servers=1.12.14-1
 hpe-csm-goss-package=0.3.13-20210615152800_aae8d77
 hpe-csm-yq-package=3.4.1-20210615153837_40f15a6
 
