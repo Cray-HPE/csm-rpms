@@ -6,3 +6,5 @@ python3-netaddr=0.7.19-1.17
 netcat-openbsd=1.178-1.24
 jq=1.6-3.3.1
 cephadm=15.2.14.84+gb6e5642e260-3.31.1
+podman-cni-config=3.4.4-150300.9.3.2
+podman=3.4.4-150300.9.3.2
