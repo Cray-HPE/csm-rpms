@@ -14,3 +14,5 @@ hpe-mlnx-ofed-default=5.4_1.0.3.0_5.3.18_57_default-1.sles15sp3
 mft=4.17.0-106
 mlnx-ethtool=5.10-1.54103
 mlnx-tools=5.2.0-0.54103
+tpm2.0-abrmd=2.3.3-1.12
+tpm2.0-tools=4.3.0-2.3
