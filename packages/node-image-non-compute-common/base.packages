@@ -5,10 +5,10 @@ cray-heartbeat=1.2.2-2.1_6.16__gf6fd0bd.shasta
 cray-power-button=1.2.2-2.1_20210930095544__g3d80145
 craycli=0.46.0
 csm-node-identity=1.0.18-1
-hpe-csm-scripts=0.0.31
+hpe-csm-scripts=0.0.32
 
 # CSM Testing Utils
-goss-servers=1.12.19-1
+goss-servers=1.13.0-1
 hpe-csm-goss-package=0.3.13-20210615152800_aae8d77
 hpe-csm-yq-package=3.4.1-20210615153837_40f15a6
 
@@ -122,3 +122,4 @@ wget=1.20.3-3.12.1
 wireshark=3.4.7-3.59.1
 xfsdump=3.1.6-1.30
 zip=3.0-2.22
+zsh=5.6-5.17

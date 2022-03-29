@@ -1,11 +1,11 @@
 biosdevname=0.7.3-5.3.1
-grub2=2.04-22.3.1
+grub2=2.04-150300.22.12.2
 grub2-branding-SLE=15-33.3.1
-grub2-i386-pc=2.04-22.3.1
-grub2-x86_64-efi=2.04-22.3.1
+grub2-i386-pc=2.04-150300.22.12.2
+grub2-x86_64-efi=2.04-150300.22.12.2
 mdadm=4.1-24.6.1
-dracut-kiwi-live=9.23.20-3.40.1
-dracut-metal-mdsquash=1.9.2-1
+dracut-kiwi-live=9.24.16-3.44.1
+dracut-metal-mdsquash=1.9.3-1
 kernel-source=5.3.18-150300.59.43.1
 kernel-syms=5.3.18-150300.59.43.1
 ledmon=0.94-1.59
