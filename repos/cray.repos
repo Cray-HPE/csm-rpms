@@ -1,9 +1,3 @@
-https://arti.dev.cray.com/artifactory/cos-rpm-stable-local/release/cos-2.2/sle15_sp3_ncn/                         cray-cos-sle-15sp3-SHASTA-OS-cos-2.2              --no-gpgcheck -p 59                   cray/cos/sle-15sp3-ncn
-https://arti.dev.cray.com/artifactory/cos-rpm-stable-local/release/cos-2.1/sle15_sp2_ncn/                         cray-cos-sle-15sp2-SHASTA-OS-cos-2.1              --no-gpgcheck -p 69                   cray/cos/sle-15sp2-ncn
-
-https://arti.dev.cray.com/artifactory/cos-rpm-stable-local/release/cos-2.2/sle15_sp3_cn/                          cray-cos-sle-15sp3-SHASTA-cos-2.2                 --no-gpgcheck -p 59                   cray/cos/sle-15sp3-cn
-https://arti.dev.cray.com/artifactory/cos-rpm-stable-local/release/cos-2.1/sle15_sp2_cn/                          cray-cos-sle-15sp2-SHASTA-cos-2.1                 --no-gpgcheck -p 69                   cray/cos/sle-15sp2-cn
-
 https://artifactory.algol60.net/artifactory/csm-rpms/hpe/stable/sle-15sp3/                                        cray-algol60-csm-rpms-stable-sle-15sp3            --no-gpgcheck -p 59                   cray/csm/sle-15sp3
 https://artifactory.algol60.net/artifactory/csm-rpms/hpe/stable/sle-15sp2/                                        cray-algol60-csm-rpms-stable-sle-15sp2            --no-gpgcheck -p 69                   cray/csm/sle-15sp2
 
