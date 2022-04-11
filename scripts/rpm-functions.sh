@@ -45,6 +45,12 @@ ${CSM_RPMS_DIR}/repos/cray.repos
 EOF
 }
 
+function list-cos-repos-files() {
+  cat <<EOF
+${CSM_RPMS_DIR}/repos/cos.repos
+EOF
+}
+
 function list-cray-compute-repos-files() {
   cat <<EOF
 ${CSM_RPMS_DIR}/repos/cray-compute.repos
@@ -78,6 +84,10 @@ function add-cray-repos() {
   list-cray-repos-files | xargs -r cat | zypper-add-repos
 }
 
+function add-cos-repos() {
+  list-cos-repos-files | xargs -r cat | zypper-add-repos
+}
+
 function add-cray-compute-repos() {
   list-cray-compute-repos-files | xargs -r cat | zypper-add-repos
 }
@@ -87,10 +97,16 @@ function setup-package-repos() {
   -c|--compute)
     add-cray-compute-repos
     ;;
+  -p|--pit)
+    add-hpe-repos
+    add-cray-repos
+    add-suse-repos
+    ;;
   *)
     add-hpe-repos
     add-cray-repos
     add-suse-repos
+    add-cos-repos
     ;;
   esac
 
