@@ -27,7 +27,7 @@ hms-sls-ct-test=1.11.0-1
 hms-smd-ct-test=1.48.0-1
 
 # SDU
-cray-sdu-rda=1.1.5-20210930134023_baa45ce
+cray-sdu-rda-1.2.1-shasta_20220202150011_8417c4c
 
 # SAT
 cray-prodmgr-1.1.2-20220104153307_2374f1f
