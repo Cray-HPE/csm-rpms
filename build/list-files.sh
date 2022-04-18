@@ -20,9 +20,6 @@ while [[ $# -gt 0 ]]; do
         list-hpe-spp-repos-files
         list-cray-repos-files
         ;;
-    compute-repos|compute-repositories)
-        list-cray-compute-repos-files
-        ;;
     pkgs|packages)
         list-packages-files
         ;;

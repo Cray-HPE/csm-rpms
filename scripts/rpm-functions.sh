@@ -45,12 +45,6 @@ ${CSM_RPMS_DIR}/repos/cray.repos
 EOF
 }
 
-function list-cray-compute-repos-files() {
-  cat <<EOF
-${CSM_RPMS_DIR}/repos/cray-compute.repos
-EOF
-}
-
 function remove-comments-and-empty-lines() {
   sed -e 's/#.*$//' -e '/^[[:space:]]*$/d' "$@"
 }
@@ -78,15 +72,8 @@ function add-cray-repos() {
   list-cray-repos-files | xargs -r cat | zypper-add-repos
 }
 
-function add-cray-compute-repos() {
-  list-cray-compute-repos-files | xargs -r cat | zypper-add-repos
-}
-
 function setup-package-repos() {
   case "$1" in
-  -c|--compute)
-    add-cray-compute-repos
-    ;;
   *)
     add-hpe-repos
     add-cray-repos
