@@ -1,19 +1,10 @@
-http://car.dev.cray.com/artifactory/cos/SHASTA-3RD/sle15_sp2_ncn/x86_64/release/cos-2.1/               cray-cos-sle-15sp2-x86_64-SHASTA-3RD-cos-2.1      --gpgcheck-allow-unsigned-repo -p 89  cray/cos/sle-15sp2/x86_64
-http://car.dev.cray.com/artifactory/cos/SHASTA-OS/sle15_sp2_ncn/noarch/release/cos-2.1/                cray-cos-sle-15sp2-noarch-SHASTA-OS-cos-2.1       --gpgcheck-allow-unsigned-repo -p 89  cray/cos/sle-15sp2/noarch
-http://car.dev.cray.com/artifactory/cos/SHASTA-OS/sle15_sp2_ncn/x86_64/release/cos-2.1/                cray-cos-sle-15sp2-x86_64-SHASTA-OS-cos-2.1       --gpgcheck-allow-unsigned-repo -p 89  cray/cos/sle-15sp2/x86_64
+https://artifactory.algol60.net/artifactory/csm-rpms/hpe/stable/sle-15sp3/                                        cray-algol60-csm-rpms-stable-sle-15sp3            --no-gpgcheck -p 59                   cray/csm/sle-15sp3
+https://artifactory.algol60.net/artifactory/csm-rpms/hpe/stable/sle-15sp2/                                        cray-algol60-csm-rpms-stable-sle-15sp2            --no-gpgcheck -p 69                   cray/csm/sle-15sp2
 
-http://car.dev.cray.com/artifactory/csm/CLOUD/sle15_sp2_ncn/x86_64/release/csm-1.2/                    cray-csm-sle-15sp2-x86_64-CLOUD-1.2               --gpgcheck-allow-unsigned-repo -p 79  cray/csm/sle-15sp2/x86_64
-http://car.dev.cray.com/artifactory/csm/CLOUD/sle15_sp2_ncn/x86_64/release/csm-1.0/                    cray-csm-sle-15sp2-x86_64-CLOUD-1.0               --gpgcheck-allow-unsigned-repo -p 89  cray/csm/sle-15sp2/x86_64
-http://car.dev.cray.com/artifactory/csm/CSM/sle15_sp2_ncn/noarch/release/1.2/                          cray-csm-sle-15sp2-noarch-1.2                     --gpgcheck-allow-unsigned-repo -p 89  cray/csm/sle-15sp2/noarch
-http://car.dev.cray.com/artifactory/csm/CSM/sle15_sp2_ncn/noarch/release/csm-1.0/                      cray-csm-sle-15sp2-noarch-CSM-1.0                 --gpgcheck-allow-unsigned-repo -p 89  cray/csm/sle-15sp2/noarch
-http://car.dev.cray.com/artifactory/csm/CSM/sle15_sp2_ncn/x86_64/release/csm-1.0/                      cray-csm-sle-15sp2-x86_64-CSM-1.0                 --gpgcheck-allow-unsigned-repo -p 89  cray/csm/sle-15sp2/x86_64
-http://car.dev.cray.com/artifactory/csm/SCMS/sle15_sp2_ncn/x86_64/release/csm-1.2/                     cray-csm-sle-15sp2-x86_64-SCMS-1.2                --gpgcheck-allow-unsigned-repo -p 89  cray/csm/sle-15sp2/x86_64
-http://car.dev.cray.com/artifactory/csm/SPET/sle15_sp2_ncn/noarch/release/csm-1.0/                     cray-csm-sle-15sp2-noarch-SPET-1.0                --gpgcheck-allow-unsigned-repo -p 89  cray/csm/sle-15sp2/noarch
-http://car.dev.cray.com/artifactory/csm/SPET/sle15_sp2_ncn/x86_64/release/csm-1.0/                     cray-csm-sle-15sp2-x86_64-SPET-1.0                --gpgcheck-allow-unsigned-repo -p 89  cray/csm/sle-15sp2/x86_64
-http://car.dev.cray.com/artifactory/csm/UAS/sle15_sp2_ncn/x86_64/release/csm-1.0/                      cray-csm-sle-15sp2-x86_64-UAS-1.0                 --gpgcheck-allow-unsigned-repo -p 89  cray/csm/sle-15sp2/x86_64
+https://arti.dev.cray.com/artifactory/sat-rpm-master-local/dev/master/sle15_sp2_ncn/                              cray-sat-sle-15sp2-x86_64-master                  --no-gpgcheck -p 89                   cray/sat/sle-15sp2/x86_64
 
-http://car.dev.cray.com/artifactory/ct-tests/HMS/sle15_sp2_ncn/x86_64/release/csm-1.2/                 cray-ct-tests-sle-15sp2-x86_64-HMS-1.2            --gpgcheck-allow-unsigned-repo -p 89  cray/csm/sle-15sp2/x86_64
-
+https://arti.dev.cray.com/artifactory/csm-rpm-stable-local/hpe/                                                   x86_64/canu                                       --no-gpgcheck -p 89                   cray/csm/sle-15sp3/x86_64
+https://arti.dev.cray.com/artifactory/csm-rpm-stable-local/release/                                               cray-csm-rpm-stable-local-release                 --no-gpgcheck -p 89                   cray/csm/rpm/stable/local/release
 
 http://car.dev.cray.com/artifactory/sdu/SSA/sle15_sp2_ncn/noarch/release/sdu-1.1/                      cray-sdu-sle-15sp2-noarch-sdu-1.1                 --no-gpgcheck -p 89                   cray/sdu/sle-15sp2/noarch
 http://car.dev.cray.com/artifactory/sdu/SSA/sle15_sp2_ncn/x86_64/release/sdu-1.1/                      cray-sdu-sle-15sp2-x86_64-sdu-1.1                 --no-gpgcheck -p 89                   cray/sdu/sle-15sp2/x86_64
@@ -26,3 +17,6 @@ https://arti.dev.cray.com/artifactory/csm-rpm-stable-local/release/             
 https://artifactory.algol60.net/artifactory/csm-rpms/hpe/stable/noos/                                  cray-algol60-csm-rpms-stable-noos                 --no-gpgcheck -p 49                   cray/csm/noos
 https://artifactory.algol60.net/artifactory/csm-rpms/hpe/stable/sle-15sp3/                             cray-algol60-csm-rpms-stable-sle-15sp3            --no-gpgcheck -p 59                   cray/csm/sle-15sp3
 https://artifactory.algol60.net/artifactory/csm-rpms/hpe/stable/sle-15sp2/                             cray-algol60-csm-rpms-stable-sle-15sp2            --no-gpgcheck -p 69                   cray/csm/sle-15sp2
+
+https://arti.dev.cray.com/artifactory/sdu-rpm-stable-local/release/img_oci-shasta-1.2/sle15_sp3_ncn/              sdu-rpm-stable-local                              --no-gpgcheck -p 89                   sdu-rpm-stable-local/release/1.2/sle15_sp3_ncn/
+
