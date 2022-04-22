@@ -2,6 +2,7 @@
 acpid=2.0.31-1.1
 canu=1.3.2-1
 cray-heartbeat=1.2.2-2.1_6.16__gf6fd0bd.shasta
+cray-kubectl-hns-plugin=1.0.0-1
 cray-power-button=1.2.2-2.1_20210930095544__g3d80145
 craycli=0.46.0
 csm-node-identity=1.0.18-1
