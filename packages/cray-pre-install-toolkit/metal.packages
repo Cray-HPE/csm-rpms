@@ -6,9 +6,8 @@ grub2-x86_64-efi=2.04-150300.22.12.2
 kernel-default=5.3.18-150300.59.43.1
 kernel-source=5.3.18-150300.59.43.1
 kernel-syms=5.3.18-150300.59.43.1
+kernel-mft-mlnx-kmp-default=4.17.0_k5.3.18_57-1.sles15sp3
 ledmon=0.94-1.59
 SLE_HPC-release=15.3-47.3.3
-hpe-mlnx-ofed-default=5.4_1.0.3.0_5.3.18_57_default-1.sles15sp3
+# DO NOT INSTALL MFT FROM THE SPP REPO, NEVER APPEND "slesXspY"
 mft=4.17.0-106
-mlnx-ethtool=5.10-1.54103
-mlnx-tools=5.2.0-0.54103
