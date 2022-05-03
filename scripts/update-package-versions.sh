@@ -84,6 +84,7 @@ do
       ;;
     -c|--compute)
       DOCKER_CACHE_IMAGE="${DOCKER_CACHE_IMAGE}-compute"
+      SETUP_PACKAGE_REPOS_FLAGS="--compute"
       ;;
     -o|--output-diffs-only)
       OUTPUT_DIFFS_ONLY="true"
@@ -122,7 +123,7 @@ if [[ "$(docker images -q $DOCKER_CACHE_IMAGE 2> /dev/null)" == "" ]]; then
     source /app/scripts/rpm-functions.sh
     zypper --non-interactive install gettext gawk
     cleanup-all-repos
-    setup-package-repos
+    setup-package-repos $SETUP_PACKAGE_REPOS_FLAGS
     zypper refresh
     # Force a cache update
     zypper --no-refresh info man > /dev/null 2>&1
