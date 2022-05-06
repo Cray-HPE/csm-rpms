@@ -161,6 +161,7 @@ fi
 echo "Working with packages file $PACKAGES_FILE"
 
 # Only use tty when we'll prompt. This will allow jenkins or other automation to work
+#shellcheck disable=SC2050
 if [[ "$VALIDATE" == "true" || "$AUTO_YES" == "true" || OUTPUT_DIFFS_ONLY == "true" ]]; then
   DOCKER_TTY_ARG=""
 else
