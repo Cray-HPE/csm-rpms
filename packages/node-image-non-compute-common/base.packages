@@ -67,6 +67,7 @@ libpwquality1=1.4.4-3.3.2
 libstoragemgmt=1.8.5-3.3.1
 libunwind-devel=1.5.0-4.5.1
 lshw=B.02.19.2+git.20210619-3.9.1
+lsscsi=0.28-1.24
 ltrace=0.7.91-4.3
 lvm2=2.03.05-8.42.1
 man=2.7.6-6.22
