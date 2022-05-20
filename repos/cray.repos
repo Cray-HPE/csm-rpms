@@ -5,7 +5,6 @@ https://artifactory.algol60.net/artifactory/csm-rpms/hpe/stable/sle-15sp2/      
 
 https://arti.dev.cray.com/artifactory/sat-rpm-master-local/dev/master/sle15_sp2_ncn/                              cray-sat-sle-15sp2-x86_64-master                  --no-gpgcheck -p 89                   cray/sat/sle-15sp2/x86_64
 
-https://arti.dev.cray.com/artifactory/csm-rpm-stable-local/hpe/                                                   x86_64/canu                                       --no-gpgcheck -p 89                   cray/csm/sle-15sp3/x86_64
 https://arti.dev.cray.com/artifactory/csm-rpm-stable-local/release/                                               cray-csm-rpm-stable-local-release                 --no-gpgcheck -p 89                   cray/csm/rpm/stable/local/release
 
 https://arti.dev.cray.com/artifactory/sdu-rpm-stable-local/release/img_oci-shasta-1.2/sle15_sp3_ncn/              sdu-rpm-stable-local                              --no-gpgcheck -p 89                   sdu-rpm-stable-local/release/1.2/sle15_sp3_ncn/
