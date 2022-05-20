@@ -46,6 +46,7 @@ gperftools=2.5-4.12
 gptfdisk=1.0.1-2.11
 hdparm=9.52-1.22
 hplip=3.20.11-2.1
+ilorest=3.5.0-1
 ipmitool=1.8.18+git20200204.7ccea28-3.3.1
 iproute2-bash-completion=5.3-5.2.1
 ipset=6.36-3.3.1
