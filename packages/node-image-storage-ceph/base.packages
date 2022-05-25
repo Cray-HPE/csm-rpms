@@ -1,10 +1,6 @@
 # Base
-python3-boto3=1.17.9-19.1
-python3-kubernetes=8.0.1-3.5.1
-python3-six=1.14.0-10.1
-python3-netaddr=0.7.19-1.17
-netcat-openbsd=1.178-1.24
-jq=1.6-3.3.1
 cephadm=15.2.14.84+gb6e5642e260-3.31.1
-podman-cni-config=3.4.4-150300.9.3.2
+jq=1.6-3.3.1
+netcat-openbsd=1.178-1.24
 podman=3.4.4-150300.9.3.2
+podman-cni-config=3.4.4-150300.9.3.2
