@@ -1,4 +1,5 @@
 # Base
-cephadm=15.2.15.83+gf72054fa653-3.34.1
+cephadm=16.2.9.58+ge2e5cb80063-lp153.3854.1
+libfmt7=7.1.3-bp153.1.17
 jq=1.6-3.3.1
 netcat-openbsd=1.178-1.24
