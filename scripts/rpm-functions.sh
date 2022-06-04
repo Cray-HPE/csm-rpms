@@ -25,10 +25,10 @@
 
 CSM_RPMS_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}")/.." &> /dev/null && pwd )"
 
-function list-suse-repos-files() {
-  /usr/bin/envsubst < ${CSM_RPMS_DIR}/repos/suse.template.repos > ${CSM_RPMS_DIR}/repos/suse.repos
+function list-google-repos-files() {
+  /usr/bin/envsubst < ${CSM_RPMS_DIR}/repos/google.template.repos > ${CSM_RPMS_DIR}/repos/google.repos
   cat <<EOF
-${CSM_RPMS_DIR}/repos/suse.repos
+${CSM_RPMS_DIR}/repos/google.repos
 EOF
 }
 
@@ -39,14 +39,44 @@ ${CSM_RPMS_DIR}/repos/hpe.repos
 EOF
 }
 
+function list-suse-repos-files() {
+  /usr/bin/envsubst < ${CSM_RPMS_DIR}/repos/suse.template.repos > ${CSM_RPMS_DIR}/repos/suse.repos
+  cat <<EOF
+${CSM_RPMS_DIR}/repos/suse.repos
+EOF
+}
+
 function list-cray-repos-files() {
   cat <<EOF
 ${CSM_RPMS_DIR}/repos/cray.repos
 EOF
 }
 
+function add-fake-conntrack {
+    zypper --non-interactive install rpm-build createrepo_c
+    echo "Building a custom local repository for conntrack dependency, pulls in conntrack-tools while mocking conntrack."
+    rm -rf /var/local-repos/conntrack/x86_64 || true
+    mkdir -p /tmp/conntrack
+    cp -v ${CSM_RPMS_DIR}/repos/conntrack.spec /tmp/conntrack
+    rpmbuild -ba --define "_rpmdir /tmp/conntrack" /tmp/conntrack/conntrack.spec
+    mkdir -p /var/local-repos/conntrack/noarch
+    rm /tmp/conntrack/conntrack.spec
+    mv /tmp/conntrack/* /var/local-repos/conntrack/
+    createrepo /var/local-repos/conntrack
+    zypper -n addrepo --refresh --no-gpgcheck /var/local-repos/conntrack buildonly-local-conntrack
+    zypper --non-interactive remove rpm-build createrepo_c
+}
+
 function remove-comments-and-empty-lines() {
   sed -e 's/#.*$//' -e '/^[[:space:]]*$/d' "$@"
+}
+
+function setup-csm-rpms {
+    zypper --non-interactive install gettext-tools gawk
+}
+
+function cleanup-csm-rpms {
+    zypper --non-interactive remove gettext-tools gawk
 }
 
 function zypper-add-repos() {
@@ -60,6 +90,14 @@ function zypper-add-repos() {
   done
 }
 
+function add-cray-repos() {
+  list-cray-repos-files | xargs -r cat | zypper-add-repos
+}
+
+function add-google-repos() {
+  list-google-repos-files | xargs -r cat | zypper-add-repos
+}
+
 function add-hpe-repos() {
   list-hpe-repos-files | xargs -r cat | zypper-add-repos
 }
@@ -68,19 +106,17 @@ function add-suse-repos() {
   list-suse-repos-files | xargs -r cat | zypper-add-repos
 }
 
-function add-cray-repos() {
-  list-cray-repos-files | xargs -r cat | zypper-add-repos
-}
-
 function setup-package-repos() {
   case "$1" in
   *)
-    add-hpe-repos
     add-cray-repos
+    add-google-repos
+    add-hpe-repos
     add-suse-repos
     ;;
   esac
-
+  # fake-conntrack necessary for kubernetes; must run after all repos are setup.
+  add-fake-conntrack
   zypper lr -e /tmp/repos.repos
   cat /tmp/repos.repos
 }
