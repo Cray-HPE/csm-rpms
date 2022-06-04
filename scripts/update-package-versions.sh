@@ -144,12 +144,13 @@ if [[ "$(docker images -q $DOCKER_CACHE_IMAGE 2> /dev/null)" == "" ]]; then
   docker run --name $DOCKER_CACHE_IMAGE -v "$(realpath "$SOURCE_DIR"):/app" -e ARTIFACTORY_USER=$ARTIFACTORY_USER -e ARTIFACTORY_TOKEN=$ARTIFACTORY_TOKEN $DOCKER_BASE_IMAGE bash -c "
     set -e
     source /app/scripts/rpm-functions.sh
-    zypper --non-interactive install gettext gawk
+    setup-csm-rpms
     cleanup-all-repos
     setup-package-repos $SETUP_PACKAGE_REPOS_FLAGS
     zypper refresh
     # Force a cache update
     zypper --no-refresh info man > /dev/null 2>&1
+    cleanup-csm-rpms
   "
 
   echo "Creating cache docker image $DOCKER_CACHE_IMAGE"

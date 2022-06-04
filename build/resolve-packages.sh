@@ -33,8 +33,8 @@ cat "$@" \
     arti.dev.cray.com/baseos-docker-master-local/sles15sp3:latest \
     bash -c "set -exo pipefail
     {
-        zypper --non-interactive install  --auto-agree-with-licenses gawk
         source /data/scripts/rpm-functions.sh
+        setup-csm-rpms
         cleanup-all-repos
     } </dev/null
     zypper-add-repos"

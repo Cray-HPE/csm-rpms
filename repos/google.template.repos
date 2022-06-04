@@ -1,0 +1,1 @@
+https://${ARTIFACTORY_USER}:${ARTIFACTORY_TOKEN}@artifactory.algol60.net/artifactory/google-packages-mirror/kubernetes-el7-x86_64/                        google-packages-mirror               --no-gpgcheck -p 99    kubernetes-el7-x86_64/
