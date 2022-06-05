@@ -1,13 +1,13 @@
 amsd=2.4.1-1571.4.sles15
 biosdevname=0.7.3-5.3.1
-grub2=2.04-150300.22.15.2
 grub2-branding-SLE=15-33.3.1
 grub2-i386-pc=2.04-150300.22.15.2
 grub2-x86_64-efi=2.04-150300.22.15.2
+grub2=2.04-150300.22.15.2
 kernel-default=5.3.18-150300.59.63.1
+kernel-mft-mlnx-kmp-default=4.18.0_k5.3.18_57-1.sles15sp3
 kernel-source=5.3.18-150300.59.63.1
 kernel-syms=5.3.18-150300.59.63.1
-kernel-mft-mlnx-kmp-default=4.18.0_k5.3.18_57-1.sles15sp3
 ledmon=0.94-1.59
 # DO NOT INSTALL MFT FROM THE SPP REPO, NEVER APPEND "slesXspY"
 mft=4.18.0-106
