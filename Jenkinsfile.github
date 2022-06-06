@@ -34,7 +34,6 @@ pipeline {
         sh """
           ./scripts/update-package-versions.sh -p packages/cray-pre-install-toolkit/base.packages --validate --suffix ${env.SUFFIX}
           ./scripts/update-package-versions.sh -p packages/cray-pre-install-toolkit/metal.packages --validate --suffix ${env.SUFFIX}
-          ./scripts/update-package-versions.sh -p packages/cray-pre-install-toolkit/firmware.packages --validate --suffix ${env.SUFFIX}
         """
       }
     }
@@ -43,7 +42,6 @@ pipeline {
       steps {
         sh """
           ./scripts/update-package-versions.sh -p packages/node-image-non-compute-common/base.packages --validate --suffix ${env.SUFFIX}
-          ./scripts/update-package-versions.sh -p packages/node-image-non-compute-common/cms.packages --validate --suffix ${env.SUFFIX}
           ./scripts/update-package-versions.sh -p packages/node-image-non-compute-common/google.packages --validate --suffix ${env.SUFFIX}
           ./scripts/update-package-versions.sh -p packages/node-image-non-compute-common/metal.packages --validate --suffix ${env.SUFFIX}
         """
@@ -54,8 +52,8 @@ pipeline {
       steps {
         sh """
           ./scripts/update-package-versions.sh -p packages/node-image-kubernetes/base.packages --validate --suffix ${env.SUFFIX}
-          ./scripts/update-package-versions.sh -p packages/node-image-kubernetes/metal.packages --validate --suffix ${env.SUFFIX}
           ./scripts/update-package-versions.sh -p packages/node-image-kubernetes/google.packages --validate --suffix ${env.SUFFIX}
+          ./scripts/update-package-versions.sh -p packages/node-image-kubernetes/metal.packages --validate --suffix ${env.SUFFIX}
         """
       }
     }
