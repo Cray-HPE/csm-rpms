@@ -157,8 +157,10 @@ function update-package-versions() {
 
   # Filter out just the package names we want
   while read -r package; do
+    #shellcheck disable=SC2206
     local parts=(${package//=/ })
     local package=${parts[0]}
+    #shellcheck disable=SC2034
     local version=${parts[1]}
 
     if [[ ! -z "$filter" && ! $package =~ $filter ]]; then
@@ -172,6 +174,7 @@ function update-package-versions() {
   echo "Looking up latest versions"
 
   if [[ "$repos_filter" != "all" ]]; then
+    #shellcheck disable=SC2155
     local repos=$(zypper lr | grep "${repos_filter}" | awk '{printf " -r %s", $1}')
     echo "Filtering repos matching grep pattern ${repos_filter}"
     if [[ -z "$repos" ]]; then
@@ -182,11 +185,15 @@ function update-package-versions() {
     local repos=""
   fi
 
+  #shellcheck disable=SC2155
   local package_info=$(zypper --no-refresh info $repos $package_names)
 
   for package in $package_names; do
+    #shellcheck disable=SC2155
     local current_version=$(cat $packages_path | grep -oP "^${package}=\K.*$")
+    #shellcheck disable=SC2155
     local latest_version=$(echo "${package_info}" | grep -oPz "Name + : ${package}\nVersion + : \K.*" | tr '\0' '\n')
+    #shellcheck disable=SC2155
     local repo=$(echo "${package_info}" | grep -oPz "Repository + : .*\nName + : ${package}\n" | grep -oPz "Repository + : \K.*" | tr '\0' '\n')
 
     if [[ "$current_version" != "$latest_version" || $output_diffs_only != "true" ]]; then
@@ -228,10 +235,12 @@ function validate-package-versions() {
   local packages_path="$1"
 
   echo "Running zypper install --dry-run to validate packages"
+  #shellcheck disable=SC2046
   zypper --no-refresh --non-interactive install --dry-run --auto-agree-with-licenses --no-recommends --force-resolution $(sed '/^[a-zA-Z].*$/!d' $packages_path)
 }
 
 function get-current-package-list() {
+  #shellcheck disable=SC2155
   local inventory_file=$(mktemp)
   local output_path="$1"
   local packages="$2"
@@ -242,7 +251,7 @@ function get-current-package-list() {
   else
     local base_arg=""
   fi
-
+  #shellcheck disable=SC2046
   python3 ${CSM_RPMS_DIR}/scripts/get-packages.py -p /tmp -f $(basename $inventory_file) $base_arg
   get-package-list-from-inventory $inventory_file $output_path $packages
 }

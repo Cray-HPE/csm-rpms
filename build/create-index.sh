@@ -20,9 +20,11 @@ source "${ROOTDIR}/scripts/rpm-functions.sh"
 
 # Temporary directory to cache working files
 workdir="$(mktemp -d)"
+#shellcheck disable=SC2064
 trap "rm -fr '$workdir'" EXIT
 
 # Parse the zypper log and generate an rpm-index
+#shellcheck disable=SC2046
 sed -e '/^Not downloading package /!d' \
     -e "s/^Not downloading package '//" \
     -e 's/[[:space:]]\+.*$//' \
