@@ -80,5 +80,6 @@ https://${ARTIFACTORY_USER}:${ARTIFACTORY_TOKEN}@artifactory.algol60.net/artifac
 https://${ARTIFACTORY_USER}:${ARTIFACTORY_TOKEN}@artifactory.algol60.net/artifactory/sles-mirror/Backports/SLE-15-SP2_x86_64/standard?auth=basic                                 SUSE-Backports-SLE-15-SP2-x86_64                                      -g -p 89  suse/Backports-SLE/15-SP2/x86_64/standard
 
 # cephadm, ceph-common, and libfmt7
-https://${ARTIFACTORY_USER}:${ARTIFACTORY_TOKEN}@artifactory.algol60.net/artifactory/opensuse-mirror/openSUSE:Backports:SLE-15-SP3/step/                                         openSUSE-Backports-SLE-15-SP3                                         -g -p 89  step/
+https://${ARTIFACTORY_USER}:${ARTIFACTORY_TOKEN}@artifactory.algol60.net/artifactory/opensuse-mirror/openSUSE:Backports:SLE-15-SP3/step/                                         openSUSE-Backports-SLE-15-SP3-step                                         -g -p 89  step/
+https://${ARTIFACTORY_USER}:${ARTIFACTORY_TOKEN}@artifactory.algol60.net/artifactory/opensuse-mirror/openSUSE:Backports:SLE-15-SP3/standard/                                     openSUSE-Backports-SLE-15-SP3-standard                                         -g -p 89  standard/
 https://${ARTIFACTORY_USER}:${ARTIFACTORY_TOKEN}@artifactory.algol60.net/artifactory/opensuse-mirror/filesystems:ceph/openSUSE_Leap_15.3/                                        filesystems-ceph                                                      -g -p 89  openSUSE_Leap_15.3/
