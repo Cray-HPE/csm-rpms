@@ -39,6 +39,7 @@ iproute2-bash-completion=5.3-5.5.1
 iproute2=5.3-5.5.1
 iputils=s20161105-8.3.1
 jq=1.6-3.3.1
+kubectl=1.21.12-0
 less=530-3.3.2
 lshw=B.02.19.2+git.20210619-3.9.1
 lsof=4.91-1.11
