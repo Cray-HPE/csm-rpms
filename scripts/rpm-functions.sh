@@ -72,11 +72,11 @@ function remove-comments-and-empty-lines() {
 }
 
 function setup-csm-rpms {
-    zypper --non-interactive install gettext-tools gawk
+    zypper --non-interactive install gettext-tools gawk jq
 }
 
 function cleanup-csm-rpms {
-    zypper --non-interactive remove gettext-tools gawk
+    zypper --non-interactive remove gettext-tools gawk jq
 }
 
 function zypper-add-repos() {
