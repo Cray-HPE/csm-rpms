@@ -1,4 +1,4 @@
-dracut-metal-dmk8s=1.7.1-1
-dracut-metal-luksetcd=1.7.1-1
+dracut-metal-dmk8s=2.0.0-1
+dracut-metal-luksetcd=2.0.0-1
 haproxy=2.0.14-bp152.1.1
 keepalived=2.0.19-bp152.1.9
