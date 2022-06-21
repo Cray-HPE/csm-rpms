@@ -29,7 +29,7 @@ sed -e '/^Not downloading package /!d' \
     -e "s/^Not downloading package '//" \
     -e 's/[[:space:]]\+.*$//' \
 | sort -u \
-| docker run --rm -i arti.dev.cray.com/internal-docker-stable-local/packaging-tools:0.7.0 rpm-index -v \
+| docker run --rm -i  artifactory.algol60.net/csm-docker/stable/csm-docker-sle:latest rpm-index -v \
     $(cat "$@" | remove-comments-and-empty-lines | awk '{print "-d", $1, $NF}') \
 | tee "${workdir}/index.yaml"
 

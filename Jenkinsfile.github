@@ -6,11 +6,10 @@ pipeline {
     label "metal-gcp-builder"
   }
 
-  // Configuration options applicable to the entire job
   options {
-    // Don't fill up the build server with unnecessary cruft
-    buildDiscarder(logRotator(numToKeepStr: '5'))
-
+    buildDiscarder(logRotator(numToKeepStr: "5"))
+    disableConcurrentBuilds()
+    timeout(time: 20, unit: 'MINUTES')
     timestamps()
   }
 
