@@ -2,5 +2,6 @@
 ses-release=7-64.1
 
 # Base
+golang-github-prometheus-node_exporter=1.1.2-3.9.3
 haproxy=2.0.14-bp152.1.1
 keepalived=2.0.19-bp152.1.9
