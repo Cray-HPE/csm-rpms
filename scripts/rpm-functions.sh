@@ -58,7 +58,7 @@ EOF
 }
 
 function remove-comments-and-empty-lines() {
-  sed -e 's/#.*$//' -e '/^[[:space:]]*$/d' "$@"
+  sed -e 's/#.*$//' -e '/^[[:space:]]*$/d'
 }
 
 function zypper-add-repos() {
