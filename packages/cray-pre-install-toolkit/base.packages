@@ -34,6 +34,7 @@ ethtool=5.14-150400.1.6
 fontconfig=2.13.1-150400.1.4
 fonts-config=20200609+git0.42e2b1b-4.7.1
 git-core=2.35.3-150300.10.12.1
+libctf0=2.37-150100.7.34.1
 libbd_mdraid2=2.26-150400.1.5
 ipmitool=1.8.18.238.gb7adc1d-150400.1.14
 iproute2-bash-completion=5.14-150400.1.8
