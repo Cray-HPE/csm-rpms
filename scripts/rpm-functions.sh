@@ -68,7 +68,7 @@ function add-fake-conntrack {
 }
 
 function remove-comments-and-empty-lines() {
-  sed -e 's/#.*$//' -e '/^[[:space:]]*$/d' "$@"
+  sed -e 's/#.*$//' -e '/^[[:space:]]*$/d'
 }
 
 function setup-csm-rpms {
