@@ -1,6 +1,6 @@
 biosdevname=0.7.3-5.3.1
 dracut-kiwi-live=9.24.17-150100.3.50.1
-dracut-metal-mdsquash=2.0.1-1
+dracut-metal-mdsquash=2.0.2-1
 grub2-branding-SLE=15-150400.36.12
 grub2-i386-pc=2.06-150400.11.5.2
 grub2-x86_64-efi=2.06-150400.11.5.2
