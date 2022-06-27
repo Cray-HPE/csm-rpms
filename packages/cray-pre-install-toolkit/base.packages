@@ -15,7 +15,7 @@ ilorest=3.5.1-1
 metal-basecamp=1.2.0-1
 metal-ipxe=2.2.7-1
 metal-net-scripts=0.0.2-1
-pit-init=1.2.26-1
+pit-init=1.2.29-1
 pit-nexus=1.1.4-1
 
 # SUSE Packages
