@@ -1,7 +1,9 @@
-# SES
-ses-release=7-64.1
+# Metal only packages
+# Format:
+#   package_name=version
+# The version is the same version reported by the OS package manager (e.g. zypper).
 
-# Base
 golang-github-prometheus-node_exporter=1.3.0-150100.3.12.1
 haproxy=2.0.14-bp152.1.1
 keepalived=2.0.19-bp152.1.9
+ses-release=7-64.1

@@ -1,3 +1,7 @@
+# Metal only packages
+# Format:
+#   package_name=version
+# The version is the same version reported by the OS package manager (e.g. zypper).
 biosdevname=0.7.3-5.3.1
 dracut-kiwi-live=9.24.17-150100.3.50.1
 dracut-metal-mdsquash=2.0.2-1
