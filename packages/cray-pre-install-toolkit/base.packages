@@ -1,3 +1,8 @@
+# Packages common to all mediums.
+# Format:
+#   package_name=version
+# The version is the same version reported by the OS package manager (e.g. zypper).
+
 # CSM Packages
 apache2=2.4.51-150200.3.45.1
 canu=1.6.5-1
