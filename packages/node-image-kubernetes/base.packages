@@ -18,21 +18,6 @@ cray-orca=0.9.1-2.3_20220329135308__g8f2d4d6
 # DVS
 insserv-compat=0.1-4.6.1
 
-# HMS
-hms-bss-ct-test=1.15.0-1
-hms-capmc-ct-test=1.33.1-1
-hms-ct-test-base=1.11.0-1
-hms-fas-ct-test=1.17.1-1
-hms-hbtd-ct-test=1.15.0-1
-hms-hmcollector-ct-test=2.17.0-1
-hms-hmnfd-ct-test=1.14.0-1
-hms-meds-ct-test=1.17.0-1
-hms-reds-ct-test=1.21.0-1
-hms-rts-ct-test=1.15.0-1
-hms-scsd-ct-test=1.10.0-1
-hms-sls-ct-test=1.18.0-1
-hms-smd-ct-test=1.50.0-1
-
 # SDU
 cray-sdu-rda=2.0.0-shasta_20220512140700_f3c40fd
 

@@ -127,7 +127,7 @@ cray-kubectl-hns-plugin=1.0.0-1
 cray-kubectl-kubelogin-plugin=1.25.1-1
 craycli=0.56.0-1
 csm-node-identity=1.0.18-1
-hpe-csm-scripts=0.0.34-1
+hpe-csm-scripts=0.0.35-1
 
 # CSM Testing Utils
 goss-servers=1.14.26-1
