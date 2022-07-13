@@ -2,7 +2,7 @@
 # Format:
 #   package_name=version
 # The version is the same version reported by the OS package manager (e.g. zypper).
-cephadm=16.2.9.158+gd93952c7eea-lp153.3856.1
+cephadm=16.2.9.536+ga4b2af9947d-lp153.3858.1
 jq=1.6-3.3.1
 libfmt7=7.1.3-bp153.1.17
 netcat-openbsd=1.178-1.24
