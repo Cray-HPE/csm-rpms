@@ -4,7 +4,7 @@
 # The version is the same version reported by the OS package manager (e.g. zypper).
 
 # CSM Packages
-apache2=2.4.51-150200.3.45.1
+apache2=2.4.51-150200.3.48.1
 canu=1.6.5-1
 craycli=0.56.0-1
 dnsmasq=2.86-150100.7.20.1
@@ -33,7 +33,7 @@ checkmedia=5.4-1.13
 chrony=4.1-150300.16.9.1
 conman=0.3.0-1.42
 createrepo_c=0.16.0-3.3.1
-curl=7.66.0-150200.4.33.1
+curl=7.66.0-150200.4.36.1
 dhcp-client=4.3.6.P1-150000.6.14.1
 ethtool=5.9-1.31
 fontconfig=2.12.6-4.3.1
@@ -52,7 +52,7 @@ lshw=B.02.19.2+git.20210619-3.9.1
 lsof=4.91-1.11
 lsscsi=0.28-1.24
 lvm2=2.03.05-8.42.1
-mdadm=4.1-150300.24.12.1
+mdadm=4.1-150300.24.15.1
 minicom=2.7.1-1.19
 mkisofs=3.02~a09-4.6.1
 netcat-openbsd=1.178-1.24
@@ -68,8 +68,7 @@ pciutils=3.5.6-150300.13.3.1
 pdsh=2.34-32.1
 podman-cni-config=3.4.4-150300.9.6.1
 podman=3.4.4-150300.9.6.1
-python=2.7.18-150000.38.1
-python3=3.6.15-150300.10.21.1
+python3=3.6.15-150300.10.27.1
 python3-pip=20.0.2-150100.6.18.1
 python3-setuptools=40.5.0-6.3.1
 python3-virtualenv=16.1.0-1.13
