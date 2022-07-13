@@ -16,7 +16,7 @@ kernel-mft-mlnx-kmp-default=4.20.0_k5.3.18_57-1.sles15sp3
 kernel-source=5.3.18-150300.59.76.1
 kernel-syms=5.3.18-150300.59.76.1
 ledmon=0.94-1.59
-mdadm=4.1-150300.24.12.1
+mdadm=4.1-150300.24.15.1
 # DO NOT INSTALL MFT FROM THE SPP REPO, NEVER APPEND "slesXspY"
 mft=4.20.0-34
 tpm2.0-abrmd=2.3.3-3.3.1
