@@ -1,3 +1,8 @@
+# Google only packages
+# Format:
+#   package_name=version
+# The version is the same version reported by the OS package manager (e.g. zypper).
 google-guest-agent=20220204.00-150000.1.26.1
-google-guest-configs=20211116.00-150400.11.5
+google-guest-configs=20220211.00-150000.1.19.1
 google-guest-oslogin=20220205.00-150000.1.27.1
+google-osconfig-agent=20220209.00-150000.1.17.1
