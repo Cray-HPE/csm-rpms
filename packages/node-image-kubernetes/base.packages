@@ -31,6 +31,7 @@ cray-sdu-rda=1.1.5-20210930134023_baa45ce
 
 # SAT
 cray-prodmgr-1.1.1-20211207144328_ba9d8c8
+cray-sat-podman-1.9.1-1
 
 # DVS
 insserv-compat=0.1-4.6.1
