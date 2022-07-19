@@ -3,7 +3,7 @@
 #   package_name=version
 # The version is the same version reported by the OS package manager (e.g. zypper).
 
-dracut-metal-dmk8s=2.0.0-1
-dracut-metal-luksetcd=2.0.2-1
+dracut-metal-dmk8s=2.0.3-1
+dracut-metal-luksetcd=2.0.3-1
 haproxy=2.0.14-bp152.1.1
 keepalived=2.0.19-bp152.1.9
