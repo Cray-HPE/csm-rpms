@@ -131,6 +131,14 @@ craycli=0.57.0-1
 csm-node-identity=1.0.18-1
 hpe-csm-scripts=0.0.36-1
 
+# CSM Metal
+kernel-default=5.3.18-150300.59.76.1
+kernel-firmware=20210208-150300.4.10.1
+# When we move to SP4 double-check this has a matching kernel, if not then kernel-mft-mlnx-kmp-default needs to be commented out.
+kernel-mft-mlnx-kmp-default=4.20.0_k5.3.18_57-1.sles15sp3
+kernel-source=5.3.18-150300.59.76.1
+kernel-syms=5.3.18-150300.59.76.1
+
 # CSM Testing Utils
 goss-servers=1.14.31-1
 hpe-csm-goss-package=0.3.13-20210615152800_aae8d77
