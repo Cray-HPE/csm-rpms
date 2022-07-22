@@ -6,7 +6,7 @@
 # CSM Packages
 apache2=2.4.51-150200.3.48.1
 canu=1.6.9-1
-craycli=0.57.0-1
+craycli=0.58.0-1
 dnsmasq=2.86-150100.7.20.1
 hpe-csm-goss-package=0.3.13-20210615152800_aae8d77
 hpe-csm-scripts=0.0.36-1
