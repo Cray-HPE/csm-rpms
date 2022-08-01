@@ -48,6 +48,7 @@ fonts-config=20200609+git0.42e2b1b-4.7.1
 git-core=2.35.3-150300.10.12.1
 libctf0=2.37-150100.7.37.1
 libbd_mdraid2=2.22-1.36
+libelf1=0.168-4.5.3
 ipmitool=1.8.18+git20200204.7ccea28-3.3.1
 iproute2-bash-completion=5.3-5.5.1
 iproute2=5.3-5.5.1

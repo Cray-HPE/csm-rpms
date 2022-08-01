@@ -49,6 +49,7 @@ less=530-3.3.2
 libbd_mdraid2=2.22-1.36
 libcanberra-gtk0=0.30-3.2.3
 libecpg6=14.3-150200.5.12.2
+libelf1=0.168-4.5.3
 libfreebl3-hmac=3.68.3-150000.3.67.1
 libfreebl3=3.68.3-150000.3.67.1
 liblldp_clif1=1.1+44.0f781b4162d3-3.3.1
