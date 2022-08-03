@@ -19,8 +19,6 @@ cray-site-init=1.24.0-1
 ilorest=3.5.1-1
 kernel-default=5.3.18-150300.59.76.1
 kernel-firmware=20210208-150300.4.10.1
-# When we move to SP4 double-check this has a matching kernel, if not then kernel-mft-mlnx-kmp-default needs to be commented out.
-kernel-mft-mlnx-kmp-default=4.20.0_k5.3.18_57-1.sles15sp3
 kernel-source=5.3.18-150300.59.76.1
 kernel-syms=5.3.18-150300.59.76.1
 metal-basecamp=1.2.0-1
