@@ -147,7 +147,7 @@ kernel-source=5.3.18-150300.59.76.1
 kernel-syms=5.3.18-150300.59.76.1
 
 # CSM Testing Utils
-goss-servers=1.14.39-1
+goss-servers=1.14.40-1
 hpe-csm-goss-package=0.3.13-20210615152800_aae8d77
 hpe-csm-yq-package=3.4.1-20210615153837_40f15a6
 
