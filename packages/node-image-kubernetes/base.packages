@@ -22,6 +22,7 @@ insserv-compat=0.1-4.6.1
 
 # SAT
 cray-prodmgr=1.1.2-20220104153307_2374f1f
+cray-sat-podman=2.0.0
 
 # SDU
 cray-sdu-rda=2.0.1-shasta_20220712130245_fe07e86
