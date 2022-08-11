@@ -127,8 +127,8 @@ zip=3.0-2.22
 zsh=5.6-7.5.1
 
 # CMS
-cfs-state-reporter=1.7.50-1
-cfs-trust=1.4.4-1
+cfs-state-reporter=1.9.0-1
+cfs-trust=1.6.0-1
 
 # COS
 cray-heartbeat=1.6.0-2.3_3.2__gb2e7d63.shasta

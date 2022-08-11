@@ -1,5 +1,5 @@
 craycli=0.59.0-1
 cray-switchboard=1.2.3-1
 cray-uai-util=1.0.13-1
-cfs-state-reporter=1.7.50-1
-cfs-trust=1.4.4-1
+cfs-state-reporter=1.9.0-1
+cfs-trust=1.6.0-1
