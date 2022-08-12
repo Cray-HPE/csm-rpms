@@ -146,10 +146,10 @@ hpe-csm-scripts=0.0.38-1
 hpe-csm-yq-package=3.4.1-20210615153837_40f15a6
 
 # Metal
-kernel-default=5.3.18-150300.59.76.1
+kernel-default=5.3.18-150300.59.43.1
 kernel-firmware=20210208-150300.4.10.1
-kernel-source=5.3.18-150300.59.76.1
-kernel-syms=5.3.18-150300.59.76.1
+kernel-source=5.3.18-150300.59.43.1
+kernel-syms=5.3.18-150300.59.43.1
 
 # Python3 RPM Packages
 # These support applications that do not install into virtualenvs, and that need airgap support.

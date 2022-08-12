@@ -17,10 +17,10 @@ manifestgen=1.3.7-1
 # CSM METAL-team Packages
 cray-site-init=1.24.2-1
 ilorest=3.5.1-1
-kernel-default=5.3.18-150300.59.76.1
+kernel-default=5.3.18-150300.59.43.1
 kernel-firmware=20210208-150300.4.10.1
-kernel-source=5.3.18-150300.59.76.1
-kernel-syms=5.3.18-150300.59.76.1
+kernel-source=5.3.18-150300.59.43.1
+kernel-syms=5.3.18-150300.59.43.1
 metal-basecamp=1.2.0-1
 metal-ipxe=2.2.8-1
 metal-net-scripts=0.0.2-1
