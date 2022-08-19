@@ -53,21 +53,20 @@ pipeline {
       }
     }
 
-    stage('Validate cray-pre-install-toolkit packages') {
+    stage('Validate node-image-common packages') {
       steps {
         sh """
-          ./scripts/update-package-versions.sh -p packages/cray-pre-install-toolkit/base.packages --validate --suffix ${env.SUFFIX}
-          ./scripts/update-package-versions.sh -p packages/cray-pre-install-toolkit/metal.packages --validate --suffix ${env.SUFFIX}
+          ./scripts/update-package-versions.sh -p packages/node-image-common/base.packages --validate --suffix ${env.SUFFIX}
+          ./scripts/update-package-versions.sh -p packages/node-image-common/google.packages --validate --suffix ${env.SUFFIX}
+          ./scripts/update-package-versions.sh -p packages/node-image-common/metal.packages --validate --suffix ${env.SUFFIX}
         """
       }
     }
 
-    stage('Validate node-image-non-compute-common packages') {
+    stage('Validate node-image-pre-install-toolkit packages') {
       steps {
         sh """
-          ./scripts/update-package-versions.sh -p packages/node-image-non-compute-common/base.packages --validate --suffix ${env.SUFFIX}
-          ./scripts/update-package-versions.sh -p packages/node-image-non-compute-common/google.packages --validate --suffix ${env.SUFFIX}
-          ./scripts/update-package-versions.sh -p packages/node-image-non-compute-common/metal.packages --validate --suffix ${env.SUFFIX}
+          ./scripts/update-package-versions.sh -p packages/node-image-pre-install-toolkit/base.packages --validate --suffix ${env.SUFFIX}
         """
       }
     }
