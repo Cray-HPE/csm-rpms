@@ -2,5 +2,5 @@
 # Format:
 #   package_name=version
 # The version is the same version reported by the OS package manager (e.g. zypper).
-dracut-metal-dmk8s=2.0.4-1
+dracut-metal-dmk8s=2.0.5-1
 dracut-metal-luksetcd=2.0.4-1
