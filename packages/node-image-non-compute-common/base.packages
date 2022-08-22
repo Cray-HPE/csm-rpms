@@ -49,6 +49,7 @@ iproute2-bash-completion=5.3-5.5.1
 ipset=6.36-3.3.1
 java-1_8_0-ibm-plugin=1.8.0_sr7.5-150000.3.56.1
 java-1_8_0-ibm=1.8.0_sr7.5-150000.3.56.1
+kdump=0.9.0-150300.18.8.1
 kdumpid=1.2-1.30
 kmod-bash-completion=29-4.15.1
 kubectl=1.21.12-0
