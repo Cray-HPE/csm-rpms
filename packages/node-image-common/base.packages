@@ -164,7 +164,7 @@ spire-agent=0.12.2-2.3_20220420125806__gf6cdaa8
 # CSM Team
 cray-kubectl-hns-plugin=1.0.0-1
 cray-kubectl-kubelogin-plugin=1.25.1-1
-craycli=0.62.0-1
+craycli=0.63.0-1
 csm-node-identity=1.0.18-1
 goss-servers=1.15.7-1
 hpe-csm-goss-package=0.3.13-20210615152800_aae8d77
