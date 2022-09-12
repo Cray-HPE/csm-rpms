@@ -29,7 +29,7 @@ metal-ipxe=2.2.9-1
 metal-net-scripts=0.0.2-1
 # DO NOT INSTALL MFT FROM THE SPP REPO, NEVER APPEND "slesXspY"
 mft=4.20.0-34
-pit-init=1.2.34-1
+pit-init=1.2.35-1
 pit-nexus=1.1.5-1
 
 # SUSE Packages
