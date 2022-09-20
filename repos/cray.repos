@@ -10,4 +10,4 @@ https://arti.dev.cray.com/artifactory/cos-rpm-stable-local/release/cos-2.3/sle15
 https://artifactory.algol60.net/artifactory/sat-rpms/hpe/stable/sle-15sp3/                                        cray-algol60-sat-rpms-stable-sle-15sp3            --no-gpgcheck -p 88                   cray/sat/sle-15sp3
 
 # SDU
-https://arti.dev.cray.com/artifactory/sdu-rpm-stable-local/release/img_oci-shasta-2.1/sle15_sp3_ncn/              sdu-rpm-stable-local                              --no-gpgcheck -p 89                   sdu-rpm-stable-local/release/2.1/sle15_sp3_ncn/
+https://arti.hpc.amslabs.hpecorp.net/artifactory/sdu-rpm-stable-local/release/img_oci-shasta-2.1/sle15_sp3_ncn/   sdu-rpm-stable-local                              --no-gpgcheck -p 89                   sdu-rpm-stable-local/release/2.1/sle15_sp3_ncn/
