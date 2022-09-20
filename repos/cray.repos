@@ -11,4 +11,4 @@ https://artifactory.algol60.net/artifactory/sat-rpms/hpe/stable/sle-15sp3/      
 https://arti.dev.cray.com/artifactory/sat-rpm-master-local/dev/master/sle15_sp2_ncn/                              cray-sat-sle-15sp2-x86_64-master                  --no-gpgcheck -p 89                   cray/sat/sle-15sp2/x86_64
 
 # SDU
-https://arti.dev.cray.com/artifactory/sdu-rpm-stable-local/release/img_oci-shasta-2.1/sle15_sp3_ncn/              sdu-rpm-stable-local                              --no-gpgcheck -p 89                   sdu-rpm-stable-local/release/2.1/sle15_sp3_ncn/
+https://arti.hpc.amslabs.hpecorp.net/artifactory/sdu-rpm-stable-local/release/img_oci-shasta-2.1/sle15_sp3_ncn/   sdu-rpm-stable-local                              --no-gpgcheck -p 89                   sdu-rpm-stable-local/release/2.1/sle15_sp3_ncn/
