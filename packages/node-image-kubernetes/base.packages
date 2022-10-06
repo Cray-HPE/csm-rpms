@@ -25,4 +25,4 @@ cray-prodmgr=1.1.2-20220104153307_2374f1f
 cray-sat-podman=2.0.0-1
 
 # SDU
-cray-sdu-rda=2.1.1-shasta_20220919150932_ec06814
+cray-sdu-rda=2.1.2-shasta_20221006164635_402e1db
