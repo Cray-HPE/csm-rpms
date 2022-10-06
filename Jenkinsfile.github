@@ -59,6 +59,7 @@ pipeline {
           ./scripts/update-package-versions.sh -p packages/node-image-common/base.packages --validate --suffix ${env.SUFFIX}
           ./scripts/update-package-versions.sh -p packages/node-image-common/google.packages --validate --suffix ${env.SUFFIX}
           ./scripts/update-package-versions.sh -p packages/node-image-common/metal.packages --validate --suffix ${env.SUFFIX}
+          ./scripts/update-package-versions.sh -p packages/node-image-common/vagrant.packages --validate --suffix ${env.SUFFIX}
         """
       }
     }
