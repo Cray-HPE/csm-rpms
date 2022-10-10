@@ -11,7 +11,7 @@ kubelet=1.21.12-0
 cray-cmstools-crayctldeploy=1.10.0-1
 loftsman=1.2.0-1
 manifestgen=1.3.7-1
-platform-utils=1.3.5-1
+platform-utils=1.3.9-1
 
 # COS
 cray-cps-utils=0.11.0-2.3_20220329162848__gfb2fe6a
