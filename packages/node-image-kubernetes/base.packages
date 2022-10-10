@@ -13,10 +13,6 @@ loftsman=1.2.0-1
 manifestgen=1.3.7-1
 platform-utils=1.3.5-1
 
-# COS
-cray-cps-utils=0.11.0-2.3_20220329162848__gfb2fe6a
-cray-orca=0.9.1-2.3_20220329135308__g8f2d4d6
-
 # DVS
 insserv-compat=0.1-4.6.1
 
