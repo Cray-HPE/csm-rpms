@@ -1,0 +1,24 @@
+# Packages common to all mediums.
+# Format:
+#   package_name=version
+# The version is the same version reported by the OS package manager (e.g. zypper).
+
+# CSM Packages
+canu=1.6.20-1
+cray-site-init=1.27.2-1
+ilorest=3.5.1-1
+metal-basecamp=1.2.0-1
+metal-ipxe=2.2.11-1
+metal-net-scripts=0.0.2-1
+pit-init=1.2.36-1
+pit-nexus=1.1.5-1
+
+# SUSE Packages
+acl=2.2.52-4.3.1
+apache2=2.4.51-150200.3.48.1
+dnsmasq=2.86-150100.7.20.1
+checkmedia=5.4-1.13
+mkisofs=3.02~a09-4.6.1
+syslinux=4.04-15.1
+wol=0.7.1-2.5
+xorriso=1.4.6-1.29
