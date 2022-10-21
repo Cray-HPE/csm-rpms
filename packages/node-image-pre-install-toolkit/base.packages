@@ -11,7 +11,7 @@ metal-basecamp=1.2.0-1
 metal-ipxe=2.2.11-1
 metal-net-scripts=0.0.2-1
 pit-init=1.2.36-1
-pit-nexus=1.1.5-1
+pit-nexus=1.1.4-1
 
 # SUSE Packages
 acl=2.2.52-4.3.1
