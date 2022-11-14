@@ -30,7 +30,7 @@ cat "$@" \
 | docker run -i \
     --cidfile "${workdir}/container-id" \
     -v "$(realpath "$ROOTDIR"):/data" \
-    artifactory.algol60.net/csm-docker/stable/csm-docker-sle:15.3 \
+    artifactory.algol60.net/csm-docker/stable/csm-docker-sle:15.4 \
     bash -c "set -exo pipefail
     {
         source /data/scripts/rpm-functions.sh

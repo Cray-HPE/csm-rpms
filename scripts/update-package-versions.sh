@@ -88,7 +88,7 @@ REPOS_FILTER="all"
 AUTO_YES="false"
 
 DOCKER_CACHE_IMAGE="csm-rpms-cache"
-DOCKER_BASE_IMAGE="artifactory.algol60.net/csm-docker/stable/csm-docker-sle:15.3"
+DOCKER_BASE_IMAGE="artifactory.algol60.net/csm-docker/stable/csm-docker-sle:15.4"
 
 while [[ "$#" -gt 0 ]]
 do
