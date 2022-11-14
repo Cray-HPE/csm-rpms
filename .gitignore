@@ -1,4 +1,5 @@
 # ignore template files
+cray.repos
 google.repos
 hpe.repos
 suse.repos
