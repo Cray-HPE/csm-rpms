@@ -4,7 +4,7 @@
 # The version is the same version reported by the OS package manager (e.g. zypper).
 
 # CSM Packages
-canu=1.6.20-1
+canu=1.6.27-1
 cray-site-init=1.28.0-1
 ilorest=3.5.1-1
 metal-basecamp=1.2.2-1
