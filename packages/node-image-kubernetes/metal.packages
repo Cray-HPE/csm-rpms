@@ -1,4 +1,4 @@
-# Metal only packages
+# Packages for Kubernetes metal artifacts.
 # Format:
 #   package_name=version
 # The version is the same version reported by the OS package manager (e.g. zypper).
