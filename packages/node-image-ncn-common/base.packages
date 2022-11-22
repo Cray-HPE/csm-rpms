@@ -53,6 +53,7 @@ wireshark=3.6.8-150000.3.74.1
 xfsdump=3.1.6-1.30
 
 # CMS Team
+cfs-debugger=-1.2.0-1
 cfs-state-reporter=1.9.0-1
 cfs-trust=1.6.1-1
 
