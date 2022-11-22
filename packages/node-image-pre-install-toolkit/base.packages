@@ -1,4 +1,4 @@
-# Packages common to all mediums.
+# Packages for all pre-install-toolkit artifacts.
 # Format:
 #   package_name=version
 # The version is the same version reported by the OS package manager (e.g. zypper).

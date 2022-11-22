@@ -1,35 +1,26 @@
-# Packages common to all mediums.
+# Packages for any node-image artifact.
 # Format:
 #   package_name=version
 # The version is the same version reported by the OS package manager (e.g. zypper).
-amsd=2.4.1-1571.4.sles15
-apparmor-profiles=2.13.6-150300.3.15.1
 arptables=0.0.4-8.39
 at=3.1.20-11.3
-aws-cli=1.20.7-30.3.1
 bash-completion=2.7-150000.4.9.1
 bc=1.07.1-11.37
 bind-utils=9.16.6-150300.22.16.1
 biosdevname=0.7.3-5.3.1
 bsdtar=3.4.2-150200.4.9.1
-ceph-common>=16.2.9
 chrony=4.1-150300.16.9.1
-cloud-init-config-suse=21.4-1
-cloud-init-doc=21.4-1
-cloud-init=21.4-1
-conman=0.3.0-1.42
-cpupower=5.10-3.6.1
 crash=7.2.9-150300.23.10.1
 cryptsetup=2.3.7-150300.3.5.1
 curl=7.66.0-150200.4.39.1
 dkms=2.3-bp153.1.17
+dmidecode=3.2-9.11.1
 dosfstools=4.1-3.6.1
 dracut-kiwi-live=9.24.36-150100.3.53.2
 dump=0.4b46-1.31
 ebtables=2.0.11-1.1
 elfutils-lang=0.177-150300.11.3.1
 elfutils=0.177-150300.11.3.1
-emacs=25.3-3.9.2
 ethtool=5.9-1.31
 expect=5.45.4-3.3.1
 fontconfig=2.12.6-4.3.1
@@ -40,27 +31,18 @@ gdb=11.1-8.30.1
 genders=1.27.3-1.42
 git-core=2.35.3-150300.10.15.1
 gnuplot=5.2.2-3.9.2
-gperftools=2.5-4.12
-gptfdisk=1.0.1-2.11
 grub2-branding-SLE=15-33.3.1
 grub2-i386-pc=2.04-150300.22.20.2
 grub2-x86_64-efi=2.04-150300.22.20.2
 grub2=2.04-150300.22.20.2
 hdparm=9.52-1.22
-hplip=3.21.10-150300.4.6.1
-ipmitool=1.8.18+git20200204.7ccea28-150200.3.8.1
 iproute2-bash-completion=5.3-5.5.1
 iproute2=5.3-5.5.1
-ipset=6.36-3.3.1
 iputils=s20161105-8.3.1
 issue-generator=1.7-1.17
-java-1_8_0-ibm-plugin=1.8.0_sr7.11-150000.3.62.1
-java-1_8_0-ibm=1.8.0_sr7.11-150000.3.62.1
-jq=1.6-3.3.1
 kdump=0.9.0-150300.18.8.1
 kdumpid=1.2-1.30
 kmod-bash-completion=29-4.15.1
-kubectl=1.21.12-0
 less=530-3.3.2
 libasm1=0.177-150300.11.3.1
 libbd_mdraid2=2.22-1.36
@@ -79,21 +61,12 @@ libpwquality1=1.4.4-3.3.2
 libstoragemgmt=1.8.5-3.3.1
 libunwind-devel=1.5.0-4.5.1
 lshw=B.02.19.2+git.20220628-150200.3.12.1
-lsof=4.91-1.11
 lsscsi=0.28-1.24
-ltrace=0.7.91-4.3
 lvm2=2.03.05-8.42.1
 man=2.7.6-6.22
-mariadb-tools=10.5.17-150300.3.21.1
-mariadb=10.5.17-150300.3.21.1
-mdadm=4.1-150300.24.18.1
-minicom=2.7.1-1.19
-mlocate=0.26-150100.7.3.2
-netcat-openbsd=1.178-1.24
-nmap=7.70-3.12.1
 open-lldp=1.1+44.0f781b4162d3-3.3.1
-openscap=1.3.5-3.10.1
 openscap-utils=1.3.5-3.10.1
+openscap=1.3.5-3.10.1
 openssh-clients=8.4p1-3.9.1
 openssh-common=8.4p1-3.9.1
 openssh-server=8.4p1-3.9.1
@@ -101,18 +74,11 @@ openssh=8.4p1-3.9.1
 openssl-1_1=1.1.1d-150200.11.51.1
 parted=3.2-19.1
 pciutils=3.5.6-150300.13.3.1
-pdsh=2.34-32.1
 perf=5.3.18-150300.38.3.1
 perl-MailTools=2.19-1.20
 perl-doc=5.26.1-150300.17.11.1
 pixz=1.0.6-1.13
-podman-cni-config=3.4.7-150300.9.9.2
-podman=3.4.7-150300.9.9.2
 postfix=3.5.9-5.9.2
-postgresql-contrib=14-150300.10.9.12
-postgresql-docs=14-150300.10.9.12
-postgresql-server=14-150300.10.9.12
-postgresql=14-150300.10.9.12
 python3-devel=3.6.15-150300.10.30.1
 python3-pip=20.0.2-150100.6.18.1
 python3-setuptools=40.5.0-6.3.1
@@ -121,23 +87,12 @@ python3-wheel=0.32.3-6.2.12
 python39-devel=3.9.14-150300.4.16.1
 python39=3.9.14-150300.4.16.1
 python3=3.6.15-150300.10.30.1
-rarpd=s20161105-8.3.1
-rasdaemon=0.6.5+git20200205.3dca35f-2.8
-rollback-helper=1.0+git20181218.5394d6e-4.3.1
 rsync=3.1.3-150000.4.13.1
 rsyslog=8.2106.0-150200.4.32.1
-rzsz=0.12.21~rc-150000.3.3.2
-s3fs=1.91-150000.3.9.1
 scap-security-guide=0.1.63-150000.1.45.1
 screen=4.6.2-5.3.1
-smartmontools=7.2-150300.8.5.1
-socat=1.7.3.2-4.10
-squashfs=4.4-1.1
-squid=4.17-150000.5.32.1
 strace=5.3-1.44
 sudo=1.9.5p2-150300.3.6.1
-sysstat=12.0.2-3.33.1
-systemtap=4.2-3.3.1
 tar=1.34-150000.3.18.1
 tcpdump=4.9.2-3.18.1
 tpm2.0-abrmd=2.3.3-3.3.1
@@ -148,33 +103,17 @@ unzip=6.00-150000.4.11.1
 usbutils=014-3.3.1
 vim-data=9.0.0313-150000.5.25.1
 vim=9.0.0313-150000.5.25.1
-wget=1.20.3-3.12.1
 which=2.21-2.20
-wireshark=3.6.8-150000.3.74.1
-xfsdump=3.1.6-1.30
 zip=3.0-2.22
 zsh=5.6-7.5.1
 
-# CMS Team
-cfs-state-reporter=1.9.0-1
-cfs-trust=1.6.1-1
-
-# COS Team
+# COS
 cray-heartbeat=1.6.0-2.3_3.2__gb2e7d63.shasta
 cray-power-button=1.3.1-2.3_20220329162359__g0ddf9af
 spire-agent=0.12.2-2.3_20220420125806__gf6cdaa8
 
 # CSM Team
-cray-kubectl-hns-plugin=1.0.0-1
-cray-kubectl-kubelogin-plugin=1.25.1-1
 craycli=0.64.0-1
-csm-node-identity=1.0.18-1
-goss-servers=1.15.16-1
-hpe-csm-goss-package=0.3.13-20210615152800_aae8d77
-hpe-csm-scripts=0.4.1-1
-hpe-csm-yq-package=3.4.1-20210615153837_40f15a6
-loftsman=1.2.0-1
-manifestgen=1.3.8-1
 
 # Metal Team
 kernel-default=5.3.18-150300.59.87.1
@@ -182,10 +121,6 @@ kernel-firmware=20210208-150300.4.10.1
 kernel-macros=5.3.18-150300.59.87.1
 kernel-source=5.3.18-150300.59.87.1
 kernel-syms=5.3.18-150300.59.87.1
-# When we move to SP4 double-check this has a matching kernel, if not then kernel-mft-mlnx-kmp-default needs to be commented out.
-kernel-mft-mlnx-kmp-default=4.20.0_k5.3.18_57-1.sles15sp3
-# DO NOT INSTALL MFT FROM THE SPP REPO, NEVER APPEND "slesXspY"
-mft=4.20.0-34
 
 # Python3 RPM Packages
 # These support applications that do not install into virtualenvs, and that need airgap support.

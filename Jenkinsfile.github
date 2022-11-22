@@ -53,41 +53,40 @@ pipeline {
       }
     }
 
-    stage('Validate node-image-common packages') {
+    stage('Validate node-image-base packages') {
       steps {
-        sh """
-          ./scripts/update-package-versions.sh -p packages/node-image-common/base.packages --validate --suffix ${env.SUFFIX}
-          ./scripts/update-package-versions.sh -p packages/node-image-common/google.packages --validate --suffix ${env.SUFFIX}
-          ./scripts/update-package-versions.sh -p packages/node-image-common/metal.packages --validate --suffix ${env.SUFFIX}
-          ./scripts/update-package-versions.sh -p packages/node-image-common/vagrant.packages --validate --suffix ${env.SUFFIX}
-        """
+          sh "./scripts/update-package-versions.sh -p packages/node-image-base/base.packages --validate --suffix ${env.SUFFIX}"
+          sh "./scripts/update-package-versions.sh -p packages/node-image-base/metal.packages --validate --suffix ${env.SUFFIX}"
+          sh "./scripts/update-package-versions.sh -p packages/node-image-base/google.packages --validate --suffix ${env.SUFFIX}"
+          sh "./scripts/update-package-versions.sh -p packages/node-image-base/vagrant.packages --validate --suffix ${env.SUFFIX}"
+      }
+    }
+
+    stage('Validate node-image-ncn-common packages') {
+      steps {
+        sh "./scripts/update-package-versions.sh -p packages/node-image-ncn-common/base.packages --validate --suffix ${env.SUFFIX}"
+        sh "./scripts/update-package-versions.sh -p packages/node-image-ncn-common/metal.packages --validate --suffix ${env.SUFFIX}"
       }
     }
 
     stage('Validate node-image-pre-install-toolkit packages') {
       steps {
-        sh """
-          ./scripts/update-package-versions.sh -p packages/node-image-pre-install-toolkit/base.packages --validate --suffix ${env.SUFFIX}
-        """
+        sh "./scripts/update-package-versions.sh -p packages/node-image-pre-install-toolkit/base.packages --validate --suffix ${env.SUFFIX}"
       }
     }
 
     stage('Validate node-image-kubernetes packages') {
       steps {
-        sh """
-          ./scripts/update-package-versions.sh -p packages/node-image-kubernetes/base.packages --validate --suffix ${env.SUFFIX}
-          ./scripts/update-package-versions.sh -p packages/node-image-kubernetes/google.packages --validate --suffix ${env.SUFFIX}
-          ./scripts/update-package-versions.sh -p packages/node-image-kubernetes/metal.packages --validate --suffix ${env.SUFFIX}
-        """
+          sh "./scripts/update-package-versions.sh -p packages/node-image-kubernetes/base.packages --validate --suffix ${env.SUFFIX}"
+          sh "./scripts/update-package-versions.sh -p packages/node-image-kubernetes/google.packages --validate --suffix ${env.SUFFIX}"
+          sh "./scripts/update-package-versions.sh -p packages/node-image-kubernetes/metal.packages --validate --suffix ${env.SUFFIX}"
       }
     }
 
     stage('Validate node-image-storage-ceph packages') {
       steps {
-        sh """
-          ./scripts/update-package-versions.sh -p packages/node-image-storage-ceph/base.packages --validate --suffix ${env.SUFFIX}
-          ./scripts/update-package-versions.sh -p packages/node-image-storage-ceph/metal.packages --validate --suffix ${env.SUFFIX}
-        """
+          sh "./scripts/update-package-versions.sh -p packages/node-image-storage-ceph/base.packages --validate --suffix ${env.SUFFIX}"
+          sh "./scripts/update-package-versions.sh -p packages/node-image-storage-ceph/metal.packages --validate --suffix ${env.SUFFIX}"
       }
     }
 
