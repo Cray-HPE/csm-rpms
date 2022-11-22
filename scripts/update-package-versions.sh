@@ -39,7 +39,7 @@ Usage:
     If you choose to update the version then the given packages-file is updated directly.
     You can then git commit to the appropriate branch and create a PR.
 
-    -p|--packages-file <path>  Required: The packages file path to update versions in (eg packages/node-image-common/base.packages)
+    -p|--packages-file <path>  Required: The packages file path to update versions in (eg packages/node-images-base/base.packages)
 
     [-f|--filter <pattern>]    Package regex pattern to filter against. Only packages matching the filter will be queried and prompted to update. (eg cray-)
     [-r|--repos <pattern>]     Repo regex pattern to filter against. Latest version will only be looked up in repos names matching the filter. (eg SUSE)
@@ -54,26 +54,26 @@ Usage:
 
     Examples
 
-    ./scripts/update-package-versions.sh -p packages/node-image-common/base.packages
+    ./scripts/update-package-versions.sh -p packages/node-images-base/base.packages
     --------------
     Query all packages in base.packages and prompt the user to update the version if a newer version is found in the repos one by one.
 
 
-    ./scripts/update-package-versions.sh -p packages/node-image-common/base.packages -f '^cray' -o
+    ./scripts/update-package-versions.sh -p packages/node-images-base/base.packages -f '^cray' -o
     --------------
     Query packages in base.packages that start with 'cray'. Only print out packages that have a different version found
 
 
-    ./scripts/update-package-versions.sh -p packages/node-image-common/base.packages -f cray-network-config -r shasta-1.4
+    ./scripts/update-package-versions.sh -p packages/node-images-base/base.packages -f cray-network-config -r shasta-1.4
     --------------
     Only update the package cray-network-config in a repo that contains the shasta-1.4 name
 
 
-    ./scripts/update-package-versions.sh -p packages/node-image-common/base.packages -r buildonly-SUSE
+    ./scripts/update-package-versions.sh -p packages/node-images-base/base.packages -r buildonly-SUSE
     --------------
     Only update packages found in the upstream SUSE repos
 
-    ./scripts/update-package-versions.sh -p packages/node-image-common/base.packages -r buildonly-SUSE -y
+    ./scripts/update-package-versions.sh -p packages/node-images-base/base.packages -r buildonly-SUSE -y
     --------------
     Same as the last example, but automatically update all SUSE packages rather than prompt one by one
 
