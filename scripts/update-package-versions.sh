@@ -43,6 +43,7 @@ Usage:
 
     [-f|--filter <pattern>]    Package regex pattern to filter against. Only packages matching the filter will be queried and prompted to update. (eg cray-)
     [-r|--repos <pattern>]     Repo regex pattern to filter against. Latest version will only be looked up in repos names matching the filter. (eg SUSE)
+    [-c|--compute]             Whether to also include compute specific repositories (these are included with a higher priority then their NCN counterparts).
     [-o|--output-diffs-only]   The package information, including the latest found version, will be outputted instead of prompting to update the package file directly
     [-y|--yes]                 No prompts, instead auto updates the package file with any new version that matches other option filters
     [--validate]               Validate that packages exist instead looking for newer versions

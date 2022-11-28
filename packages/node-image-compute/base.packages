@@ -1,9 +1,96 @@
-# Packages common to all mediums.
+# Packages for any CN artifacts.
 # Format:
 #   package_name=version
 # The version is the same version reported by the OS package manager (e.g. zypper).
-cfs-state-reporter=1.9.0-1
-cfs-trust=1.6.0-1
-cray-switchboard=1.2.3-1
-cray-uai-util=1.0.13-1
-craycli=0.65.0-1
+
+# Analytics Base SLES Packages
+java-11-openjdk-devel=11.0.17.0-150000.3.86.2
+
+# CDST GUI Packages
+libGLU1=9.0.0-8.45
+libatk-1_0-0=2.34.1-1.56
+libcairo-gobject2=1.16.0-5.2.1
+libcairo2=1.16.0-5.2.1
+libgcrypt20=1.8.2-8.42.1
+libgdk_pixbuf-2_0-0=2.40.0-150200.3.9.1
+libgio-2_0-0=2.62.6-150200.3.9.1
+libglvnd=1.3.2-1.49
+libgtk-3-0=3.24.20-3.6.1
+libgtksourceview-3_0-1=3.24.11-2.45
+libopenblas_pthreads0=0.3.13-150300.5.2.3
+munge=0.5.14-11.1
+typelib-1_0-Gtk-3_0=3.24.20-3.6.1
+
+# COS General Packages
+# - cray-auth-utils                     :
+# - cray-ckdump-helper                  : Wraps kdump, providing an interface for NMD
+# - cray-chrony-dracut                  : NTP setup in dracut
+# - cray-hugepage-setup                 : Customizing hugepage setup 
+# - cray-network-dracut                 : Custom ifup.sh scripts for generic distribution                                                    
+# - cray-node-identity                  : Provides nid and xname through systemd
+# - cray-power-button                   :
+# - cray-spire-dracut                   :
+# - cray-system-files                   :  
+# - cray-system-setup-scripts           :
+# - cray-systemd-presets                : 
+# - cray-udev-network                   : Provides udev rules for network interfaces
+# - spire-agent
+cray-auth-utils=0.3.1-2.4_20220805020814__ga82f924
+cray-ckdump-helper=2.11.2-2.4_20220805010029__gdf57a13
+cray-chrony-dracut=1.4.0-2.4_20220805040923__g6c82b5c
+#cray-heartbeat=1 # SP4 only
+cray-hugepage-setup=0.6.1-2.4_20220805041504__g6f7fd58
+cray-network-dracut=1.3.1-2.4_20220805042140__g5a855ac
+cray-node-identity=0.6.0-2.4_20220805060148__g2e46b7f
+cray-power-button=1.4.0-2.4_20220805065637__gabaf78c
+cray-spire-dracut=1.5.3-2.4_20220805032324__gdeb29a2
+cray-system-files=1.13.2-2.4_20220805070523__ga001bca
+cray-system-setup-scripts=1.3.1-2.4_20220805070550__g290a739
+cray-systemd-presets=1.6.0-2.4_20220805065859__gbe6afe2
+cray-udev-network=1.6.6-2.4_20220805182606__g68e3ad8
+spire-agent=0.12.2-2.4_20220805014211__gd8c3376
+
+# COS SHASTA-OS packages
+# - cray-cos-release                    : Installed cle and cos release files.
+# - cray-low-noise-mode                 : Hardware optimization
+# - kdump-spire-watcher                 : Related to NMD/kdump (ckdump)
+cray-cos-release=1.2.1-2.4_20220805024758__gb8e8a50
+cray-low-noise-mode=1.2.2-2.4_20220805055640__g6d30bfd
+kdump-spire-watcher=0.5.1-2.4_20220805055228__g34c3c83
+
+# COS SHASTA-3RD Packages
+# - acpid                               : 
+# - cray-libhugetlbfs                   :
+# - cray-libhugetlbfs-devel             :
+# - cray-rasdaemon                      : 
+acpid=2.0.31-1.1_2.4_20220804233311__ga14e057
+#cray-libhugetlbfs=1 # SP4 only
+#cray-libhugetlbfs-devel=1 # SP4 only
+cray-rasdaemon=0.6.8-3_2.4_20220805013632__g413a81f
+
+# GPU Support Packages
+autoconf=2.69-1.445
+automake=1.15.1-4.10.2
+check-devel=0.11.0-1.26
+glu-devel=9.0.0-8.45
+libLLVM7=7.0.1-150100.3.22.2
+libXext6-32bit=1.3.3-1.30
+libdrm-devel=2.4.104-1.12
+libglut3=3.2.1-1.24
+libglvnd-32bit=1.3.2-1.49
+libnuma-devel=2.0.14.20.g4ee5e0c-10.1
+libvdpau1=1.1.1-150000.3.2.1
+libvulkan1=1.2.133-1.26
+mokutil=0.4.0-150200.4.6.1
+
+#perl-URI-Encode # Unable to find
+x11-tools=0.1-2.18
+
+# PE Base SLES Packages for cray-lmod
+lua53=5.3.6-3.6.1
+lua53-luafilesystem=1.7.0-3.2.3
+lua53-luaposix=34.1.1-3.2.3
+
+# PE Base SLES Packages for cray-R
+libicu60_2=60.2-150000.3.12.1
+libicu60_2-ledata=60.2-150000.3.12.1
