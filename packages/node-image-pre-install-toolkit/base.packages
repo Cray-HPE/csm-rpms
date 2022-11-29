@@ -19,6 +19,7 @@ apache2=2.4.51-150200.3.48.1
 dnsmasq=2.86-150100.7.20.1
 checkmedia=5.4-1.13
 mkisofs=3.02~a09-4.6.1
+mtools=4.0.18-1.45
 syslinux=4.04-15.1
 wol=0.7.1-2.5
 xorriso=1.4.6-1.29
