@@ -1,3 +1,7 @@
+# Packages for any application node artifacts.
+# Format:
+#   package_name=version
+# The version is the same version reported by the OS package manager (e.g. zypper).
 cfs-state-reporter=1.9.0-1
 cray-auth-utils=0.3.1-2.4_20220805020814__ga82f924
 cray-spire-dracut=1.4.3
