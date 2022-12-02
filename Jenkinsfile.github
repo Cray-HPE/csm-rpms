@@ -63,7 +63,7 @@ pipeline {
 
         stage('Validate node-image-application packages') {
             steps {
-                sh "./scripts/update-package-versions.sh -p packages/node-image-application/base.packages --validate --suffix ${env.SUFFIX}"
+                sh "./scripts/update-package-versions.sh -p packages/node-image-application/base.packages --compute --validate --suffix ${env.SUFFIX}"
             }
         }
 
