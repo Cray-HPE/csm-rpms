@@ -1,0 +1,3 @@
+# COS
+https://${ARTIFACTORY_USER}:${ARTIFACTORY_TOKEN}@artifactory.algol60.net/artifactory/dst-rpm-mirror/cos-rpm-stable-local/release/cos-2.4/sle15_sp3_cn?auth=basic               cray-cos-sle-15sp3-2.4-SHASTA-OS-cos-cn               --no-gpgcheck -p 79                   cray/cos/sle-15sp3-2.4-cn
+

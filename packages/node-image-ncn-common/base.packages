@@ -52,6 +52,16 @@ wget=1.20.3-3.12.1
 wireshark=3.6.8-150000.3.74.1
 xfsdump=3.1.6-1.30
 
+# COS
+# - cray-auth-utils                     :
+# - cray-hearbeat                       : 
+# - cray-spire-dracut                   : Provides spire access in dracut
+# - spire-agent                         :
+cray-auth-utils=0.3.1-2.4_20220907191123__gecf64bc
+cray-heartbeat=1.8.2-2.4_3.10__g5712ad4.shasta
+cray-power-button=1.4.1-2.4_20220907233542__g35e8b4a
+spire-agent=0.12.2-2.4_20220907184947__ge83309b
+
 # CMS Team
 cfs-debugger=1.2.0-1
 cfs-state-reporter=1.9.0-1

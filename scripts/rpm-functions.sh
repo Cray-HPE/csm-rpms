@@ -53,6 +53,13 @@ ${CSM_RPMS_DIR}/repos/cray.repos
 EOF
 }
 
+function list-compute-repos-files() {
+  /usr/bin/envsubst < ${CSM_RPMS_DIR}/repos/compute.template.repos > ${CSM_RPMS_DIR}/repos/compute.repos
+  cat <<EOF
+${CSM_RPMS_DIR}/repos/compute.repos
+EOF
+}
+
 function add-fake-conntrack {
     zypper --non-interactive install rpm-build createrepo_c
     echo "Building a custom local repository for conntrack dependency, pulls in conntrack-tools while mocking conntrack."
@@ -107,15 +114,31 @@ function add-suse-repos() {
   list-suse-repos-files | xargs -r cat | zypper-add-repos
 }
 
+function add-compute-repos() {
+  list-compute-repos-files | xargs -r cat | zypper-add-repos
+}
+
+function setup-package-repos-with-compute() {
+  setup-package-repos -c
+}
+
 function setup-package-repos() {
-  case "$1" in
-  *)
-    add-cray-repos
-    add-google-repos
-    add-hpe-repos
-    add-suse-repos
-    ;;
-  esac
+  for arg in "$@"
+  do
+    case "$arg" in
+      -c|--compute)
+        add-compute-repos
+        ;;
+      *)
+          # No args.
+          :
+          ;;
+    esac
+  done
+  add-cray-repos
+  add-google-repos
+  add-hpe-repos
+  add-suse-repos
   # fake-conntrack necessary for kubernetes; must run after all repos are setup.
   add-fake-conntrack
   zypper lr -e /tmp/repos.repos

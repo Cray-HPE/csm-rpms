@@ -27,68 +27,73 @@
 
 def credentialsId = 'artifactory-algol60'
 pipeline {
-  agent {
-    label "metal-gcp-builder"
-  }
+    agent {
+        label "metal-gcp-builder"
+    }
 
-  options {
-    buildDiscarder(logRotator(numToKeepStr: "5"))
-    disableConcurrentBuilds()
-    timeout(time: 20, unit: 'MINUTES')
-    timestamps()
-  }
+    options {
+        buildDiscarder(logRotator(numToKeepStr: "5"))
+        disableConcurrentBuilds()
+        timeout(time: 20, unit: 'MINUTES')
+        timestamps()
+    }
 
-  environment {
-    SUFFIX = "${env.JOB_BASE_NAME.replaceAll("%2F","-").toLowerCase()}-${env.BUILD_NUMBER}"
-  }
+    environment {
+        SUFFIX = "${env.JOB_BASE_NAME.replaceAll("%2F", "-").toLowerCase()}-${env.BUILD_NUMBER}"
+    }
 
-  stages {
-    stage('Setup Docker Cache') {
-      steps {
-      withCredentials([usernamePassword(credentialsId: credentialsId, usernameVariable: 'ARTIFACTORY_USER', passwordVariable: 'ARTIFACTORY_TOKEN')]) {
-          sh """
-          ./scripts/update-package-versions.sh --refresh --no-cache --suffix ${env.SUFFIX}
-          """
+    stages {
+        stage('Setup Docker Cache') {
+            steps {
+                withCredentials([usernamePassword(credentialsId: credentialsId, usernameVariable: 'ARTIFACTORY_USER', passwordVariable: 'ARTIFACTORY_TOKEN')]) {
+                    sh "./scripts/update-package-versions.sh --refresh --no-cache --suffix ${env.SUFFIX}"
+                    sh "./scripts/update-package-versions.sh --compute --refresh --no-cache --suffix ${env.SUFFIX}"
+                }
+            }
         }
-      }
-    }
 
-    stage('Validate node-image-base packages') {
-      steps {
-          sh "./scripts/update-package-versions.sh -p packages/node-image-base/base.packages --validate --suffix ${env.SUFFIX}"
-          sh "./scripts/update-package-versions.sh -p packages/node-image-base/metal.packages --validate --suffix ${env.SUFFIX}"
-          sh "./scripts/update-package-versions.sh -p packages/node-image-base/google.packages --validate --suffix ${env.SUFFIX}"
-          sh "./scripts/update-package-versions.sh -p packages/node-image-base/vagrant.packages --validate --suffix ${env.SUFFIX}"
-      }
-    }
+        stage('Validate node-image-base packages') {
+            steps {
+                sh "./scripts/update-package-versions.sh -p packages/node-image-base/base.packages --validate --suffix ${env.SUFFIX}"
+                sh "./scripts/update-package-versions.sh -p packages/node-image-base/metal.packages --validate --suffix ${env.SUFFIX}"
+                sh "./scripts/update-package-versions.sh -p packages/node-image-base/google.packages --validate --suffix ${env.SUFFIX}"
+                sh "./scripts/update-package-versions.sh -p packages/node-image-base/vagrant.packages --validate --suffix ${env.SUFFIX}"
+            }
+        }
 
-    stage('Validate node-image-ncn-common packages') {
-      steps {
-        sh "./scripts/update-package-versions.sh -p packages/node-image-ncn-common/base.packages --validate --suffix ${env.SUFFIX}"
-        sh "./scripts/update-package-versions.sh -p packages/node-image-ncn-common/metal.packages --validate --suffix ${env.SUFFIX}"
-      }
-    }
+        stage('Validate node-image-compute packages') {
+            steps {
+                sh "./scripts/update-package-versions.sh -p packages/node-image-compute/base.packages --compute --validate --suffix ${env.SUFFIX}"
+            }
+        }
 
-    stage('Validate node-image-pre-install-toolkit packages') {
-      steps {
-        sh "./scripts/update-package-versions.sh -p packages/node-image-pre-install-toolkit/base.packages --validate --suffix ${env.SUFFIX}"
-      }
-    }
+        stage('Validate node-image-ncn-common packages') {
+            steps {
+                sh "./scripts/update-package-versions.sh -p packages/node-image-ncn-common/base.packages --validate --suffix ${env.SUFFIX}"
+                sh "./scripts/update-package-versions.sh -p packages/node-image-ncn-common/metal.packages --validate --suffix ${env.SUFFIX}"
+            }
+        }
 
-    stage('Validate node-image-kubernetes packages') {
-      steps {
-          sh "./scripts/update-package-versions.sh -p packages/node-image-kubernetes/base.packages --validate --suffix ${env.SUFFIX}"
-          sh "./scripts/update-package-versions.sh -p packages/node-image-kubernetes/google.packages --validate --suffix ${env.SUFFIX}"
-          sh "./scripts/update-package-versions.sh -p packages/node-image-kubernetes/metal.packages --validate --suffix ${env.SUFFIX}"
-      }
-    }
+        stage('Validate node-image-pre-install-toolkit packages') {
+            steps {
+                sh "./scripts/update-package-versions.sh -p packages/node-image-pre-install-toolkit/base.packages --validate --suffix ${env.SUFFIX}"
+            }
+        }
 
-    stage('Validate node-image-storage-ceph packages') {
-      steps {
-          sh "./scripts/update-package-versions.sh -p packages/node-image-storage-ceph/base.packages --validate --suffix ${env.SUFFIX}"
-          sh "./scripts/update-package-versions.sh -p packages/node-image-storage-ceph/metal.packages --validate --suffix ${env.SUFFIX}"
-      }
-    }
+        stage('Validate node-image-kubernetes packages') {
+            steps {
+                sh "./scripts/update-package-versions.sh -p packages/node-image-kubernetes/base.packages --validate --suffix ${env.SUFFIX}"
+                sh "./scripts/update-package-versions.sh -p packages/node-image-kubernetes/google.packages --validate --suffix ${env.SUFFIX}"
+                sh "./scripts/update-package-versions.sh -p packages/node-image-kubernetes/metal.packages --validate --suffix ${env.SUFFIX}"
+            }
+        }
 
-  }
+        stage('Validate node-image-storage-ceph packages') {
+            steps {
+                sh "./scripts/update-package-versions.sh -p packages/node-image-storage-ceph/base.packages --validate --suffix ${env.SUFFIX}"
+                sh "./scripts/update-package-versions.sh -p packages/node-image-storage-ceph/metal.packages --validate --suffix ${env.SUFFIX}"
+            }
+        }
+
+    }
 }
