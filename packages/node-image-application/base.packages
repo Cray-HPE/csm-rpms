@@ -4,6 +4,7 @@
 # The version is the same version reported by the OS package manager (e.g. zypper).
 cfs-state-reporter=1.9.0-1
 cray-auth-utils=0.3.1-2.4_20220805020814__ga82f924
+cray-chrony-dracut=1.4.0-2.4_20220805040923__g6c82b5c
 cray-spire-dracut=1.5.3-2.4_20220805032324__gdeb29a2
 csm-node-identity=1.0.18-1
 spire-agent=0.12.2-2.4_20220805014211__gd8c3376
