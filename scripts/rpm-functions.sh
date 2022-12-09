@@ -190,9 +190,9 @@ function update-package-versions() {
   while read -r package; do
     #shellcheck disable=SC2206
     local parts=(${package//=/ })
-    local package=${parts[0]}
+    local package=$(echo ${parts[0]} | sed 's/[<>]//')
     #shellcheck disable=SC2034
-    local version=${parts[1]}
+    local version=$(echo ${parts[1]} | sed 's/[<>]//')
 
     if [[ ! -z "$filter" && ! $package =~ $filter ]]; then
       continue

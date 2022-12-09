@@ -8,7 +8,7 @@ kubelet=1.21.12-0
 
 # CSM
 cray-cmstools-crayctldeploy=1.10.0-1
-platform-utils=1.4.2-1
+platform-utils=1.4.3-1
 
 # DVS
 insserv-compat=0.1-4.6.1
@@ -18,4 +18,4 @@ cray-prodmgr=1.1.6-1
 cray-sat-podman=2.0.0-1
 
 # SDU
-cray-sdu-rda=2.1.2-shasta_20221006164635_402e1db
+cray-sdu-rda=2.1.3-shasta_20221024161411_0800580

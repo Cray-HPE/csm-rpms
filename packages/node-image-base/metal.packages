@@ -2,4 +2,4 @@
 # Format:
 #   package_name=version
 # The version is the same version reported by the OS package manager (e.g. zypper).
-ledmon=0.94-1.59
+ledmon=0.94-150400.5.5
