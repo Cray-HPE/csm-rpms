@@ -55,7 +55,6 @@ xfsdump=3.1.6-1.30
 # COS
 # - cray-auth-utils                     :
 # - cray-heartbeat                      : Serves the heartbeat read by HMS
-# - cray-spire-dracut                   : Provides spire access in dracut
 # - spire-agent                         :
 cray-auth-utils=0.3.1-2.4_20220805020628__ga82f924
 cray-power-button=1.4.0-2.4_20220805065637__gabaf78c

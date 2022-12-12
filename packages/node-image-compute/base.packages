@@ -29,7 +29,6 @@ typelib-1_0-Gtk-3_0=3.24.34-150400.3.3.1
 # - cray-network-dracut                 : Custom ifup.sh scripts for generic distribution                                                    
 # - cray-node-identity                  : Provides nid and xname through systemd
 # - cray-power-button                   :
-# - cray-spire-dracut                   :
 # - cray-system-files                   :  
 # - cray-system-setup-scripts           :
 # - cray-systemd-presets                : 
@@ -42,7 +41,6 @@ cray-heartbeat=1.8.2-2.4_4.19__g5712ad4.shasta
 cray-hugepage-setup=0.6.1-2.4_20220907195721__g8a72bcc
 cray-network-dracut=1.3.1-2.4_20220907212221__ga511757
 cray-power-button=1.4.1-2.4_20220907233542__g35e8b4a
-cray-spire-dracut=1.5.5-2.4_20220907213354__gdd86864
 cray-system-files=1.13.5-2.4_20220927102737__g81928fa
 cray-system-setup-scripts=1.3.2-2.4_20220907182749__ga5ea373
 cray-systemd-presets=1.6.1-2.4_20220907233542__gf8b34cc

@@ -5,5 +5,4 @@
 cfs-state-reporter=1.9.0-1
 cray-auth-utils=0.3.1-2.4_20220907191100__gecf64bc
 cray-chrony-dracut=1.4.0-2.4_20220907211223__gf7f4743
-cray-spire-dracut=1.5.5-2.4_20220907213354__gdd86864
 spire-agent=0.12.2-2.4_20220907184947__ge83309b
