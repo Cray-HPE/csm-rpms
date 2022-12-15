@@ -40,12 +40,14 @@ pipeline {
 
     environment {
         SUFFIX = "${env.JOB_BASE_NAME.replaceAll("%2F", "-").toLowerCase()}-${env.BUILD_NUMBER}"
+        DOCKER_REGISTRY = "https://artifactory.algol60.net/csm-docker/stable"
     }
 
     stages {
         stage('Setup Docker Cache') {
             steps {
                 withCredentials([usernamePassword(credentialsId: credentialsId, usernameVariable: 'ARTIFACTORY_USER', passwordVariable: 'ARTIFACTORY_TOKEN')]) {
+                    sh "docker login ${env.DOCKER_REGISTRY} --username \$ARTIFACTORY_USER --password \$ARTIFACTORY_TOKEN"
                     sh "./scripts/update-package-versions.sh --refresh --no-cache --suffix ${env.SUFFIX}"
                     sh "./scripts/update-package-versions.sh --compute --refresh --no-cache --suffix ${env.SUFFIX}"
                 }
