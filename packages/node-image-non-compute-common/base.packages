@@ -154,7 +154,7 @@ craycli=0.63.0-1
 csm-node-identity=1.0.18-1
 goss-servers=1.14.60-1
 hpe-csm-goss-package=0.3.13-20210615152800_aae8d77
-hpe-csm-scripts=0.3.0-1
+hpe-csm-scripts=0.4.3-1
 hpe-csm-yq-package=3.4.1-20210615153837_40f15a6
 
 # Metal
