@@ -114,11 +114,11 @@ csm-node-identity=1.0.19-1
 craycli=0.65.0-1
 
 # Metal Team
-kernel-default=5.14.21-150400.24.33.2
-kernel-firmware-all=20220509-150400.4.13.1
-kernel-macros=5.14.21-150400.24.33.1
-kernel-source=5.14.21-150400.24.33.1
-kernel-syms=5.14.21-150400.24.33.1
+kernel-default=5.3.18-150300.59.87.1
+kernel-firmware=20210208-150300.4.10.1
+kernel-macros=5.3.18-150300.59.87.1
+kernel-source=5.3.18-150300.59.87.1
+kernel-syms=5.3.18-150300.59.87.1
 
 # Python3 RPM Packages
 # These support applications that do not install into virtualenvs, and that need airgap support.
