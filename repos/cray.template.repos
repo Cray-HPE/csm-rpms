@@ -1,10 +1,10 @@
 # CSM / CLOUD / PET / MTL / NET
-https://artifactory.algol60.net/artifactory/csm-rpms/hpe/stable/sle-15sp4                                                                                                                                      cray-algol60-csm-rpms-stable-sle-15sp4            --no-gpgcheck -p 88                   cray/csm/sle-15sp4
-https://artifactory.algol60.net/artifactory/csm-rpms/hpe/stable/sle-15sp3                                                                                                                                      cray-algol60-csm-rpms-stable-sle-15sp3            --no-gpgcheck -p 89                   cray/csm/sle-15sp3
-https://artifactory.algol60.net/artifactory/csm-rpms/hpe/stable/sle-15sp2                                                                                                                                      cray-algol60-csm-rpms-stable-sle-15sp2            --no-gpgcheck -p 90                   cray/csm/sle-15sp2
+https://${ARTIFACTORY_USER}:${ARTIFACTORY_TOKEN}@artifactory.algol60.net/artifactory/csm-rpms/hpe/stable/sle-15sp4                                                                                                                                      cray-algol60-csm-rpms-stable-sle-15sp4            --no-gpgcheck -p 88                   cray/csm/sle-15sp4
+https://${ARTIFACTORY_USER}:${ARTIFACTORY_TOKEN}@artifactory.algol60.net/artifactory/csm-rpms/hpe/stable/sle-15sp3                                                                                                                                      cray-algol60-csm-rpms-stable-sle-15sp3            --no-gpgcheck -p 89                   cray/csm/sle-15sp3
+https://${ARTIFACTORY_USER}:${ARTIFACTORY_TOKEN}@artifactory.algol60.net/artifactory/csm-rpms/hpe/stable/sle-15sp2                                                                                                                                      cray-algol60-csm-rpms-stable-sle-15sp2            --no-gpgcheck -p 90                   cray/csm/sle-15sp2
 
 # SAT
-https://artifactory.algol60.net/artifactory/sat-rpms/hpe/stable/sle-15sp3                                                                                                                                      cray-algol60-sat-rpms-stable-sle-15sp3            --no-gpgcheck -p 88                   cray/sat/sle-15sp3
+https://${ARTIFACTORY_USER}:${ARTIFACTORY_TOKEN}@artifactory.algol60.net/artifactory/sat-rpms/hpe/stable/sle-15sp3                                                                                                                                      cray-algol60-sat-rpms-stable-sle-15sp3            --no-gpgcheck -p 88                   cray/sat/sle-15sp3
 
 # COS
 # NOTE: Includes SP3 with an older priority because cray-heartbeat isn't built for SP4 (yet - SKERN-7383)
