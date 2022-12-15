@@ -25,15 +25,15 @@ typelib-1_0-Gtk-3_0=3.24.34-150400.3.3.1
 # - cray-auth-utils                     :
 # - cray-ckdump-helper                  : Wraps kdump, providing an interface for NMD
 # - cray-chrony-dracut                  : NTP setup in dracut
-# - cray-hugepage-setup                 : Customizing hugepage setup 
-# - cray-network-dracut                 : Custom ifup.sh scripts for generic distribution                                                    
+# - cray-hugepage-setup                 : Customizing hugepage setup
+# - cray-network-dracut                 : Custom ifup.sh scripts for generic distribution
 # - cray-node-identity                  : Provides nid and xname through systemd
 # - cray-power-button                   :
-# - cray-system-files                   :  
+# - cray-system-files                   :
 # - cray-system-setup-scripts           :
-# - cray-systemd-presets                : 
+# - cray-systemd-presets                :
 # - cray-udev-network-cn                : Provides udev rules for network interfaces
-# - spire-agent
+
 cray-auth-utils=0.3.1-2.4_20220907191100__gecf64bc
 cray-ckdump-helper=2.11.2-2.4_20220907192738__g2f4338a
 cray-chrony-dracut=1.4.0-2.4_20220907211223__gf7f4743
@@ -50,16 +50,14 @@ spire-agent=0.12.2-2.4_20220907184947__ge83309b
 # COS SHASTA-OS packages
 # - cray-cos-release                    : Installed cle and cos release files.
 # - cray-low-noise-mode                 : Hardware optimization
-# - kdump-spire-watcher                 : Related to NMD/kdump (ckdump)
 cray-cos-release=1.2.1-2.4_20221201073039__g029ecdf
 cray-low-noise-mode=1.2.3-2.4_20220907223914__gb6477c9
-kdump-spire-watcher=0.5.2-2.4_20220914124541__g81820b4
 
 # COS SHASTA-3RD Packages
-# - acpid                               : 
+# - acpid                               :
 # - cray-libhugetlbfs                   :
 # - cray-libhugetlbfs-devel             :
-# - cray-rasdaemon                      : 
+# - cray-rasdaemon                      :
 acpid=2.0.31-1.1_2.4_20220907164401__g5cfe682
 cray-libhugetlbfs=2.20_2.1.29-2.4_3.12__g05da5a8.shasta
 cray-libhugetlbfs-devel=2.20_2.1.29-2.4_3.12__g05da5a8.shasta
