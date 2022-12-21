@@ -13,3 +13,6 @@ https://${ARTIFACTORY_USER}:${ARTIFACTORY_TOKEN}@artifactory.algol60.net/artifac
 
 # SDU
 https://${ARTIFACTORY_USER}:${ARTIFACTORY_TOKEN}@artifactory.algol60.net/artifactory/dst-rpm-mirror/sdu-rpm-stable-local/release/img_oci-shasta-2.1/sle15_sp3_ncn?auth=basic                                   sdu-rpm-stable-local                              --no-gpgcheck -p 89                  cray/sdu/sle-15-sp3
+
+# SUSE_PTF_TEST 00502283
+http://redbull-ncn-m001.hpc.amslabs.hpecorp.net/ephemeral/data/SUSE_PTF_00502283                                                                                                                               SUSE_PTF_00502283                                 --no-gpgcheck -p 10 suse/ptf/00502283
