@@ -16,7 +16,7 @@ gperftools=2.5-4.12
 gptfdisk=1.0.8-150400.1.7
 hplip=3.21.10-150400.3.5.1
 ipmitool=1.8.18.238.gb7adc1d-150400.1.14
-ipset=6.36-3.3.1
+ipset=7.15-150400.12.3.2
 java-1_8_0-ibm-plugin=1.8.0_sr7.20-150000.3.65.1
 java-1_8_0-ibm=1.8.0_sr7.20-150000.3.65.1
 jq=1.6-3.3.1
@@ -30,14 +30,14 @@ minicom=2.7.1-1.19
 mlocate=0.26-150400.14.5
 netcat-openbsd=1.203-150400.1.5
 nmap=7.92-150400.1.8
-pdsh=2.34-32.1
+pdsh=2.34-150300.35.2
 podman-cni-config=3.4.7-150400.4.6.1
 podman=3.4.7-150400.4.6.1
 postgresql-contrib=14-150400.4.3.88
 postgresql-docs=14-150400.4.3.88
 postgresql-server=14-150400.4.3.88
 postgresql=14-150400.4.3.88
-rarpd=20211215-150400.1.5
+rarpd=20211215-150400.3.3.2
 rasdaemon=0.6.7.18.git+7ccf12f-150400.2.7
 rollback-helper=1.0+git20181218.5394d6e-4.3.1
 rzsz=0.12.21~rc-150000.3.3.2
@@ -49,7 +49,7 @@ squid=5.7-150400.3.6.1
 sysstat=12.0.2-3.33.1
 systemtap=4.6-150400.1.7
 wget=1.20.3-150000.3.15.1
-wireshark=3.6.8-150000.3.74.1
+wireshark=3.6.10-150000.3.78.1
 xfsdump=3.1.6-1.30
 
 # COS
@@ -69,7 +69,6 @@ cfs-trust=1.6.2-1
 # CSM Team
 cray-kubectl-hns-plugin=1.0.1-1
 cray-kubectl-kubelogin-plugin=1.25.2-1
-csm-node-identity=1.0.19-1
 goss-servers=1.15.24-1
 hpe-csm-goss-package=0.3.13-20210615152800_aae8d77
 hpe-csm-scripts=0.4.3-1
@@ -77,8 +76,3 @@ hpe-csm-yq-package=3.4.1-20210615153837_40f15a6
 loftsman=1.2.0-1
 manifestgen=1.3.9-1
 
-# Metal Team
-# When we move to SP4 double-check this has a matching kernel, if not then kernel-mft-mlnx-kmp-default needs to be commented out.
-kernel-mft-mlnx-kmp-default=4.21.0_k5.14.21_150400.22-1.sles15sp4
-# DO NOT INSTALL MFT FROM THE SPP REPO, NEVER APPEND "slesXspY"
-mft=4.21.0-99
