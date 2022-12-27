@@ -6,3 +6,5 @@ cfs-state-reporter=1.9.0-1
 cray-auth-utils=0.3.1-2.4_20220907191100__gecf64bc
 cray-chrony-dracut=1.4.0-2.4_20220907211223__gf7f4743
 spire-agent=0.12.2-2.4_20220907184947__ge83309b
+cloud-init=21.4-1
+cray-heartbeat=1.8.2-2.4_3.11__g5712ad4.shasta
