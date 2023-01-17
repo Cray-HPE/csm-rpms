@@ -4,7 +4,7 @@
 # The version is the same version reported by the OS package manager (e.g. zypper).
 cfs-state-reporter=1.9.0-1
 cloud-init=21.4-1
-cray-auth-utils=0.3.1-2.4_20220907191100__gecf64bc
-cray-chrony-dracut=1.4.0-2.4_20220907211223__gf7f4743
-cray-heartbeat=1.8.2-2.4_3.11__g5712ad4.shasta
-spire-agent=0.12.2-2.4_20220907184947__ge83309b
+cray-auth-utils=0.4.1-2.5_20230113043005__g4aa0940
+cray-chrony-dracut=1.5.0-2.5_20230112202042__g70be251
+cray-heartbeat=1.9.1-2.5_1.2__gcf13165.shasta
+spire-agent=1.4.0-2.5_20230117111813__gc07bb77

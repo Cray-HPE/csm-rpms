@@ -7,9 +7,7 @@ https://${ARTIFACTORY_USER}:${ARTIFACTORY_TOKEN}@artifactory.algol60.net/artifac
 https://${ARTIFACTORY_USER}:${ARTIFACTORY_TOKEN}@artifactory.algol60.net/artifactory/sat-rpms/hpe/stable/sle-15sp3?auth=basic                                                                                                                             cray-algol60-sat-rpms-stable-sle-15sp3            --no-gpgcheck -p 88                   cray/sat/sle-15sp3
 
 # COS
-# NOTE: Includes SP3 with an older priority because cray-heartbeat isn't built for SP4 (yet - SKERN-7383)
-https://${ARTIFACTORY_USER}:${ARTIFACTORY_TOKEN}@artifactory.algol60.net/artifactory/dst-rpm-mirror/cos-rpm-stable-local/release/cos-2.4/sle15_sp3_ncn?auth=basic                                              cray-cos-sle-15sp3-2.4-SHASTA-OS-cos-ncn          --no-gpgcheck -p 90                   cray/cos/sle-15sp3
-https://${ARTIFACTORY_USER}:${ARTIFACTORY_TOKEN}@artifactory.algol60.net/artifactory/dst-rpm-mirror/cos-rpm-stable-local/release/cos-2.4/sle15_sp4_ncn?auth=basic                                              cray-cos-sle-15sp4-2.4-SHASTA-OS-cos-ncn          --no-gpgcheck -p 89                   cray/cos/sle-15sp4
+https://${ARTIFACTORY_USER}:${ARTIFACTORY_TOKEN}@artifactory.algol60.net/artifactory/dst-rpm-mirror/cos-rpm-stable-local/release/cos-2.5/sle15_sp4_ncn?auth=basic                                              cray-cos-sle-15sp4-2.5-SHASTA-OS-cos-ncn          --no-gpgcheck -p 89                   cray/cos/sle-15sp4
 
 # SDU
 https://${ARTIFACTORY_USER}:${ARTIFACTORY_TOKEN}@artifactory.algol60.net/artifactory/dst-rpm-mirror/sdu-rpm-stable-local/release/img_oci-shasta-2.1/sle15_sp3_ncn?auth=basic                                   sdu-rpm-stable-local                              --no-gpgcheck -p 89                  cray/sdu/sle-15-sp3
