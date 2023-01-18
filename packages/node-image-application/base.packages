@@ -2,7 +2,7 @@
 # Format:
 # Packages for any application node artifacts.
 # The version is the same version reported by the OS package manager (e.g. zypper).
-cfs-state-reporter=1.9.0-1
+cfs-state-reporter=1.9.1-1
 cloud-init=21.4-1
 cray-auth-utils=0.3.1-2.4_20220907191100__gecf64bc
 cray-chrony-dracut=1.4.0-2.4_20220907211223__gf7f4743
