@@ -34,34 +34,34 @@ typelib-1_0-Gtk-3_0=3.24.34-150400.3.3.1
 # - cray-systemd-presets                :
 # - cray-udev-network-cn                : Provides udev rules for network interfaces
 
-cray-auth-utils=0.3.1-2.4_20220907191100__gecf64bc
-cray-ckdump-helper=2.11.2-2.4_20220907192738__g2f4338a
-cray-chrony-dracut=1.4.0-2.4_20220907211223__gf7f4743
-cray-heartbeat=1.8.2-2.4_4.20__g5712ad4.shasta
-cray-hugepage-setup=0.6.1-2.4_20220907195721__g8a72bcc
-cray-network-dracut=1.3.1-2.4_20220907212221__ga511757
-cray-power-button=1.4.1-2.4_20220907233542__g35e8b4a
-cray-system-files=1.13.5-2.4_20220927102737__g81928fa
-cray-system-setup-scripts=1.3.3-2.4_20221215171734__gf3a8090
-cray-systemd-presets=1.6.1-2.4_20220907233542__gf8b34cc
-cray-udev-network-cn=1.6.18-2.4_20221025121011__ga8be192
-spire-agent=0.12.2-2.4_20220907184947__ge83309b
+cray-auth-utils=0.4.1-2.5_20230113043005__g4aa0940
+cray-ckdump-helper=2.12.1-2.5_20230112235926__g9e95309
+cray-chrony-dracut=1.5.0-2.5_20230112202042__g70be251
+cray-heartbeat=1.9.1-2.5_1.2__gcf13165.shasta
+cray-hugepage-setup=0.7.1-2.5_20230113063638__g3e2f155
+cray-network-dracut=1.4.0-2.5_20230113063048__gc9eac23
+cray-power-button=1.5.2-2.5_20230113092552__g0fcacce
+cray-system-files=1.14.5-2.5_20230113092927__g8fffb85
+cray-system-setup-scripts=1.4.3-2.5_20230113142817__ge0ef7dd
+cray-systemd-presets=1.7.3-2.5_20230113091846__g4a496ef
+cray-udev-network-cn=1.7.12-2.5_20230113033545__g737c32a
+spire-agent=0.12.2-2.5_20230113021328__g48e293b
 
 # COS SHASTA-OS packages
 # - cray-cos-release                    : Installed cle and cos release files.
 # - cray-low-noise-mode                 : Hardware optimization
-cray-cos-release=1.2.1-2.4_20221201073039__g029ecdf
-cray-low-noise-mode=1.2.3-2.4_20220907223914__gb6477c9
+cray-cos-release=1.3.1-2.5_20230113051708__g2c3f0bb
+cray-low-noise-mode=1.3.3-2.5_20230113084748__g7892358
 
 # COS SHASTA-3RD Packages
 # - acpid                               :
 # - cray-libhugetlbfs                   :
 # - cray-libhugetlbfs-devel             :
 # - cray-rasdaemon                      :
-acpid=2.0.31-1.1_2.4_20220907164401__g5cfe682
-cray-libhugetlbfs=2.20_2.1.29-2.4_3.13__g05da5a8.shasta
-cray-libhugetlbfs-devel=2.20_2.1.29-2.4_3.13__g05da5a8.shasta
-cray-rasdaemon=0.6.8-3_2.4_20220907184629__gdb74487
+acpid=2.0.31-1.1_2.5_20230113012845__g40880b3
+cray-libhugetlbfs=2.20_2.1.28-2.5_1.2__g814a27a.shasta
+cray-libhugetlbfs-devel=2.20_2.1.28-2.5_1.2__g814a27a.shasta
+cray-rasdaemon=0.6.8-3_2.5_20230112191741__g9c01752
 
 # GPU Support Packages
 autoconf=2.69-1.445
