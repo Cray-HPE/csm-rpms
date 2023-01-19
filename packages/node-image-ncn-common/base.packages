@@ -59,7 +59,7 @@ xfsdump=3.1.6-1.30
 cray-auth-utils=0.4.1-2.5_20230113043005__g4aa0940
 cray-power-button=1.5.2-2.5_20230113081448__g0fcacce
 cray-heartbeat=1.9.1-2.5_1.2__gcf13165.shasta
-spire-agent=1.4.0-2.5_20230117111813__gc07bb77
+spire-agent=0.12.2-2.5_20230112214220__g48e293b
 
 # CMS Team
 cfs-debugger=1.3.0-1
