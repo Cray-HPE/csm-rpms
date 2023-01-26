@@ -2,5 +2,5 @@
 # Format:
 #   package_name=version
 # The version is the same version reported by the OS package manager (e.g. zypper).
-cephadm>=17.2.3
+cephadm>=17.2.5
 libfmt8=8.0.1-150400.1.8
