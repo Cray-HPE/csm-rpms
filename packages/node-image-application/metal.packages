@@ -1,5 +1,4 @@
-# Vagrant only packages
+# Metal only packages
 # Format:
 #   package_name=version
 # The version is the same version reported by the OS package manager (e.g. zypper).
-qemu-guest-agent=5.2.0-150300.115.2

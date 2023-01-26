@@ -1,0 +1,10 @@
+#   package_name=version
+# Format:
+# Packages for any application node artifacts.
+# The version is the same version reported by the OS package manager (e.g. zypper).
+cfs-state-reporter=1.9.1-1
+cloud-init=21.4-1
+cray-auth-utils=0.4.1-2.5_20230113043005__g4aa0940
+cray-chrony-dracut=1.5.0-2.5_20230112202042__g70be251
+cray-heartbeat=1.9.1-2.5_1.2__gcf13165.shasta
+spire-agent=0.12.2-2.5_20230113021328__g48e293b

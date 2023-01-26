@@ -1,4 +1,7 @@
-# Packages for pre-install-toolkit Vagrant artifacts.
+# Packages for NCN metal artifacts.
 # Format:
 #   package_name=version
 # The version is the same version reported by the OS package manager (e.g. zypper).
+dracut-metal-mdsquash=2.3.1-1
+haproxy=2.0.14-bp152.1.1
+keepalived=2.0.19-bp152.1.9

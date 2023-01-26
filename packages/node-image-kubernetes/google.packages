@@ -1,5 +1,5 @@
-# Google only packages
+# Packages for Kubernetes Google artifacts.
 # Format:
 #   package_name=version
 # The version is the same version reported by the OS package manager (e.g. zypper).
-nginx=1.19.8-3.6.1
+nginx=1.21.5-150400.1.8

@@ -2,7 +2,3 @@
 # Format:
 #   package_name=version
 # The version is the same version reported by the OS package manager (e.g. zypper).
-dracut-metal-mdsquash=2.3.0-1
-ledmon=0.94-1.59
-haproxy=2.0.14-bp152.1.1
-keepalived=2.0.19-bp152.1.9
