@@ -16,7 +16,7 @@ pit-observability=1.0.6-1
 
 # SUSE Packages
 acl=2.2.52-4.3.1
-apache2=2.4.51-150400.6.3.1
+apache2=2.4.51-150400.6.6.1
 dnsmasq=2.86-150400.14.3
 checkmedia=6.1-150400.1.5
 mkisofs=3.02~a09-4.6.1
