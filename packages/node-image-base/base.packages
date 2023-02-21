@@ -52,8 +52,8 @@ libdw1=0.185-150400.5.3.1
 libecpg6=15.1-150200.5.3.2
 libelf-devel=0.185-150400.5.3.1
 libelf1=0.185-150400.5.3.1
-libfreebl3-hmac=3.79.3-150400.3.23.1
-libfreebl3=3.79.3-150400.3.23.1
+libfreebl3-hmac=3.79.4-150400.3.26.1
+libfreebl3=3.79.4-150400.3.26.1
 liblldp_clif1=1.1+44.0f781b4162d3-3.3.1
 libopenssl1_1=1.1.1l-150400.7.22.1
 libpq5=15.1-150200.5.3.2
@@ -123,11 +123,11 @@ csm-node-identity=1.0.20-1
 craycli=0.70.0-1
 
 # Metal Team
-kernel-default=5.14.21-150400.24.41.1
+kernel-default=5.14.21-150400.24.46.1
 kernel-firmware-all=20220509-150400.4.13.1
-kernel-macros=5.14.21-150400.24.41.1
-kernel-source=5.14.21-150400.24.41.1
-kernel-syms=5.14.21-150400.24.41.1
+kernel-macros=5.14.21-150400.24.46.1
+kernel-source=5.14.21-150400.24.46.1
+kernel-syms=5.14.21-150400.24.46.1
 # When we move to SP4 double-check this has a matching kernel, if not then kernel-mft-mlnx-kmp-default needs to be commented out.
 kernel-mft-mlnx-kmp-default=4.21.0_k5.14.21_150400.22-1.sles15sp4
 # DO NOT INSTALL MFT FROM THE SPP REPO, NEVER APPEND "slesXspY"
