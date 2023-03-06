@@ -45,7 +45,7 @@ cray-system-files=1.14.6-2.5_20230130112320__g7ae5ecd
 cray-system-setup-scripts=1.4.3-2.5_20230113142817__ge0ef7dd
 cray-systemd-presets=1.7.3-2.5_20230113091846__g4a496ef
 cray-udev-network-cn=1.7.12-2.5_20230113033545__g737c32a
-spire-agent=0.12.2-2.5_20230119160451__g4d5646c
+spire-agent=1.6.1-1.2
 
 # COS SHASTA-OS packages
 # - cray-cos-release                    : Installed cle and cos release files.
