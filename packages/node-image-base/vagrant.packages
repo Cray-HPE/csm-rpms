@@ -2,4 +2,4 @@
 # Format:
 #   package_name=version
 # The version is the same version reported by the OS package manager (e.g. zypper).
-qemu-guest-agent=6.2.0-150400.37.8.2
+qemu-guest-agent=6.2.0-150400.37.11.1
