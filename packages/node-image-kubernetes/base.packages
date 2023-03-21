@@ -9,7 +9,7 @@ kubelet=1.21.12-0
 
 # CSM
 cray-cmstools-crayctldeploy=1.11.1-1
-platform-utils=1.4.3-1
+platform-utils=1.5.1-1
 
 # DVS
 insserv-compat=0.1-4.6.1
