@@ -11,7 +11,7 @@ cloud-init-doc=21.4-1
 cloud-init=21.4-1
 conman=0.3.0-150400.9.10
 cpupower=5.14-150400.1.8
-emacs=27.2-150400.3.3.1
+emacs=27.2-150400.3.6.1
 gperftools=2.5-4.12
 gptfdisk=1.0.8-150400.1.7
 hplip=3.21.10-150400.3.5.1
@@ -30,7 +30,7 @@ minicom=2.7.1-1.19
 mlocate=0.26-150400.16.3.1
 netcat-openbsd=1.203-150400.1.5
 nmap=7.92-150400.1.8
-pdsh=2.34-150300.35.2
+pdsh=2.34-150300.38.1
 podman-cni-config=4.3.1-150400.4.11.1
 podman=4.3.1-150400.4.11.1
 rarpd=20211215-150400.3.3.2
@@ -54,7 +54,7 @@ xfsdump=3.1.6-1.30
 # - spire-agent                         :
 cray-auth-utils=0.4.1-2.5_20230113043005__g4aa0940
 cray-power-button=1.5.2-2.5_20230113081448__g0fcacce
-cray-heartbeat=1.9.1-2.5_1.4__gcf13165.shasta
+cray-heartbeat=1.9.1-2.5_1.6__gcf13165.shasta
 spire-agent=0.12.2-2.5_20230119160451__g4d5646c
 
 # CMS Team
@@ -65,7 +65,7 @@ cfs-trust=1.6.3-1
 # CSM Team
 cray-kubectl-hns-plugin=1.0.1-1
 cray-kubectl-kubelogin-plugin=1.25.2-1
-goss-servers=1.16.16-1
+goss-servers=1.16.20-1
 hpe-csm-goss-package=0.3.21-hpe3
 hpe-csm-scripts=0.5.4-1
 hpe-csm-yq-package=3.4.1-20210615153837_40f15a6
