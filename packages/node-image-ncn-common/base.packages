@@ -51,11 +51,9 @@ xfsdump=3.1.6-1.30
 # COS
 # - cray-auth-utils                     :
 # - cray-heartbeat                      : Serves the heartbeat read by HMS
-# - spire-agent                         :
 cray-auth-utils=0.4.1-2.5_20230113043005__g4aa0940
 cray-power-button=1.5.2-2.5_20230113081448__g0fcacce
 cray-heartbeat=1.9.1-2.5_1.6__gcf13165.shasta
-spire-agent=0.12.2-2.5_20230119160451__g4d5646c
 
 # CMS Team
 cfs-debugger=1.3.1-1
