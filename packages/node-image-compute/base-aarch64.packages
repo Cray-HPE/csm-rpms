@@ -1,0 +1,32 @@
+# Packages for any node-image artifact.
+# Format:
+#   package_name=version
+# The version is the same version reported by the OS package manager (e.g. zypper).
+# These packages are exclusively available for this architecture.
+# Packages/versions that are available for x86_64 and aarch64 should be added
+# to base.packages in this directory.
+
+# Temporary while producing kis artifacts from google builds
+squashfs=4.4-1.1
+
+# COS SHASTA-OS packages
+# - cray-cos-release                    : Installed cle and cos release files.
+cray-cos-release=1.3.1-2.5_20230113051829__g2c3f0bb
+
+# COS SHASTA-3RD Packages
+# - acpid                               :
+# - cray-rasdaemon                      :
+acpid=2.0.31-1.1_2.5_20230113012842__g40880b3
+cray-rasdaemon=0.6.8-3_2.5_20230113033939__g9c01752
+
+# COS General Packages
+# These COS RPM package names vary by timestamp between architectures
+# so they can't be listed in base.packages
+# - cray-system-setup-scripts           :
+# - cray-udev-network-cn                : Provides udev rules for network interfaces
+# - cray-ckdump-helper                  : Wraps kdump, providing an interface for NMD
+# - cray-heartbeat                      :
+cray-system-setup-scripts=1.4.3-2.5_20230113094810__ge0ef7dd
+cray-udev-network-cn=1.7.13-2.5_20230222143904__g4571a11
+cray-ckdump-helper=2.12.1-2.5_20230113045052__g9e95309
+cray-heartbeat=1.9.1-2.5_2.4__gcf13165.shasta

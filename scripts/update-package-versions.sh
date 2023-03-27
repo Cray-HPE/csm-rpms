@@ -22,7 +22,7 @@
 # ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
 # OTHER DEALINGS IN THE SOFTWARE.
 #
-set -ex
+set -e
 
 realpath() {
   [[ $1 = /* ]] && echo "$1" || echo "$PWD/${1#./}"
@@ -39,6 +39,7 @@ Usage:
     If you choose to update the version then the given packages-file is updated directly.
     You can then git commit to the appropriate branch and create a PR.
 
+    -a|--architecture          Required: Set the target architecture (eg x86_64 or aarch64)
     -p|--packages-file <path>  Required: The packages file path to update versions in (eg packages/node-images-base/base.packages)
 
     [-f|--filter <pattern>]    Package regex pattern to filter against. Only packages matching the filter will be queried and prompted to update. (eg cray-)
@@ -54,26 +55,28 @@ Usage:
 
     Examples
 
-    ./scripts/update-package-versions.sh -p packages/node-images-base/base.packages
+    ./scripts/update-package-versions.sh -a x86_64 -p packages/node-images-base/base.packages
+    ./scripts/update-package-versions.sh -a aarch64 -p packages/node-images-base/base.packages
+
     --------------
     Query all packages in base.packages and prompt the user to update the version if a newer version is found in the repos one by one.
 
 
-    ./scripts/update-package-versions.sh -p packages/node-images-base/base.packages -f '^cray' -o
+    ./scripts/update-package-versions.sh -a x86_64 -p packages/node-images-base/base.packages -f '^cray' -o
     --------------
     Query packages in base.packages that start with 'cray'. Only print out packages that have a different version found
 
 
-    ./scripts/update-package-versions.sh -p packages/node-images-base/base.packages -f cray-network-config -r shasta-1.4
+    ./scripts/update-package-versions.sh -a x86_64 -p packages/node-images-base/base.packages -f cray-network-config -r shasta-1.4
     --------------
     Only update the package cray-network-config in a repo that contains the shasta-1.4 name
 
 
-    ./scripts/update-package-versions.sh -p packages/node-images-base/base.packages -r buildonly-SUSE
+    ./scripts/update-package-versions.sh -a aarch64 -p packages/node-images-base/base.packages -r buildonly-SUSE
     --------------
-    Only update packages found in the upstream SUSE repos
+    Only update packages found in the upstream SUSE repos for aarch64
 
-    ./scripts/update-package-versions.sh -p packages/node-images-base/base.packages -r buildonly-SUSE -y
+    ./scripts/update-package-versions.sh -a x86_64 -p packages/node-images-base/base.packages -r buildonly-SUSE -y
     --------------
     Same as the last example, but automatically update all SUSE packages rather than prompt one by one
 
@@ -96,6 +99,12 @@ do
     -h|--help)
       usage
       exit
+      ;;
+    -a|--architecture)
+      export ARCH="$2"
+      [[ ${ARCH} == "x86_64" ]] && DOCKER_ARCH="linux/amd64"
+      [[ ${ARCH} == "aarch64" ]] && DOCKER_ARCH="linux/arm64"
+      DOCKER_CACHE_IMAGE="${DOCKER_CACHE_IMAGE}-${ARCH}"
       ;;
     -p|--packages-file)
       PACKAGES_FILE="$2"
@@ -133,6 +142,12 @@ do
   shift
 done
 
+if [[ -z "$ARCH" ]]; then
+    echo >&2 "error: missing -a architecture option"
+    usage
+    exit 3
+fi
+
 if [[ "$NO_CACHE" == "true" && "$(docker images -q $DOCKER_CACHE_IMAGE 2> /dev/null)" != "" ]]; then
   echo "Removing docker image cache $DOCKER_CACHE_IMAGE"
   docker rmi $DOCKER_CACHE_IMAGE || docker rmi --force $DOCKER_CACHE_IMAGE
@@ -142,13 +157,15 @@ if [[ "$(docker images -q $DOCKER_CACHE_IMAGE 2> /dev/null)" == "" ]]; then
   echo "Creating docker cache image"
   docker rm $DOCKER_CACHE_IMAGE 2> /dev/null || true
 
-  docker run --name $DOCKER_CACHE_IMAGE -v "$(realpath "$SOURCE_DIR"):/app" -e ARTIFACTORY_USER=$ARTIFACTORY_USER -e ARTIFACTORY_TOKEN=$ARTIFACTORY_TOKEN $DOCKER_BASE_IMAGE bash -c "
+  docker run --platform $DOCKER_ARCH -e ARCH=$ARCH --name $DOCKER_CACHE_IMAGE -v "$(realpath "$SOURCE_DIR"):/app" -e ARTIFACTORY_USER=$ARTIFACTORY_USER -e ARTIFACTORY_TOKEN=$ARTIFACTORY_TOKEN $DOCKER_BASE_IMAGE bash -c "
     set -e
     source /app/scripts/rpm-functions.sh
     setup-csm-rpms
     cleanup-all-repos
     setup-package-repos $SETUP_PACKAGE_REPOS_FLAGS
     zypper refresh
+    # Install yq now that it's available
+    zypper --non-interactive install --no-recommends yq
     # Force a cache update
     zypper --no-refresh info man > /dev/null 2>&1
     cleanup-csm-rpms
@@ -161,7 +178,7 @@ fi
 
 if [[ "$REFRESH" == "true" ]]; then
   docker rm $DOCKER_CACHE_IMAGE 2> /dev/null || true
-  docker run --name $DOCKER_CACHE_IMAGE -v "$(realpath "$SOURCE_DIR"):/app" --init $DOCKER_CACHE_IMAGE bash -c "
+  docker run --platform $DOCKER_ARCH -e ARCH=$ARCH --name $DOCKER_CACHE_IMAGE -v "$(realpath "$SOURCE_DIR"):/app" --init $DOCKER_CACHE_IMAGE bash -c "
     set -e
     source /app/scripts/rpm-functions.sh
     zypper refresh
@@ -193,7 +210,7 @@ else
   DOCKER_TTY_ARG="-it"
 fi
 
-docker run $DOCKER_TTY_ARG --rm -v "$(realpath "$SOURCE_DIR"):/app" -v "$(realpath "$PACKAGES_FILE"):/packages" --init $DOCKER_CACHE_IMAGE bash -c "
+docker run --platform $DOCKER_ARCH -e ARCH=$ARCH $DOCKER_TTY_ARG --rm -v "$(realpath "$SOURCE_DIR"):/app" -v "$(realpath "$PACKAGES_FILE"):/packages" --init $DOCKER_CACHE_IMAGE bash -c "
   set -e
   source /app/scripts/rpm-functions.sh
   if [[ \"$VALIDATE\" == \"true\" ]]; then

@@ -2,12 +2,15 @@
 # Format:
 #   package_name=version
 # The version is the same version reported by the OS package manager (e.g. zypper).
+# These packages are available for x86_64 and aarch64.
+# Packages/versions that are available for only one architecture should be added
+# to base-<<ARCH>>.packages in this directory.
+
 arptables=0.0.4-8.39
 at=3.2.2-150400.4.3.10
 bash-completion=2.7-150400.13.3.1
 bc=1.07.1-11.37
 bind-utils=9.16.38-150400.5.20.2
-biosdevname=0.7.3-5.3.1
 bsdtar=3.5.1-150400.3.12.1
 chrony=4.1-150400.19.4
 crash=7.3.0-150400.3.2.6
@@ -32,9 +35,7 @@ genders=1.27.3-150400.8.7
 git-core=2.35.3-150300.10.24.1
 gnuplot=5.4.3-150400.1.6
 grub2-branding-SLE=15-150400.38.3.1
-grub2-i386-pc=2.06-150400.11.25.1
-grub2-x86_64-efi=2.06-150400.11.25.1
-grub2=2.06-150400.11.25.1
+grub2=2.06-150400.11.23.2
 hdparm=9.62-150400.1.7
 hwloc=2.5.0-150400.1.9
 iproute2-bash-completion=5.14-150400.1.8
@@ -60,7 +61,6 @@ libstoragemgmt=1.8.5-3.3.1
 libsystemd0=249.16-150400.8.25.7
 libudev1=249.16-150400.8.25.7
 libunwind-devel=1.5.0-4.5.1
-lshw=B.02.19.2+git.20220628-150200.3.12.1
 lsscsi=0.28-1.24
 lvm2=2.03.05-150400.185.1
 man=2.7.6-6.22
@@ -130,11 +130,6 @@ kernel-firmware-all=20220509-150400.4.13.1
 kernel-macros=5.14.21-150400.24.55.2
 kernel-source=5.14.21-150400.24.55.2
 kernel-syms=5.14.21-150400.24.55.1
-# When we move to SP4 double-check this has a matching kernel, if not then kernel-mft-mlnx-kmp-default needs to be commented out.
-kernel-mft-mlnx-kmp-default=4.21.0_k5.14.21_150400.22-1.sles15sp4
-# DO NOT INSTALL MFT FROM THE SPP REPO, NEVER APPEND "slesXspY"
-mft=4.21.0-99
-qlgc-fastlinq-kmp-default=8.72.1.0_k5.14.21_150400.22-1.sles15sp4
 
 # Python3 RPM Packages
 # These support applications that do not install into virtualenvs, and that need airgap support.
@@ -143,7 +138,7 @@ python3-MarkupSafe=1.0-1.29
 python3-PyYAML=5.4.1-1.1
 python3-boto3=1.23.4-150200.23.9.1
 python3-click=7.0-1.27
-python3-colorama=0.4.4-5.4.1
+python3-colorama=0.4.4-1.1 
 python3-defusedxml=0.6.0-1.42
 python3-gobject=3.42.2-150400.3.3.2
 python3-ipaddr=2.1.11-2.24
@@ -153,7 +148,7 @@ python3-netaddr=0.7.19-1.17
 python3-pexpect=4.8.0-150400.13.6
 python3-pyroute2=0.5.10-3.3.1
 python3-requests-oauthlib=0.8.0-3.4.1
-python3-requests=2.24.0-6.10.2
+python3-requests=2.24.0-1.24
 python3-rpm=4.14.3-150300.55.1
 python3-six=1.14.0-12.1
-python3-urllib3=1.25.10-9.14.1
+python3-urllib3=1.25.10-4.3.1

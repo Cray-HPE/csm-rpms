@@ -1,7 +1,10 @@
-# Packages for any CN artifacts.
+# Packages for any node-image artifact.
 # Format:
 #   package_name=version
 # The version is the same version reported by the OS package manager (e.g. zypper).
+# These packages are available for x86_64 and aarch64.
+# Packages/versions that are available for only one architecture should be added
+# to base-<<ARCH>>.packages in this directory.
 
 # Analytics Base SLES Packages
 java-11-openjdk-devel=11.0.18.0-150000.3.93.1
@@ -23,50 +26,25 @@ typelib-1_0-Gtk-3_0=3.24.34-150400.3.3.1
 
 # COS General Packages
 # - cray-auth-utils                     :
-# - cray-ckdump-helper                  : Wraps kdump, providing an interface for NMD
 # - cray-chrony-dracut                  : NTP setup in dracut
 # - cray-hugepage-setup                 : Customizing hugepage setup
 # - cray-network-dracut                 : Custom ifup.sh scripts for generic distribution
 # - cray-node-identity                  : Provides nid and xname through systemd
 # - cray-power-button                   :
 # - cray-system-files                   :
-# - cray-system-setup-scripts           :
 # - cray-systemd-presets                :
-# - cray-udev-network-cn                : Provides udev rules for network interfaces
 
 cray-auth-utils=0.4.1-2.5_20230113043005__g4aa0940
-cray-ckdump-helper=2.12.1-2.5_20230112235926__g9e95309
 cray-chrony-dracut=1.5.0-2.5_20230112202042__g70be251
-cray-heartbeat=1.9.1-2.5_2.7__gcf13165.shasta
 cray-hugepage-setup=0.7.1-2.5_20230113063638__g3e2f155
 cray-network-dracut=1.4.0-2.5_20230113063048__gc9eac23
 cray-power-button=1.5.2-2.5_20230113092552__g0fcacce
 cray-system-files=1.14.6-2.5_20230130112320__g7ae5ecd
-cray-system-setup-scripts=1.4.3-2.5_20230113142817__ge0ef7dd
 cray-systemd-presets=1.7.3-2.5_20230113091846__g4a496ef
-cray-udev-network-cn=1.7.13-2.5_20230222143903__g4571a11
 
 # COS SHASTA-OS packages
-# - cray-cos-release                    : Installed cle and cos release files.
 # - cray-low-noise-mode                 : Hardware optimization
-cray-cos-release=1.3.1-2.5_20230113051708__g2c3f0bb
 cray-low-noise-mode=1.3.3-2.5_20230113084748__g7892358
-
-# COS SHASTA-3RD Packages
-# - acpid                               :
-# - cray-libhugetlbfs                   :
-# - cray-libhugetlbfs-devel             :
-# - cray-rasdaemon                      :
-acpid=2.0.31-1.1_2.5_20230113012845__g40880b3
-cray-libhugetlbfs=2.20_2.1.28-2.5_1.8__g814a27a.shasta
-cray-libhugetlbfs-devel=2.20_2.1.28-2.5_1.8__g814a27a.shasta
-cray-rasdaemon=0.6.8-3_2.5_20230112191741__g9c01752
-
-# CMS Team
-cfs-debugger=1.3.1-1
-cfs-state-reporter=1.9.1-1
-cfs-trust=1.6.3-1
-bos-reporter=2.1.0-1
 
 # GPU Support Packages
 autoconf=2.69-1.445
@@ -74,10 +52,8 @@ automake=1.15.1-4.10.2
 check-devel=0.15.2-150400.1.6
 glu-devel=9.0.0-8.45
 libLLVM7=7.0.1-150100.3.22.2
-libXext6-32bit=1.3.3-1.30
 libdrm-devel=2.4.107-150400.1.8
 libglut3=3.2.1-1.24
-libglvnd-32bit=1.3.3-150400.3.4
 libnuma-devel=2.0.14.20.g4ee5e0c-150400.1.24
 libvdpau1=1.1.1-150000.3.2.1
 libvulkan1=1.2.133-1.26

@@ -1,0 +1,9 @@
+# Packages for any node-image artifact.
+# Format:
+#   package_name=version
+# The version is the same version reported by the OS package manager (e.g. zypper).
+# These packages are exclusively available for this architecture.
+# Packages/versions that are available for x86_64 and aarch64 should be added
+# to base.packages in this directory.
+
+grub2-arm64-efi=2.06-150400.11.23.2

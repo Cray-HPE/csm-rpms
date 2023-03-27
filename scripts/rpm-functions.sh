@@ -2,7 +2,7 @@
 #
 # MIT License
 #
-# (C) Copyright 2021-2022 Hewlett Packard Enterprise Development LP
+# (C) Copyright 2021-2023] Hewlett Packard Enterprise Development LP
 #
 # Permission is hereby granted, free of charge, to any person obtaining a
 # copy of this software and associated documentation files (the "Software"),
@@ -24,40 +24,62 @@
 #
 
 CSM_RPMS_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}")/.." &> /dev/null && pwd )"
+export ARCH="${ARCH:-x86_64}"
 
 function list-google-repos-files() {
   /usr/bin/envsubst < ${CSM_RPMS_DIR}/repos/google.template.repos > ${CSM_RPMS_DIR}/repos/google.repos
-  cat <<EOF
-${CSM_RPMS_DIR}/repos/google.repos
-EOF
+
+	cat <<-EOF
+			${CSM_RPMS_DIR}/repos/google.repos
+			EOF
 }
 
 function list-hpe-repos-files() {
   /usr/bin/envsubst < ${CSM_RPMS_DIR}/repos/hpe.template.repos > ${CSM_RPMS_DIR}/repos/hpe.repos
-  cat <<EOF
-${CSM_RPMS_DIR}/repos/hpe.repos
-EOF
+
+  if [ -f ${CSM_RPMS_DIR}/repos/hpe.${ARCH}.template.repos ]; then
+    /usr/bin/envsubst < ${CSM_RPMS_DIR}/repos/hpe.${ARCH}.template.repos >> ${CSM_RPMS_DIR}/repos/hpe.repos
+  fi
+
+	cat <<-EOF
+			${CSM_RPMS_DIR}/repos/hpe.repos
+			EOF
 }
 
 function list-suse-repos-files() {
   /usr/bin/envsubst < ${CSM_RPMS_DIR}/repos/suse.template.repos > ${CSM_RPMS_DIR}/repos/suse.repos
-  cat <<EOF
-${CSM_RPMS_DIR}/repos/suse.repos
-EOF
+  
+	if [ -f ${CSM_RPMS_DIR}/repos/suse.${ARCH}.template.repos ]; then
+    /usr/bin/envsubst < ${CSM_RPMS_DIR}/repos/suse.${ARCH}.template.repos >> ${CSM_RPMS_DIR}/repos/suse.repos
+  fi
+
+  cat <<-EOF
+			${CSM_RPMS_DIR}/repos/suse.repos
+			EOF
 }
 
 function list-cray-repos-files() {
   /usr/bin/envsubst < ${CSM_RPMS_DIR}/repos/cray.template.repos > ${CSM_RPMS_DIR}/repos/cray.repos
-  cat <<EOF
-${CSM_RPMS_DIR}/repos/cray.repos
-EOF
+
+  if [ -f ${CSM_RPMS_DIR}/repos/cray.${ARCH}.template.repos ]; then
+    /usr/bin/envsubst < ${CSM_RPMS_DIR}/repos/cray.${ARCH}.template.repos >> ${CSM_RPMS_DIR}/repos/cray.repos
+  fi
+
+	cat <<-EOF
+			${CSM_RPMS_DIR}/repos/cray.repos
+			EOF
 }
 
 function list-compute-repos-files() {
   /usr/bin/envsubst < ${CSM_RPMS_DIR}/repos/compute.template.repos > ${CSM_RPMS_DIR}/repos/compute.repos
-  cat <<EOF
-${CSM_RPMS_DIR}/repos/compute.repos
-EOF
+
+  if [ -f ${CSM_RPMS_DIR}/repos/compute.${ARCH}.template.repos ]; then
+    /usr/bin/envsubst < ${CSM_RPMS_DIR}/repos/compute.${ARCH}.template.repos >> ${CSM_RPMS_DIR}/repos/compute.repos
+  fi
+
+	cat <<-EOF
+			${CSM_RPMS_DIR}/repos/compute.repos
+			EOF
 }
 
 function add-fake-conntrack {

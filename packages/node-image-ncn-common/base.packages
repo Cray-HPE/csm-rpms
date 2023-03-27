@@ -50,7 +50,8 @@ xfsdump=3.1.6-1.30
 
 # COS
 # - cray-auth-utils                     :
-# - cray-heartbeat                      : Serves the heartbeat read by HMS
+# - cray-power-button
+# - cray-heartbeat
 cray-auth-utils=0.4.1-2.5_20230113043005__g4aa0940
 cray-power-button=1.5.2-2.5_20230113081448__g0fcacce
 cray-heartbeat=1.9.1-2.5_1.8__gcf13165.shasta
