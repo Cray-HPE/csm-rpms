@@ -2,7 +2,7 @@
 # Format:
 #   package_name=version
 # The version is the same version reported by the OS package manager (e.g. zypper).
-amsd=2.4.1-1571.4.sles15
+amsd=2.7.0-1724.3.sles15
 apparmor-profiles=3.0.4-150400.5.3.1
 aws-cli=1.24.4-150200.30.8.1
 ceph-common>=17.2.5
