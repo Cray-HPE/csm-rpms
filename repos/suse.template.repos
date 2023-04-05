@@ -91,4 +91,4 @@ https://${ARTIFACTORY_USER}:${ARTIFACTORY_TOKEN}@artifactory.algol60.net/artifac
 
 
 # SUSE PTF Packages
-https://${ARTIFACTORY_USER}:${ARTIFACTORY_TOKEN}@artifactory.algol60.net/artifactory/suse-external/PTF/15-SP4/SLE-Module-Basesystem?auth=basic                                     SUSE-SLE-Module-Basesystem-PTF-15-SP4                                 -g -p 90  suse/SLE-Module-Basesystem-PTF/15-SP4/
+#https://${ARTIFACTORY_USER}:${ARTIFACTORY_TOKEN}@artifactory.algol60.net/artifactory/suse-external/PTF/15-SP4/SLE-Module-Basesystem?auth=basic                                     SUSE-SLE-Module-Basesystem-PTF-15-SP4                                 -g -p 90  suse/SLE-Module-Basesystem-PTF/15-SP4/
