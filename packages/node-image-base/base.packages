@@ -134,6 +134,7 @@ kernel-syms=5.14.21-150400.24.55.1
 kernel-mft-mlnx-kmp-default=4.21.0_k5.14.21_150400.22-1.sles15sp4
 # DO NOT INSTALL MFT FROM THE SPP REPO, NEVER APPEND "slesXspY"
 mft=4.21.0-99
+qlgc-fastlinq-kmp-default=8.72.1.0_k5.14.21_150400.22-1.sles15sp4
 
 # Python3 RPM Packages
 # These support applications that do not install into virtualenvs, and that need airgap support.
