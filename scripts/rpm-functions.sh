@@ -102,11 +102,12 @@ function remove-comments-and-empty-lines() {
 }
 
 function setup-csm-rpms {
-    zypper --non-interactive install gettext-tools gawk jq
+    zypper --non-interactive install ca-certificates-mozilla ca-certificates gettext-tools gawk jq
 }
 
 function cleanup-csm-rpms {
-    zypper --non-interactive remove gettext-tools gawk jq || echo 'Ignoring errors'
+    # Do not use --clean-deps here, some items like ca-certificates will remove python3.
+    zypper --non-interactive remove ca-certificates-mozilla ca-certificates gettext-tools gawk jq || echo 'Ignoring errors'
 }
 
 function zypper-add-repos() {

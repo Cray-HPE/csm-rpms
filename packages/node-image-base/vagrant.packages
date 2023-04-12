@@ -2,4 +2,6 @@
 # Format:
 #   package_name=version
 # The version is the same version reported by the OS package manager (e.g. zypper).
+cron=4.2-150400.82.21
 qemu-guest-agent=6.2.0-150400.37.14.2
+open-lldp=1.1+44.0f781b4162d3-3.3.1
