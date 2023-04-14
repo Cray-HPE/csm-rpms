@@ -72,7 +72,7 @@ function add-fake-conntrack {
     mv /tmp/conntrack/* /var/local-repos/conntrack/
     createrepo /var/local-repos/conntrack
     zypper -n addrepo --refresh --no-gpgcheck /var/local-repos/conntrack buildonly-local-conntrack
-    zypper --non-interactive remove rpm-build createrepo_c
+    zypper --non-interactive remove --clean-deps rpm-build createrepo_c
 }
 
 function remove-comments-and-empty-lines() {
@@ -84,7 +84,7 @@ function setup-csm-rpms {
 }
 
 function cleanup-csm-rpms {
-    zypper --non-interactive remove gettext-tools gawk jq
+    zypper --non-interactive remove gettext-tools gawk jq || echo 'Ignoring errors'
 }
 
 function zypper-add-repos() {
@@ -139,7 +139,8 @@ function setup-package-repos() {
   add-google-repos
   add-hpe-repos
   add-suse-repos
-  # fake-conntrack necessary for kubernetes; must run after all repos are setup.
+
+  # fake-conntrack necessary for kubernetes on SUSE distros; must run after all repos are setup.
   add-fake-conntrack
   zypper lr -e /tmp/repos.repos
   cat /tmp/repos.repos
@@ -275,7 +276,7 @@ function get-current-package-list() {
   local inventory_file=$(mktemp)
   local output_path="$1"
   local packages="$2"
-  local base_inventory="$3"
+  local base_inventory="${3:-''}"
 
   if [[ ! -z "$base_inventory" ]]; then
     local base_arg="-b $base_inventory"
