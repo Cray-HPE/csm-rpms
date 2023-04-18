@@ -216,8 +216,8 @@ docker run --platform $DOCKER_ARCH -e ARCH=$ARCH $DOCKER_TTY_ARG --rm -v "$(real
   if [[ \"$VALIDATE\" == \"true\" ]]; then
     validate-package-versions /packages
   else
-    cp /packages /tmp/packages
-    update-package-versions /tmp/packages ${REPOS_FILTER} ${OUTPUT_DIFFS_ONLY} ${AUTO_YES} ${FILTER}
-    cp /tmp/packages /packages
+    cp /$(basename $PACKAGES_FILE) /tmp/$(basename $PACKAGES_FILE)
+    update-package-versions /tmp/$(basename $PACKAGES_FILE) ${REPOS_FILTER} ${OUTPUT_DIFFS_ONLY} ${AUTO_YES} ${FILTER}
+    cp /tmp/$(basename $PACKAGES_FILE) /$(basename $PACKAGES_FILE)
   fi
 "
