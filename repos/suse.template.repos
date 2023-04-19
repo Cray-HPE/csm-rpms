@@ -81,5 +81,9 @@ https://${ARTIFACTORY_USER}:${ARTIFACTORY_TOKEN}@artifactory.algol60.net/artifac
 # cloud-init
 https://${ARTIFACTORY_USER}:${ARTIFACTORY_TOKEN}@artifactory.algol60.net/artifactory/opensuse-mirror/Cloud:Tools/SLE_15_SP4/?auth=basic                                           openSUSE-CloudTools-SLE_15_SP4                                        -g -p 89  openSUSE:Cloud:Tools/SLE_15_SP4
 
+# vagrant
+https://${ARTIFACTORY_USER}:${ARTIFACTORY_TOKEN}@artifactory.algol60.net/artifactory/opensuse-mirror/Virtualization:vagrant/15.4/?auth=basic                                      openSUSE-Virtualizationvagrant-15.4                                   -g -p 89  openSUSE:Virtualization:vagrant/15.4
+https://${ARTIFACTORY_USER}:${ARTIFACTORY_TOKEN}@artifactory.algol60.net/artifactory/opensuse-mirror/devel:languages:ruby:extensions/15.4/?auth=basic                             openSUSE-devellanguagesrubyextensions-15.4                            -g -p 89  openSUSE:devel:languages:ruby:extensions/15.4
+
 # SUSE PTF Packages
 #https://${ARTIFACTORY_USER}:${ARTIFACTORY_TOKEN}@artifactory.algol60.net/artifactory/suse-external/PTF/15-SP4/SLE-Module-Basesystem?auth=basic                                   SUSE-SLE-Module-Basesystem-PTF-15-SP4                                 -g -p 90  suse/SLE-Module-Basesystem-PTF/15-SP4/
