@@ -2,7 +2,7 @@
 #
 # MIT License
 #
-# (C) Copyright 2021-2023] Hewlett Packard Enterprise Development LP
+# (C) Copyright [2021-2023] Hewlett Packard Enterprise Development LP
 #
 # Permission is hereby granted, free of charge, to any person obtaining a
 # copy of this software and associated documentation files (the "Software"),
@@ -48,12 +48,12 @@ function list-hpe-repos-files() {
 
 function list-suse-repos-files() {
   /usr/bin/envsubst < ${CSM_RPMS_DIR}/repos/suse.template.repos > ${CSM_RPMS_DIR}/repos/suse.repos
-  
-	if [ -f ${CSM_RPMS_DIR}/repos/suse.${ARCH}.template.repos ]; then
+
+  if [ -f ${CSM_RPMS_DIR}/repos/suse.${ARCH}.template.repos ]; then
     /usr/bin/envsubst < ${CSM_RPMS_DIR}/repos/suse.${ARCH}.template.repos >> ${CSM_RPMS_DIR}/repos/suse.repos
   fi
 
-  cat <<-EOF
+	cat <<-EOF
 			${CSM_RPMS_DIR}/repos/suse.repos
 			EOF
 }

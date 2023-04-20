@@ -20,13 +20,13 @@ export ARTIFACTORY_TOKEN=
 +
 [source,bash]
 ----
-./scripts/update-package-versions.sh -p packages/node-image-ncn-common/base.packages
+./scripts/update-package-versions.sh -a x86_64 -p packages/node-image-ncn-common/base.packages
 ----
 . Or, validate manifests (verify what's listed can be resolved from our Artifactory instance).
 +
 [source,bash]
 ----
-./scripts/update-package-versions.sh -p packages/node-image-ncn-common/base.packages --validate
+./scripts/update-package-versions.sh -a aarch64 -p packages/node-image-compute/base.packages --validate
 ----
 
 It is worthwhile to note that when checking out a new git-branch, where repositories may or may not have changed, running `--refresh`
@@ -36,7 +36,7 @@ or purging the docker image may aid updating and validating the manifests.
 +
 [source,bash]
 ----
-./scripts/update-package-versions.sh --refresh
+./scripts/update-package-versions.sh -a x86_64 --refresh
 ----
 * Purge the updater image and delete any dependent containers, an alternative to using `--refresh` for a fresh start
 +
@@ -52,12 +52,12 @@ This list denotes the various content deliverables we build at CSM. Each items i
 - `packages/node-images-base`
 +
 Packages for every image that directly inherits from a base image (e.g. application, compute, ncn-common). 
-- `packages/node-images-ncn-common`
+- `packages/node-image-ncn-common`
 +
 https://github.com/Cray-HPE/node-images/tree/main/boxes/ncn-common[Build Repo]
 +
 Packages specific to every NCN image (e.g. Kubernetes, pre-install-toolkit, or Storage-CEPH)
-- `packages/node-images-kubernetes`
+- `packages/node-image-kubernetes`
 +
 https://github.com/Cray-HPE/node-images/tree/main/boxes/ncn-node-images/kubernetes[Build Repo]
 +
@@ -68,11 +68,17 @@ https://github.com/Cray-HPE/node-images/tree/main/boxes/ncn-node-images/pre-inst
 +
 Packages specific to the pre-install-toolkit (a.k.a. LiveCD)
 +
-- `packages/node-images-storage-ceph`
+- `packages/node-image-storage-ceph`
 +
 https://github.com/Cray-HPE/node-images/tree/main/boxes/ncn-node-images/storage-ceph[Build Repo]
 +
 Packages specific to the Storage-CEPH image.
++
+- `packages/node-image-compute`
++
+https://github.com/Cray-HPE/node-images/tree/main/boxes/compute[Build Repo]
++
+Packages specific to the compute image.
 
 == Mediums
 
@@ -91,8 +97,8 @@ medium (e.g. Google or Metal).
 
 == Adding Packages
 
-When adding a package, by default any/all packages should go into the `base.packages` file. This helps keep our artifacts common between each delivery endpoint (preventing divergence from Google and Metal).
-If the package is specific to a medium, then it should go into one of the other `.package` files.
+When adding a package, by default any/all packages should go into the `base.packages` `base-<<ARCH>>.packages` file. This helps keep our artifacts common between each delivery endpoint (preventing divergence from Google and Metal).
+If the package is specific to a medium or architecture, it should go into one of the other `.package` files.
 
 === Examples
 
