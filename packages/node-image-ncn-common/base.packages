@@ -17,8 +17,8 @@ gptfdisk=1.0.8-150400.1.7
 hplip=3.21.10-150400.3.5.1
 ipmitool=1.8.19.gb7c0d66-0
 ipset=7.15-150400.12.3.2
-java-1_8_0-ibm-plugin=1.8.0_sr7.20-150000.3.68.1
-java-1_8_0-ibm=1.8.0_sr7.20-150000.3.68.1
+java-1_8_0-ibm-plugin=1.8.0_sr8.0-150000.3.71.1
+java-1_8_0-ibm=1.8.0_sr8.0-150000.3.71.1
 jq=1.6-3.3.1
 kubectl=1.21.12-0
 lsof=4.91-1.11
@@ -45,7 +45,7 @@ squid=5.7-150400.3.6.1
 sysstat=12.0.2-3.33.1
 systemtap=4.6-150400.1.7
 wget=1.20.3-150000.3.15.1
-wireshark=3.6.12-150000.3.86.1
+wireshark=3.6.13-150000.3.89.1
 xfsdump=3.1.6-1.30
 
 # COS
@@ -54,7 +54,7 @@ xfsdump=3.1.6-1.30
 # - cray-heartbeat
 cray-auth-utils=0.4.1-2.5_20230113043005__g4aa0940
 cray-power-button=1.5.2-2.5_20230113081448__g0fcacce
-cray-heartbeat=1.9.1-2.5_1.8__gcf13165.shasta
+cray-heartbeat=1.9.1-2.5_1.9__gcf13165.shasta
 
 # CMS Team
 cfs-debugger=1.3.1-1
