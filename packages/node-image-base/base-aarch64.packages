@@ -6,4 +6,4 @@
 # Packages/versions that are available for x86_64 and aarch64 should be added
 # to base.packages in this directory.
 
-grub2-arm64-efi=2.06-150400.11.23.2
+grub2-arm64-efi=2.06-150400.11.25.1
