@@ -140,6 +140,7 @@ python3-boto3=1.23.4-150200.23.9.1
 python3-click=7.0-1.27
 python3-colorama=0.4.4-1.1
 python3-defusedxml=0.6.0-1.42
+python3-dmidecode=3.12.2-150400.14.3.1
 python3-gobject=3.42.2-150400.3.3.2
 python3-ipaddr=2.1.11-2.24
 python3-kubernetes=8.0.1-150100.3.7.1
