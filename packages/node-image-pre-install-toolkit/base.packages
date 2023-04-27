@@ -6,6 +6,7 @@
 # CSM Packages
 canu=1.7.1-1
 cray-site-init=1.31.1-1
+cvt=1.4.19-20230502082908_9b144f009c61
 ilorest=3.5.1-1
 metal-basecamp=1.2.5-1
 metal-ipxe=2.3.0-1
