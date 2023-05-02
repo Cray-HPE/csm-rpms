@@ -1,6 +1,0 @@
-# Packages for Kubernetes metal artifacts.
-# Format:
-#   package_name=version
-# The version is the same version reported by the OS package manager (e.g. zypper).
-dracut-metal-dmk8s=2.1.0-1
-dracut-metal-luksetcd=2.1.0-1
