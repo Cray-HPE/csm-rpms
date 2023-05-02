@@ -11,7 +11,7 @@
 cfs-debugger=1.3.1-1
 cfs-state-reporter=1.9.1-1
 cfs-trust=1.6.3-1
-bos-reporter=2.1.0-1
+bos-reporter=2.1.1-1
 
 # COS SHASTA-OS packages
 # - cray-cos-release                    : Installed cle and cos release files.
