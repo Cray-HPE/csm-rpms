@@ -1,4 +1,0 @@
-# Packages for pre-install-toolkit Vagrant artifacts.
-# Format:
-#   package_name=version
-# The version is the same version reported by the OS package manager (e.g. zypper).
